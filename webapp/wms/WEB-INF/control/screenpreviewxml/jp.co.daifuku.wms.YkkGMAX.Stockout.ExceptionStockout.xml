@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE controls[
+<!ELEMENT controls (control?)>
+<!ELEMENT control (single-data+,datas)>
+<!ELEMENT datas (plural-data+)>
+<!ELEMENT plural-data (Item*)>
+<!ATTLIST control
+  id CDATA #REQUIRED
+  reflection (true|false) "false">
+<!ATTLIST single-data
+  name CDATA #REQUIRED
+  value CDATA #REQUIRED>
+<!ATTLIST item
+  value CDATA #REQUIRED>
+]>
+<controls>
+  <control id="btn_Help" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="message" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="btn_ToMenu" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_StockoutCondition" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="rdo_OverTimeStorageStockout" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_StockinDateTime" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_InstockCount" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="btn_ItemBrowse2" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="chk_AfterThisLocation" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_ItemNo1" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="rdo_ItemNo2" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_LocationNo" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="rdo_BitsStorageStockout" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_to" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_ColorCode" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_StockinTime" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="rdo_LocationRange" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="btn_ItemBrowse3" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_ColorCode2" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_FewerThanThis" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_Memo" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="btn_ItemBrowse1" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_ItemNo2" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_LocationNo" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_ItemNo1" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_LocationNoTo" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="rdo_DesignateLocationStockout" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_BeforeThisDate" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_LocationNoFrom" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_ColorCode" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_Time" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="rdo_LocationStockout" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_ItemNo3" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_ColorCode2" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_InstockCount" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="rdo_SearchStockout" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="btn_Set" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_Date" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_StockinDate" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Memo" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_SettingName" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+</controls>

@@ -1,0 +1,38 @@
+<!-- $Id: tool.css,v 1.1.1.1 2006/08/17 09:33:01 mori Exp $ -->
+
+/*
+ * Copyright 2000-2001 DAIFUKU Co.,Ltd. All Rights Reserved.
+ * 
+ * This software is the proprietary information of DAIFUKU Co.,Ltd.
+ * Use is subject to license terms.
+ */
+
+/**
+ * UTF8で保存する必要があるのですが、UTF8で保存するとブラウザによって
+ * ボタンのVALUEが右にずれ、文字が中心にこない現象が出ます。
+ * 現状原因が分かりません。もしその現象が発生したら澤まで連絡ください。
+ *                                                      2002/09/21 sawa
+ * @version $Revision: 1.1.1.1 $, $Date: 2006/08/17 09:33:01 $
+ * @author  $Author: mori $
+ */
+
+/*--------------------------------------*/
+/*	BUTTON								*/
+/*--------------------------------------*/
+
+/* TOOLサブメニュー用ボタン */
+.btn-toolsubmenu-001   {
+	color				: white;
+	font-style			: normal;
+	font-weight			: normal;
+	font-size			: 16px;
+	line-height			: 19px;
+	font-family			: "ＭＳ ゴシック", FixedSys;
+	text-decoration		: none;
+	background-color	: #fc8800;
+	border-style		: solid;
+	border-width		: 2px;
+	border-color		: #fdb561 #884700 #884700 #fdb561;
+	width				: 160px;
+	height				: 24px; 
+}

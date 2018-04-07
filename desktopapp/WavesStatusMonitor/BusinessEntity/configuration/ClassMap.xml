@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<map>
+  <class name="FNSYSTEMEntity" table="FNSYSTEM" database="ykk">
+    <attribute name="SYSNO" column="SYSNO" type="String" />
+    <attribute name="SYSNAME" column="SYSNAME" type="String"  key="primary"/>
+    <attribute name="SYSHIJI" column="SYSHIJI" type="String" key="primary" />
+    <attribute name="BATCH_FLAG" column="BATCH_FLAG" type="String" key="primary" />
+    <attribute name="AUTO_SPLIT_FLAG" column="AUTO_SPLIT_FLAG" type="String" />
+    <attribute name="KEPT_FREESHELF_NUM" column="KEPT_FREESHELF_NUM" type="Decimal" />
+    <attribute name="PICKING_PER" column="PICKING_PER" type="Decimal" />
+    <attribute name="REV_PICKING_LOWLIMIT" column="REV_PICKING_LOWLIMIT" type="Decimal" />
+    <attribute name="DEST_WAITTING_TIME" column="DEST_WAITTING_TIME" type="Decimal" />
+    <attribute name="BAG_WEIGHT" column="BAG_WEIGHT" type="Decimal" />    
+    <attribute name="CHECK_DATE" column="CHECK_DATE" type="String" />
+    <attribute name="TRX00_FLG" column="TRX00_FLG" type="String" />
+    <attribute name="TRY00_FLG" column="TRY00_FLG" type="String" />
+    <attribute name="TRZ00_FLG" column="TRZ00_FLG" type="String" />
+    <attribute name="WORK_FILE_FLG" column="WORK_FILE_FLG" type="String" />
+    <attribute name="RETRIEVAL_CANCEL_FLG" column="RETRIEVAL_CANCEL_FLG" type="String" />
+  </class>
+</map>

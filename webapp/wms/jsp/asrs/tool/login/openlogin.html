@@ -1,0 +1,70 @@
+<!-- $Id: openlogin.html,v 1.1.1.1 2006/08/17 09:33:16 mori Exp $ -->
+
+<!--
+ * Copyright 2000-2001 DAIFUKU Co.,Ltd. All Rights Reserved.
+ * 
+ * This software is the proprietary information of DAIFUKU Co.,Ltd.
+ * Use is subject to license terms.
+-->
+
+<!--
+ * ASRS設定ツール　ログイン画面を表示します。
+ * @version $Revision: 1.1.1.1 $, $Date: 2006/08/17 09:33:16 $
+ * @author  $Author: mori $
+-->
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>eWareNavi Ver2.6</title>
+  <script language="javascript" src="/wms/jscript/control.js"></script>
+  <script>
+  <!--
+  // the main window object
+  var mainWindowObject = 0;
+  // the main window target
+  var mainWindowName   = "ASRSToolWindow";
+
+  // show the screen for the Login authentication.
+  function showLogin()
+  {
+    if ( mainWindowObject == 0 )
+    {
+    }
+    else
+    {
+      mainWindowObject.close();
+      mainWindowObject = 0;
+    }
+
+    // Open the main window.
+    mainWindowObject = 
+      window.open( '/wms/asrs/tool/login/toollogin/Login.do', mainWindowName,'resizable=yes');
+
+    if( window.name != mainWindowName )
+    {
+      // The window should close itself.
+      window.opener = true;
+      window.close();
+    }
+  }
+
+  // Key operation is invalidated. 
+  function getKey()
+  {
+    // Ctrl + N
+    if (window.event.ctrlKey)
+    {
+      if (window.event.keyCode == '78')
+      {
+        return false;
+      }
+    }
+  }
+  window.document.onkeydown = getKey;
+  windowResize();
+  -->
+  </script>
+
+</head>
+<body onload="showLogin();" onContextMenu="return false">
+</html>

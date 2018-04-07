@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="shift_jis"?>
+
+  <project  name="FFORTISSIMO" basedir="." default="compile">
+  <property name="project.title" value="FFORTISSIMO(BlueDog Version3.0)"/>
+  <property name="project.version" value="3.0"/>
+
+  <property name="project.home" value=".."/>
+  <property name="bluedog-framework-jar" value="bluedog-framework-3.0.jar"/>
+  <property name="bluedog-servercontrol-jar" value="bluedog-servercontrol-3.0.jar"/>
+  <property name="encoding"     value="UTF-8"/>
+  <property name="classes.dir"  value="${project.home}/WEB-INF/classes"/>
+  <property name="src.dir"      value="${project.home}/WEB-INF/src"/>
+  <property name="lib.dir"      value="${project.home}/WEB-INF/lib"/>
+  <property name="javadoc.dir"  value="${project.home}/WEB-INF/javadoc/api"/>
+  <property name="jsp.dir"      value="${project.home}/"/>
+  <property name="servlet.jar"  value="E:/java/api/servletapi/2.3/servlet.jar"/>
+
+  <!-- コンパイル用クラスパス -->
+  <path id="compile.classpath">
+    <pathelement path="${lib.dir}/commons-beanutils.jar"/>
+    <pathelement path="${lib.dir}/commons-collections.jar"/>
+    <pathelement path="${lib.dir}/commons-dbcp-1.1.jar"/>
+    <pathelement path="${lib.dir}/commons-digester.jar"/>
+    <pathelement path="${lib.dir}/commons-fileupload-1.0.jar"/>
+    <pathelement path="${lib.dir}/commons-pool-1.1.jar"/>
+    <pathelement path="${lib.dir}/log4j-1.2.8.jar"/>
+    <pathelement path="${servlet.jar}"/>
+  </path>
+
+  <!-- JSP最適化 -->
+  <target name="jspclean">
+      <fixcrlf srcdir="${jsp.dir}"
+          tab="remove"
+          includes="**/*.jsp"
+      />
+  </target>
+
+  <!-- クラス削除 -->
+  <target name="clean">
+      <delete dir="${classes.dir}/jp"/>
+  </target>
+
+  <!-- JavaDoc作成 -->
+  <target name="javadoc">
+    <javadoc destdir="${javadoc.dir}"
+      access="private"
+      use="true"
+      notree="false"
+      nonavbar="false"
+      noindex="false"
+      splitindex="true"
+      author="true"
+      version="true"
+      nodeprecatedlist="false"
+      nodeprecated="false"
+      packagenames="jp.co.daifuku.bluedog.util,jp.co.daifuku.bluedog.webapp,jp.co.daifuku.bluedog.ui.control,jp.co.daifuku.bluedog.sql,jp.co.daifuku.bluedog.ui.taglib,jp.co.daifuku.bluedog.exception,jp.co.daifuku.bluedog.logging"
+      sourcepath="${src.dir}"
+      overview="${src.dir}/overview.html"
+      doctitle="BlueDog API Documentation (Version 3.0)"
+      additionalparam="-encoding Shift_JIS">
+        <classpath refid="compile.classpath"/>
+    </javadoc>
+  </target>
+
+  <!-- コンパイル -->
+  <target name="compile" depends="clean,native2ascii">
+    <mkdir dir="${classes.dir}"/>
+    <javac debug="true" srcdir="${src.dir}" destdir="${classes.dir}" encoding="Shift_JIS">
+        <classpath refid="compile.classpath"/>
+    </javac>
+  </target>
+
+  <!-- native2ascii -->
+  <target name="native2ascii">
+    <native2ascii dest="${classes.dir}" encoding="${encoding}" src="${src.dir}" includes="**/**.properties" />
+  </target>
+
+  <!-- JAR -->
+  <target name="bluedog-framework-jar" depends="compile">
+    <jar jarfile="${lib.dir}/${bluedog-framework-jar}">
+      <fileset dir="${classes.dir}">
+        <include name="jp/co/daifuku/bluedog/webapp/**.class"/>
+        <include name="jp/co/daifuku/bluedog/sql/**.class"/>
+        <include name="jp/co/daifuku/bluedog/logging/**.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/control/Constants.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/control/Control.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/control/ControlFactory.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/control/FocusSupport.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/control/Page.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/control/PageFactory.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/control/TemplateRule.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/control/TemplateRules$TemplateListRule.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/control/ListCellSupport.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/taglib/PageTag.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/taglib/TagHandler.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/taglib/HtmlTag.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/taglib/HeadTag.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/taglib/Constants.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/taglib/FunctionKeyInfo.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/taglib/FocusTagSupport.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/taglib/ListCellTagSupport.class"/>
+      </fileset>
+    </jar>
+  </target>
+
+  <!-- JAR -->
+  <target name="bluedog-servercontrol-jar" depends="compile">
+    <jar jarfile="${lib.dir}/${bluedog-servercontrol-jar}">
+      <fileset dir="${classes.dir}">
+        <include name="jp/co/daifuku/bluedog/ui/control/**.class"/>
+        <include name="jp/co/daifuku/bluedog/ui/taglib/**.class"/>
+        <exclude name="jp/co/daifuku/bluedog/ui/control/Constants.class"/>
+        <exclude name="jp/co/daifuku/bluedog/ui/control/Control.class"/>
+        <exclude name="jp/co/daifuku/bluedog/ui/control/ControlFactory.class"/>
+        <exclude name="jp/co/daifuku/bluedog/ui/control/FocusSupport.class"/>
+        <exclude name="jp/co/daifuku/bluedog/ui/control/Page.class"/>
+        <exclude name="jp/co/daifuku/bluedog/ui/control/PageFactory.class"/>
+        <exclude name="jp/co/daifuku/bluedog/ui/control/TemplateRule.class"/>
+        <exclude name="jp/co/daifuku/bluedog/ui/control/TemplateRules$TemplateListRule.class"/>
+        <exclude name="jp/co/daifuku/bluedog/ui/control/ListCellSupport.class"/>
+        <exclude name="jp/co/daifuku/bluedog/ui/taglib/PageTag.class"/>
+        <exclude name="jp/co/daifuku/bluedog/ui/taglib/TagHandler.class"/>
+        <exclude name="jp/co/daifuku/bluedog/ui/taglib/HtmlTag.class"/>
+        <exclude name="jp/co/daifuku/bluedog/ui/taglib/HeadTag.class"/>
+        <exclude name="jp/co/daifuku/bluedog/ui/taglib/Constants.class"/>
+        <exclude name="jp/co/daifuku/bluedog/ui/taglib/FunctionKeyInfo.class"/>
+        <exclude name="jp/co/daifuku/bluedog/ui/taglib/FocusTagSupport.class"/>
+        <exclude name="jp/co/daifuku/bluedog/ui/taglib/ListCellTagSupport.class"/>
+      </fileset>
+    </jar>
+  </target>
+
+  <!-- JAR -->
+  <target name="jar" depends="compile">
+    <jar jarfile="${lib.dir}/${bluedog-servercontrol-jar}">
+      <fileset dir="${classes.dir}">
+        <include name="**/**.class"/>
+     
+      </fileset>
+    </jar>
+  </target>
+
+
+</project>

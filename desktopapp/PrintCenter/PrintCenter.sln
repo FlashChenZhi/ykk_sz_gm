@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintCenter", "PrintCenter\PrintCenter.csproj", "{8BB1A79B-B72E-4918-8E7D-F804D0DDE2FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintCenterServer", "PrintCenterServer\PrintCenterServer.csproj", "{C853FCE8-3F3E-4559-B33D-F8099EF1DF5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintCenterCommon", "PrintCenterCommon\PrintCenterCommon.csproj", "{2E02328A-CEA1-499E-8246-9CAF120BAC7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintCenterService", "PrintCenterService\PrintCenterService.csproj", "{4E31DAF9-572D-4B66-8A3C-CC79806E1666}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintCenterProxy", "PrintCenterProxy\PrintCenterProxy.csproj", "{8F427987-5DE5-4627-A69D-2F4E1DFCE63C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YkkReports", "YkkReports\YkkReports.csproj", "{14E6F184-F4D2-433B-8513-91291BA3AD71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BB1A79B-B72E-4918-8E7D-F804D0DDE2FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BB1A79B-B72E-4918-8E7D-F804D0DDE2FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BB1A79B-B72E-4918-8E7D-F804D0DDE2FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BB1A79B-B72E-4918-8E7D-F804D0DDE2FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C853FCE8-3F3E-4559-B33D-F8099EF1DF5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C853FCE8-3F3E-4559-B33D-F8099EF1DF5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C853FCE8-3F3E-4559-B33D-F8099EF1DF5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C853FCE8-3F3E-4559-B33D-F8099EF1DF5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E02328A-CEA1-499E-8246-9CAF120BAC7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E02328A-CEA1-499E-8246-9CAF120BAC7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E02328A-CEA1-499E-8246-9CAF120BAC7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E02328A-CEA1-499E-8246-9CAF120BAC7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E31DAF9-572D-4B66-8A3C-CC79806E1666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E31DAF9-572D-4B66-8A3C-CC79806E1666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E31DAF9-572D-4B66-8A3C-CC79806E1666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E31DAF9-572D-4B66-8A3C-CC79806E1666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F427987-5DE5-4627-A69D-2F4E1DFCE63C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F427987-5DE5-4627-A69D-2F4E1DFCE63C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F427987-5DE5-4627-A69D-2F4E1DFCE63C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F427987-5DE5-4627-A69D-2F4E1DFCE63C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14E6F184-F4D2-433B-8513-91291BA3AD71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14E6F184-F4D2-433B-8513-91291BA3AD71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14E6F184-F4D2-433B-8513-91291BA3AD71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14E6F184-F4D2-433B-8513-91291BA3AD71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

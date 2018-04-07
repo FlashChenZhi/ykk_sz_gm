@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application-config[
+<!ELEMENT application-config (mappings?,exceptions?,parameters?,prohibitions?)>
+<!ELEMENT mappings (mapping+)>
+<!ELEMENT exceptions (exception+)>
+<!ELEMENT parameters (parameter+)>
+<!ELEMENT prohibitions (prohibition+)>
+<!ATTLIST mapping
+path CDATA #REQUIRED
+  jsp CDATA #REQUIRED
+  class NMTOKEN #REQUIRED
+  business NMTOKEN #REQUIRED>
+<!ATTLIST exception
+  class NMTOKEN #REQUIRED
+  path CDATA #REQUIRED>
+<!ATTLIST parameter
+  name CDATA #REQUIRED
+  value CDATA #REQUIRED>
+<!ATTLIST prohibition
+code CDATA #REQUIRED>
+]>
+<application-config>
+  <mappings>
+    <mapping path="/Progress"
+             jsp="/jsp/Progress.jsp"
+             business="jp.co.daifuku.tools.display.web.ProgressBusiness"
+             class="jp.co.daifuku.tools.display.web.Progress" />
+    <mapping path="/Error"
+             jsp="/jsp/Error.jsp"
+             business="jp.co.daifuku.tools.display.web.ErrorBusiness"
+             class="jp.co.daifuku.tools.display.web.Error" />
+    <mapping path="/Dispatch"
+             jsp=""
+             business="jp.co.daifuku.tools.display.web.DispatchBusiness"
+             class="jp.co.daifuku.tools.display.web.Dispatch" />
+    <mapping path="/mainmenu/MainMenu"
+             jsp="/jsp/mainmenu/MainMenu.jsp"
+             business="jp.co.daifuku.tools.display.web.mainmenu.MainMenuBusiness"
+             class="jp.co.daifuku.tools.display.web.mainmenu.MainMenu" />
+    <mapping path="/listbox/mainmenulist/MainMenuList"
+             jsp="/jsp/listbox/mainmenulist/MainMenuList.jsp"
+             business="jp.co.daifuku.tools.display.web.listbox.mainmenulist.MainMenuListBusiness"
+             class="jp.co.daifuku.tools.display.web.listbox.mainmenulist.MainMenuList" />
+    <mapping path="/listbox/resourcelist/ResourceList"
+             jsp="/jsp/listbox/resourcelist/ResourceList.jsp"
+             business="jp.co.daifuku.tools.display.web.listbox.resourcelist.ResourceListBusiness"
+             class="jp.co.daifuku.tools.display.web.listbox.resourcelist.ResourceList" />
+    <mapping path="/mainmenuorder/MainMenuOrder"
+             jsp="/jsp/mainmenuorder/MainMenuOrder.jsp"
+             business="jp.co.daifuku.tools.display.web.mainmenuorder.MainMenuOrderBusiness"
+             class="jp.co.daifuku.tools.display.web.mainmenuorder.MainMenuOrder" />
+    <mapping path="/function/Function"
+             jsp="/jsp/function/Function.jsp"
+             business="jp.co.daifuku.tools.display.web.function.FunctionBusiness"
+             class="jp.co.daifuku.tools.display.web.function.Function" />
+    <mapping path="/listbox/functionlist/FunctionList"
+             jsp="/jsp/listbox/functionlist/FunctionList.jsp"
+             business="jp.co.daifuku.tools.display.web.listbox.functionlist.FunctionListBusiness"
+             class="jp.co.daifuku.tools.display.web.listbox.functionlist.FunctionList" />
+    <mapping path="/functionorder/FunctionOrder"
+             jsp="/jsp/functionorder/FunctionOrder.jsp"
+             business="jp.co.daifuku.tools.display.web.functionorder.FunctionOrderBusiness"
+             class="jp.co.daifuku.tools.display.web.functionorder.FunctionOrder" />
+    <mapping path="/functionmap/FunctionMap1"
+             jsp="/jsp/functionmap/FunctionMap1.jsp"
+             business="jp.co.daifuku.tools.display.web.functionmap.FunctionMap1Business"
+             class="jp.co.daifuku.tools.display.web.functionmap.FunctionMap1" />
+    <mapping path="/functionmap/FunctionMap2"
+             jsp="/jsp/functionmap/FunctionMap2.jsp"
+             business="jp.co.daifuku.tools.display.web.functionmap.FunctionMap2Business"
+             class="jp.co.daifuku.tools.display.web.functionmap.FunctionMap2" />
+    <mapping path="/functionmaporder/FunctionMapOrder"
+             jsp="/jsp/functionmaporder/FunctionMapOrder.jsp"
+             business="jp.co.daifuku.tools.display.web.functionmaporder.FunctionMapOrderBusiness"
+             class="jp.co.daifuku.tools.display.web.functionmaporder.FunctionMapOrder" />
+    <mapping path="/role/Role"
+             jsp="/jsp/role/Role.jsp"
+             business="jp.co.daifuku.tools.display.web.role.RoleBusiness"
+             class="jp.co.daifuku.tools.display.web.role.Role" />
+    <mapping path="/listbox/rolelist/RoleList"
+             jsp="/jsp/listbox/rolelist/RoleList.jsp"
+             business="jp.co.daifuku.tools.display.web.listbox.rolelist.RoleListBusiness"
+             class="jp.co.daifuku.tools.display.web.listbox.rolelist.RoleList" />
+    <mapping path="/rolemap/RoleMap"
+             jsp="/jsp/rolemap/RoleMap.jsp"
+             business="jp.co.daifuku.tools.display.web.rolemap.RoleMapBusiness"
+             class="jp.co.daifuku.tools.display.web.rolemap.RoleMap" />
+    <mapping path="/user/User"
+             jsp="/jsp/user/User.jsp"
+             business="jp.co.daifuku.tools.display.web.user.UserBusiness"
+             class="jp.co.daifuku.tools.display.web.user.User" />
+    <mapping path="/listbox/userlist/UserList"
+             jsp="/jsp/listbox/userlist/UserList.jsp"
+             business="jp.co.daifuku.tools.display.web.listbox.userlist.UserListBusiness"
+             class="jp.co.daifuku.tools.display.web.listbox.userlist.UserList" />
+    <mapping path="/terminal/Terminal"
+             jsp="/jsp/terminal/Terminal.jsp"
+             business="jp.co.daifuku.tools.display.web.terminal.TerminalBusiness"
+             class="jp.co.daifuku.tools.display.web.terminal.Terminal" />
+    <mapping path="/listbox/terminallist/TerminalList"
+             jsp="/jsp/listbox/terminallist/TerminalList.jsp"
+             business="jp.co.daifuku.tools.display.web.listbox.terminallist.TerminalListBusiness"
+             class="jp.co.daifuku.tools.display.web.listbox.terminallist.TerminalList" />
+    <mapping path="/authenticationsystem/AuthenticationSystem"
+             jsp="/jsp/authenticationsystem/AuthenticationSystem.jsp"
+             business="jp.co.daifuku.tools.display.web.authenticationsystem.AuthenticationSystemBusiness"
+             class="jp.co.daifuku.tools.display.web.authenticationsystem.AuthenticationSystem" />
+    <mapping path="/finalcheck/FinalCheck"
+             jsp="/jsp/finalcheck/FinalCheck.jsp"
+             business="jp.co.daifuku.tools.display.web.finalcheck.FinalCheckBusiness"
+             class="jp.co.daifuku.tools.display.web.finalcheck.FinalCheck" />
+    <mapping path="/backup/BackUp"
+             jsp="/jsp/backup/BackUp.jsp"
+             business="jp.co.daifuku.tools.display.web.backup.BackUpBusiness"
+             class="jp.co.daifuku.tools.display.web.backup.BackUp" />
+    <mapping path="/restore/Restore"
+             jsp="/jsp/restore/Restore.jsp"
+             business="jp.co.daifuku.tools.display.web.restore.RestoreBusiness"
+             class="jp.co.daifuku.tools.display.web.restore.Restore" />
+    <mapping path="/menu/SubMenu"
+             jsp="/jsp/menu/SubMenu.jsp"
+             business="jp.co.daifuku.tools.display.web.menu.SubMenuBusiness"
+             class="jp.co.daifuku.tools.display.web.menu.SubMenu" />
+    <mapping path="//backup/BackUp"
+             jsp="/jsp//backup/BackUp.jsp"
+             business="jp.co.daifuku.tools.display.web.backup.BackUpBusiness"
+             class="jp.co.daifuku.tools.display.web.backup.BackUp" />
+  </mappings>
+  <exceptions>
+    <exception class="java.lang.Exception" path="/Error.do" />
+    <exception class="jp.co.daifuku.bluedog.exception.LocaleException" path="/jsp/LocaleException.jsp" />
+    <exception class="jp.co.daifuku.exception.AuthenticationException" path="/Dispatch.do?PATH=/jsp/SessionTimeout.jsp" />
+    <!--
+    <exception class="java.sql.SQLException"
+               path="/exceptions/SQLException.do"/>
+-->
+  </exceptions>
+  <parameters>
+    <parameter name="RIGHTCLICK_POPUPMENU" value="false" />
+    <parameter name="FUNCTIONKEY_1" value="false" />
+    <parameter name="FUNCTIONKEY_2" value="false" />
+    <parameter name="FUNCTIONKEY_3" value="false" />
+    <parameter name="FUNCTIONKEY_4" value="false" />
+    <parameter name="FUNCTIONKEY_5" value="false" />
+    <parameter name="FUNCTIONKEY_6" value="false" />
+    <parameter name="FUNCTIONKEY_7" value="false" />
+    <parameter name="FUNCTIONKEY_8" value="false" />
+    <parameter name="FUNCTIONKEY_9" value="false" />
+    <parameter name="FUNCTIONKEY_10" value="false" />
+    <parameter name="FUNCTIONKEY_11" value="false" />
+    <parameter name="FUNCTIONKEY_12" value="false" />
+    <parameter name="DIALOG_TOPMOST" value="false" />
+    <parameter name="NO_CACHE" value="true" />
+    <parameter name="FILE_UPLOAD_DIR" value="c:/upload" />
+    <parameter name="FILE_UPLOAD_TEMP" value="c:/upload_temp" />
+    <parameter name="FILE_UPLOAD_MAX_SIZE" value="104857600" />
+    <parameter name="FILE_UPLOAD_THRESHOLD" value="1048576" />
+  </parameters>
+  <prohibitions>
+    <prohibition code="0x0025" />
+    <prohibition code="0x0027" />
+  </prohibitions>
+  <patternmatchings>
+    <patternmatching code="0x002A" />
+  </patternmatchings>
+</application-config>

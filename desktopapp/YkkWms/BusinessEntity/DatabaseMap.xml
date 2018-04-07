@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?><map>
+  <database name="ykk" type="Oracle">
+    <parameter name="Provider" value="MSDAORA.1" />
+    <parameter name="Data Source" value="orcl" />
+    <parameter name="User ID" value="ykk" />
+    <parameter name="Password" value="wms" />
+    <classMapFile path="ClassMap.xml" />
+  </database></map>

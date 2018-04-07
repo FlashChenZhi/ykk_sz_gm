@@ -1,0 +1,155 @@
+package jp.co.daifuku.wms.YkkGMAX.PageController;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import jp.co.daifuku.bluedog.ui.control.ListCell;
+import jp.co.daifuku.bluedog.ui.control.Page;
+import jp.co.daifuku.bluedog.ui.control.Pager;
+import jp.co.daifuku.wms.YkkGMAX.Entities.ItemViewEntity;
+import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKDBException;
+import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKSQLException;
+import jp.co.daifuku.wms.YkkGMAX.ListProxy.ItemViewListProxy;
+import jp.co.daifuku.wms.YkkGMAX.Popup.ItemViewBusiness;
+import jp.co.daifuku.wms.YkkGMAX.Utils.ASRSInfoCentre;
+import jp.co.daifuku.wms.YkkGMAX.Utils.ConnectionManager;
+import jp.co.daifuku.wms.YkkGMAX.Utils.Debugprinter.DebugLevel;
+import jp.co.daifuku.wms.YkkGMAX.Utils.Debugprinter.DebugPrinter;
+
+public class ItemViewPager implements IPageable
+{
+	private final String ITEM_NAME_1 = "ITEM_NAME_1";
+	private final String ITEM_NAME_2 = "ITEM_NAME_2";
+	private final String ITEM_NAME_3 = "ITEM_NAME_3";
+	private final String ITEM_CODE = "ITEM_CODE";
+	private final String LOOSE_SEARCH_MODE = "LOOSE_SEARCH_MODE";
+	private final String MANAGE_ITEM_FLAG = "MANAGE_ITEM_FLAG";
+	private Page page = null;
+	private Pager pager = null;
+
+	public ItemViewPager(Page page, Pager pager)
+	{
+		this.page = page;
+		this.pager = pager;
+	}
+
+	public List getList(int beginningPos, int length) throws YKKDBException,
+			YKKSQLException
+	{
+		Connection conn = null;
+		List itemViewEntityList = new ArrayList();
+
+		try
+		{
+			conn = ConnectionManager.getConnection();
+
+			ASRSInfoCentre centre = new ASRSInfoCentre(conn);
+
+			itemViewEntityList = centre.getItemViewList(getItemCode(),
+					getItemName1(), getItemName2(), getItemName3(),
+					getLooseSearchMode(), getManageItemFlag(), beginningPos,
+					length);
+
+		} finally
+		{
+			if (conn != null)
+			{
+				try
+				{
+					conn.close();
+				} catch (SQLException e)
+				{
+					DebugPrinter.print(DebugLevel.ERROR, e.getMessage());
+					YKKDBException ex = new YKKDBException();
+					ex.setResourceKey("7200002");
+					throw ex;
+				}
+			}
+		}
+		return itemViewEntityList;
+	}
+
+	public String getItemCode()
+	{
+		return (String) page.getSession().getAttribute(ITEM_CODE);
+	}
+
+	public String getItemName1()
+	{
+		return (String) page.getSession().getAttribute(ITEM_NAME_1);
+	}
+
+	public String getItemName2()
+	{
+		return (String) page.getSession().getAttribute(ITEM_NAME_2);
+	}
+
+	public String getItemName3()
+	{
+		return (String) page.getSession().getAttribute(ITEM_NAME_3);
+	}
+
+	public String getLooseSearchMode()
+	{
+		return (String) page.getSession().getAttribute(LOOSE_SEARCH_MODE);
+	}
+
+	public String getManageItemFlag()
+	{
+		return (String) page.getSession().getAttribute(MANAGE_ITEM_FLAG);
+	}
+
+	public ListCell getListCell()
+	{
+		return ((ItemViewBusiness) page).lst_ItemView;
+	}
+
+	public Pager getPager()
+	{
+		return pager;
+	}
+
+	public int getTotalCount() throws YKKDBException, YKKSQLException
+	{
+		Connection conn = null;
+		int totalCount = 0;
+
+		try
+		{
+			conn = ConnectionManager.getConnection();
+			ASRSInfoCentre centre = new ASRSInfoCentre(conn);
+			totalCount = centre.getItemViewCount(getItemCode(), getItemName1(),
+					getItemName2(), getItemName3(), getLooseSearchMode(),
+					getManageItemFlag());
+		} finally
+		{
+			if (conn != null)
+			{
+				try
+				{
+					conn.close();
+				} catch (SQLException e)
+				{
+					DebugPrinter.print(DebugLevel.ERROR, e.getMessage());
+					YKKDBException ex = new YKKDBException();
+					ex.setResourceKey("7200002");
+					throw ex;
+				}
+			}
+		}
+		return totalCount;
+	}
+
+	public void setRowValue(ListCell listCell, int rowNum, Object object)
+	{
+		ItemViewListProxy listProxy = new ItemViewListProxy(listCell);
+
+		ItemViewEntity entity = (ItemViewEntity) object;
+
+		listProxy.setRowValueByEntity(entity, rowNum);
+
+	}
+
+}

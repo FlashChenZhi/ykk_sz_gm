@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WavesStatusMonitor", "WavesStatusMonitor\WavesStatusMonitor.csproj", "{53A84D9E-95A8-4A77-9B67-C2AD66BCA623}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessEntity", "BusinessEntity\BusinessEntity.csproj", "{C4A6B38A-493E-43F3-BD01-ABDBCC22DD0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53A84D9E-95A8-4A77-9B67-C2AD66BCA623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53A84D9E-95A8-4A77-9B67-C2AD66BCA623}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53A84D9E-95A8-4A77-9B67-C2AD66BCA623}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53A84D9E-95A8-4A77-9B67-C2AD66BCA623}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4A6B38A-493E-43F3-BD01-ABDBCC22DD0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4A6B38A-493E-43F3-BD01-ABDBCC22DD0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A6B38A-493E-43F3-BD01-ABDBCC22DD0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4A6B38A-493E-43F3-BD01-ABDBCC22DD0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C4A6B38A-493E-43F3-BD01-ABDBCC22DD0A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessEntity</RootNamespace>
+    <AssemblyName>BusinessEntity</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PersistenceLayer, Version=3.2.0.7, Culture=neutral, PublicKeyToken=a18c8602ba050ad5">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\PersistenceLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AUTHENTICATIONSYSTEMEntity.cs" />
+    <Compile Include="FHDIFFERENCESTOCKEntity.cs" />
+    <Compile Include="FHRETRIEVALRESULTEntity.cs" />
+    <Compile Include="FHSTORAGEINFOEntity.cs" />
+    <Compile Include="FHWEIGHTREPORTEntity.cs" />
+    <Compile Include="FMBUCKETEntity.cs" />
+    <Compile Include="FMPATTERNEntity.cs" />
+    <Compile Include="FMZKEYEntity.cs" />
+    <Compile Include="FNAILCTLEntity.cs" />
+    <Compile Include="FNAKITANAEntity.cs" />
+    <Compile Include="FNAREAEntity.cs" />
+    <Compile Include="FNBANKCTLEntity.cs" />
+    <Compile Include="FNCART_CTLEntity.cs" />
+    <Compile Include="FNCART_SNDEntity.cs" />
+    <Compile Include="FNFORBIDRETRIEVALEntity.cs" />
+    <Compile Include="FNGSETEntity.cs" />
+    <Compile Include="FNHANSOEntity.cs" />
+    <Compile Include="FNHARDZONEEntity.cs" />
+    <Compile Include="FNHIKIJHEntity.cs" />
+    <Compile Include="FNHOST_ERREntity.cs" />
+    <Compile Include="FNHSTLOGEntity.cs" />
+    <Compile Include="FNJISEKIEntity.cs" />
+    <Compile Include="FNKANRIEntity.cs" />
+    <Compile Include="FNLABELEntity.cs" />
+    <Compile Include="FNLCNTLEntity.cs" />
+    <Compile Include="FNLOCATEntity.cs" />
+    <Compile Include="FNPICK_CTLEntity.cs" />
+    <Compile Include="FNPRINTEREntity.cs" />
+    <Compile Include="FNRANGEEntity.cs" />
+    <Compile Include="FNRETRIEVAL_STEntity.cs" />
+    <Compile Include="FNRUTEEntity.cs" />
+    <Compile Include="FNRUTESTEntity.cs" />
+    <Compile Include="FNSAGDATEntity.cs" />
+    <Compile Include="FNSAGLSTEntity.cs" />
+    <Compile Include="FNSAGYOBAEntity.cs" />
+    <Compile Include="FNSAIBANEntity.cs" />
+    <Compile Include="FNSCNTLEntity.cs" />
+    <Compile Include="FNSIJIEntity.cs" />
+    <Compile Include="FNSOFTZONEEntity.cs" />
+    <Compile Include="FNSOFTZONEYUSENEntity.cs" />
+    <Compile Include="FNSOKOEntity.cs" />
+    <Compile Include="FNSTATIONEntity.cs" />
+    <Compile Include="FNSTCTLEntity.cs" />
+    <Compile Include="FNSYOTEIEntity.cs" />
+    <Compile Include="FNSYSTEMEntity.cs" />
+    <Compile Include="FNTERMFUNCEntity.cs" />
+    <Compile Include="FNTERMONAREAEntity.cs" />
+    <Compile Include="FNTOUCYAKUEntity.cs" />
+    <Compile Include="FNUNITEntity.cs" />
+    <Compile Include="FNZAIKOEntity.cs" />
+    <Compile Include="FUNCTIONEntity.cs" />
+    <Compile Include="FUNCTIONMAPEntity.cs" />
+    <Compile Include="LOGINUSEREntity.cs" />
+    <Compile Include="MAINMENUEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ROLEEntity.cs" />
+    <Compile Include="ROLEMAPEntity.cs" />
+    <Compile Include="TERMINALEntity.cs" />
+    <Compile Include="USERATTRIBUTEEntity.cs" />
+    <Compile Include="USERTERMINALEntity.cs" />
+    <Compile Include="WARENAVI_SYSTEMEntity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClassMap.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DatabaseMap.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

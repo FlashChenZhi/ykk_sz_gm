@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+  <template key="Pager" keyword="Listcell" description="Pager">
+    <property name="max" value="100" />
+    <property name="index" value="" />
+    <property name="page" value="5" />
+    <property name="visible" value="true" />
+  </template>
+</templates>

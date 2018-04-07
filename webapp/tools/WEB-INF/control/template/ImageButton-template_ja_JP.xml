@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+  <template key="T_ArrowDown" keyword="" description="↓">
+    <property name="src" value="\img\control\imagebutton\arrow_down.gif" />
+    <property name="visible" value="true" />
+    <property name="border" value="0" />
+    <property name="target" value="" />
+    <property name="features" value="" />
+    <property name="functionKey" value="" />
+    <property name="beforeConfirm" value="" />
+    <property name="onconfirmOK" value="" />
+    <property name="serverEvents" value="" />
+    <property name="cssClass" value="" />
+    <property name="accessKey" value="" />
+    <property name="onblur" value="" />
+    <property name="onclick" value="" />
+    <property name="onfocus" value="" />
+    <property name="onmousedown" value="" />
+    <property name="onmousemove" value="" />
+    <property name="onmouseout" value="" />
+    <property name="onmouseover" value="" />
+    <property name="onmouseup" value="" />
+  </template>
+  <template key="T_ArrowUp" keyword="" description="↑">
+    <property name="src" value="\img\control\imagebutton\arrow_up.gif" />
+    <property name="visible" value="true" />
+    <property name="border" value="0" />
+    <property name="target" value="" />
+    <property name="features" value="" />
+    <property name="functionKey" value="" />
+    <property name="beforeConfirm" value="" />
+    <property name="onconfirmOK" value="" />
+    <property name="serverEvents" value="" />
+    <property name="cssClass" value="" />
+    <property name="accessKey" value="" />
+    <property name="onblur" value="" />
+    <property name="onclick" value="" />
+    <property name="onfocus" value="" />
+    <property name="onmousedown" value="" />
+    <property name="onmousemove" value="" />
+    <property name="onmouseout" value="" />
+    <property name="onmouseover" value="" />
+    <property name="onmouseup" value="" />
+  </template>
+  <template key="T_ArrowRight" keyword="" description="→">
+    <property name="src" value="\img\control\imagebutton\arrow_right.gif" />
+    <property name="visible" value="true" />
+    <property name="border" value="0" />
+    <property name="target" value="" />
+    <property name="features" value="" />
+    <property name="functionKey" value="" />
+    <property name="beforeConfirm" value="" />
+    <property name="onconfirmOK" value="" />
+    <property name="serverEvents" value="" />
+    <property name="cssClass" value="" />
+    <property name="accessKey" value="" />
+    <property name="onblur" value="" />
+    <property name="onclick" value="" />
+    <property name="onfocus" value="" />
+    <property name="onmousedown" value="" />
+    <property name="onmousemove" value="" />
+    <property name="onmouseout" value="" />
+    <property name="onmouseover" value="" />
+    <property name="onmouseup" value="" />
+  </template>
+  <template key="T_ArrowLeft" keyword="" description="←">
+    <property name="src" value="\img\control\imagebutton\arrow_left.gif" />
+    <property name="visible" value="true" />
+    <property name="border" value="0" />
+    <property name="target" value="" />
+    <property name="features" value="" />
+    <property name="functionKey" value="" />
+    <property name="beforeConfirm" value="" />
+    <property name="onconfirmOK" value="" />
+    <property name="serverEvents" value="" />
+    <property name="cssClass" value="" />
+    <property name="accessKey" value="" />
+    <property name="onblur" value="" />
+    <property name="onclick" value="" />
+    <property name="onfocus" value="" />
+    <property name="onmousedown" value="" />
+    <property name="onmousemove" value="" />
+    <property name="onmouseout" value="" />
+    <property name="onmouseover" value="" />
+    <property name="onmouseup" value="" />
+  </template>
+</templates>

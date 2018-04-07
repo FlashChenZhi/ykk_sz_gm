@@ -1,0 +1,27 @@
+<!-- $Id: frame.html,v 1.1.1.1 2006/08/17 09:33:16 mori Exp $ -->
+
+<!--
+ * Copyright 2000-2001 DAIFUKU Co.,Ltd. All Rights Reserved.
+ * 
+ * This software is the proprietary information of DAIFUKU Co.,Ltd.
+ * Use is subject to license terms.
+-->
+
+<!--
+ * 小さいアイコンのメインメニューをframe1に指定します。
+ * @version $Revision: 1.1.1.1 $, $Date: 2006/08/17 09:33:16 $
+ * @author  $Author: mori $
+-->
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>eWareNavi Ver2.6</title>
+</head>
+<frameset rows="30,*" frameborder=0 framespacing=0 frameborder="no">
+	<frame src="Logout.do"     name="frame1" noresize scrolling="no" frameborder="0" >
+	<frame src="SubMenu.do"  name="frame2" noresize frameborder="0" scrolling="yes">
+</frameset>
+<noframe>
+	This browser does not support frames!
+</noframe>
+</html>

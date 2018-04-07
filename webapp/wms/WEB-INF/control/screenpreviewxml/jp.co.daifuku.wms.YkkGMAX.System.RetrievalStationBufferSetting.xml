@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE controls[
+<!ELEMENT controls (control?)>
+<!ELEMENT control (single-data+,datas)>
+<!ELEMENT datas (plural-data+)>
+<!ELEMENT plural-data (Item*)>
+<!ATTLIST control
+  id CDATA #REQUIRED
+  reflection (true|false) "false">
+<!ATTLIST single-data
+  name CDATA #REQUIRED
+  value CDATA #REQUIRED>
+<!ATTLIST item
+  value CDATA #REQUIRED>
+]>
+<controls>
+  <control id="btn_Help" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="message" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="tab" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="btn_ToMenu" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_CurrentValue" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_ModifyValue" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_1217" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="btn_Default" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Modify2203" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Current1214" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Modify2208" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Current2212" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Modify1211" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_2208" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Current2203" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_1211" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Current2205" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_2212" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Modify1217" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_2203" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Modify2212" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Modify1214" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="btn_Set" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Current2213" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_1214" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Current2208" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Current2211" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Current1211" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Modify2205" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_2213" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Modify1201" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_2205" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_2211" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Modify2213" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Current1217" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="btn_Clear" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Modify2211" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_1201" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Current1201" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_SettingName" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+</controls>

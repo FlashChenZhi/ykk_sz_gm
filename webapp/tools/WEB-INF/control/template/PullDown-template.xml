@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+  <template key="T_Sex" keyword="" description="性別">
+    <property name="enabled" value="true" />
+    <property name="visible" value="true" />
+    <property name="changeEvent" value="false" />
+    <property name="serverEvents" value="" />
+    <property name="cssClass" value="pul-001" />
+    <property name="accessKey" value="" />
+    <property name="errRequired" value="" />
+    <property name="onblur" value="" />
+    <property name="onchange" value="" />
+    <property name="onclick" value="" />
+    <property name="onfocus" value="" />
+    <list-items type="PullDownItems" />
+  </template>
+  <template key="T_Role" keyword="" description="ロール">
+    <property name="enabled" value="true" />
+    <property name="visible" value="true" />
+    <property name="changeEvent" value="false" />
+    <property name="serverEvents" value="" />
+    <property name="cssClass" value="pul-001" />
+    <property name="accessKey" value="" />
+    <property name="errRequired" value="" />
+    <property name="onblur" value="" />
+    <property name="onchange" value="" />
+    <property name="onclick" value="" />
+    <property name="onfocus" value="" />
+    <list-items type="PullDownItems" />
+  </template>
+  <template key="T_MainMenu" keyword="" description="メインメニュー">
+    <property name="enabled" value="true" />
+    <property name="visible" value="true" />
+    <property name="changeEvent" value="false" />
+    <property name="serverEvents" value="" />
+    <property name="cssClass" value="pul-001" />
+    <property name="accessKey" value="" />
+    <property name="errRequired" value="" />
+    <property name="onblur" value="" />
+    <property name="onchange" value="" />
+    <property name="onclick" value="" />
+    <property name="onfocus" value="" />
+    <list-items type="PullDownItems" />
+  </template>
+  <template key="T_FailedLoginAttempts" keyword="" description="認証ミス猶予回数">
+    <property name="enabled" value="true" />
+    <property name="visible" value="true" />
+    <property name="changeEvent" value="false" />
+    <property name="serverEvents" value="" />
+    <property name="cssClass" value="pul-001" />
+    <property name="accessKey" value="" />
+    <property name="errRequired" value="" />
+    <property name="onblur" value="" />
+    <property name="onchange" value="" />
+    <property name="onclick" value="" />
+    <property name="onfocus" value="" />
+    <list-items type="PullDownItems" />
+  </template>
+</templates>

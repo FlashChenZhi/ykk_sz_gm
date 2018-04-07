@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration>
+
+  <appender name="LOGFILE" class="org.apache.log4j.RollingFileAppender">
+	<param name="File"   value=" ${catalina.home}/logs/bluedog-framework.log" />
+    <param name="Append" value="true" />
+    <param name="MaxFileSize" value="5MB" />
+    <param name="MaxBackupIndex" value="10" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{yy/MM/dd HH:mm:ss} %t %-5p %c{1} %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="APIFILE" class="org.apache.log4j.RollingFileAppender">
+	<param name="File"   value=" ${catalina.home}/logs/bluedog-api.log" />
+    <param name="Append" value="true" />
+    <param name="MaxFileSize" value="5MB" />
+    <param name="MaxBackupIndex" value="10" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{yy/MM/dd HH:mm:ss} %t %-5p %c{1} %m%n"/>
+    </layout>
+  </appender>
+  <appender name="SQLFILE" class="org.apache.log4j.RollingFileAppender">
+	<param name="File"   value=" ${catalina.home}/logs/sql.log" />
+    <param name="Append" value="true" />
+    <param name="MaxFileSize" value="5MB" />
+    <param name="MaxBackupIndex" value="10" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{yyyy/MM/dd HH:mm:ss}\t%m%n"/>
+    </layout>
+  </appender>
+  <appender name="AUTHFILE" class="org.apache.log4j.RollingFileAppender">
+	<param name="File"   value=" ${catalina.home}/logs/authentication.log" />
+    <param name="Append" value="true" />
+    <param name="MaxFileSize" value="5MB" />
+    <param name="MaxBackupIndex" value="10" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{yyyy/MM/dd HH:mm:ss}\t%m%n"/>
+    </layout>
+  </appender>
+  <appender name="APPFILE" class="org.apache.log4j.RollingFileAppender">
+	<param name="File"   value=" ${catalina.home}/logs/app-msg.log" />
+    <param name="Append" value="true" />
+    <param name="MaxFileSize" value="5MB" />
+    <param name="MaxBackupIndex" value="10" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{yyyy MM dd HH mm ss SSS Z}\t%m%n"/>
+    </layout>
+  </appender>
+  <appender name="OPELOG" class="org.apache.log4j.RollingFileAppender">
+	<param name="File"   value=" ${catalina.home}/logs/operation.log" />
+    <param name="Append" value="true" />
+    <param name="MaxFileSize" value="5MB" />
+    <param name="MaxBackupIndex" value="10" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{yyyy/MM/dd HH:mm:ss}\t%m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+    <layout class="org.apache.log4j.PatternLayout">
+<!--
+      <param name="ConversionPattern" value="%d{yy/MM/dd HH:mm:ss} %t %-5p %c{1} %m%n"/>
+-->
+      <param name="ConversionPattern" value="%d{HH:mm:ss} %t %-5p %c{1} %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="CONNECTIONLOGFILE" class="org.apache.log4j.RollingFileAppender">
+	<param name="File"   value=" ${catalina.home}/logs/connectionlog.log" />
+    <param name="Append" value="true" />
+    <param name="MaxFileSize" value="5MB" />
+    <param name="MaxBackupIndex" value="10" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{yy/MM/dd HH:mm:ss} %t %-5p %c{1} %m%n"/>
+    </layout>
+  </appender>
+
+  <!-- connectionLog用Category -->
+  <category name="connectionlog">
+  	<priority value="INFO"/>
+  	<appender-ref ref="CONNECTIONLOGFILE"/>
+  	<appender-ref ref="STDOUT"/>
+  </category>
+
+  <!-- 開発者用Category -->
+  <category name="api">
+  	<priority value="ERROR"/>
+  	<appender-ref ref="APIFILE"/>
+  	<appender-ref ref="STDOUT"/>
+  </category>
+  
+  <!-- フレームワーク用Category -->
+  <category name="framework">
+  	<priority value="WARN"/>
+  	<appender-ref ref="LOGFILE"/>
+  	<appender-ref ref="STDOUT"/>
+  </category>
+
+  <!-- SQL用Category -->
+  <category name="sql">
+  	<priority value="ERROR"/>
+  	<appender-ref ref="SQLFILE"/>
+  	<appender-ref ref="STDOUT"/>
+  </category>
+  
+  <!-- 認証用Category -->
+  <category name="authentication">
+  	<priority value="INFO"/>
+  	<appender-ref ref="AUTHFILE"/>
+  	<appender-ref ref="STDOUT"/>
+  </category>
+  
+  <!-- メッセージログ用Category -->
+  <category name="application">
+  	<priority value="ERROR"/>
+  	<appender-ref ref="APPFILE"/>
+  	<appender-ref ref="STDOUT"/>
+  </category>
+  <!-- 開発者用OPELOG -->
+  <category name="operation">
+  	<priority value="INFO"/>
+  	<appender-ref ref="OPELOG"/>
+<!--  	<appender-ref ref="STDOUT"/> -->
+  </category>
+
+  <root>
+    <priority value="DEBUG" />
+  </root>
+
+</log4j:configuration>

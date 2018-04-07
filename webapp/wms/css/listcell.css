@@ -1,0 +1,663 @@
+﻿/*****************************************************************************/
+/*                                                                           */
+/* リストセル用のCSSの定義                                                   */
+/*                                                                           */
+/* AUTHOR:       K.Fukumori                                                  */
+/* VERSION:      $Revision: 1.2 $ $Date: 2007/03/07 08:45:41 $               */
+/*                                                                           */
+/*****************************************************************************/
+
+/********** 本文 **********/
+
+/* 結合レベルありのListBoxでは
+   このスタイルをListCellに定義する
+   add 2004/08/02 N.Sawa                */
+.listcell-table-combination {
+	height				: 0%;
+}
+
+/* ListBoxにスクロールバーを表示する場合、このスタイルを定義した
+   <div class="listcell-scroll"></div>をJSPに追記する
+   例 <div class="listcell-scroll"><h:listcell id="lst_XXX" templatekey="XXX"/></div>
+   add 2004/09/07 N.Sawa                */
+.listcell-scroll {
+	overflow-x			: scroll;
+	width				: 970px;
+	height				: 100px;
+}
+
+
+/************** ListCell **************/
+/* リストセルのヘッダ 左に区切り線 */
+.listcell-header
+{
+	background-color	: #413a8a;
+	color				: white;
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	position			: relative;
+	padding-top			: 5px;
+	padding-bottom		: 1px;
+	border-left     	: 1px solid #ffffff;
+}
+.listcell-header a:link
+{
+	color: #ffffff;
+}
+.listcell-header a:visited
+{
+	color: #ffffff;
+}
+
+
+/* リストセルのヘッダ 区切り線無し */
+.listcell-header-nodelim
+{
+	background-color	: #413a8a;
+	color				: white;
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	position			: relative;
+	padding-top			: 5px;
+	padding-bottom		: 1px;
+}
+.listcell-header-nodelim a:link
+{
+	color: #ffffff;
+}
+.listcell-header-nodelim a:visited
+{
+	color: #ffffff;
+}
+
+/* リストセルのヘッダ 左端 */
+.listcell-header-left
+{
+	background-color	: #413a8a;
+	color				: white;
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	position			: relative;
+	padding-top			: 5px;
+	padding-bottom		: 1px;
+}
+.listcell-header-left a:link
+{
+	color: #ffffff;
+}
+.listcell-header-left a:visited
+{
+	color: #ffffff;
+}
+
+
+/* リストセルのヘッダ 右端 */
+.listcell-header-right
+{
+	background-color	: #413a8a;
+	color				: white;
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	position			: relative;
+	padding-top			: 5px;
+	padding-bottom		: 1px;
+}
+.listcell-header-right a:link
+{
+	color: #ffffff;
+}
+.listcell-header-right a:visited
+{
+	color: #ffffff;
+}
+
+
+/* リストセルの行ヘッダ */
+.listcell-rowheader
+{
+	background-color	: #413a8a;
+	color				: white;
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	position			: relative;
+	padding-top			: 5px;
+	padding-bottom		: 1px;
+	border-left     	: 1px solid #ffffff;
+	border-bottom     	: 1px solid #ffffff;
+}
+.listcell-rowheader a:link
+{
+	color: #ffffff;
+}
+.listcell-rowheader a:visited
+{
+	color: #ffffff;
+}
+
+
+/* リストセルの行ヘッダ 左端 */
+.listcell-rowheader-left
+{
+	background-color	: #413a8a;
+	color				: white;
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	position			: relative;
+	padding-top			: 5px;
+	padding-bottom		: 1px;
+	border-bottom     	: 1px solid #ffffff;
+}
+.listcell-rowheader-left a:link
+{
+	color: #ffffff;
+}
+.listcell-rowheader-left a:visited
+{
+	color: #ffffff;
+}
+
+
+/* リストセルの行ヘッダ 右端 */
+.listcell-rowheader-right
+{
+	background-color	: #413a8a;
+	color				: white;
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	position			: relative;
+	padding-top			: 5px;
+	padding-bottom		: 1px;
+	border-bottom     	: 1px solid #ffffff;
+}
+.listcell-rowheader-right a:link
+{
+	color: #ffffff;
+}
+.listcell-rowheader-right a:visited
+{
+	color: #ffffff;
+}
+
+
+/* リストセルの行ヘッダ */
+.listcell-rowheader-bottom
+{
+	background-color	: #413a8a;
+	color				: white;
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	position			: relative;
+	padding-top			: 5px;
+	padding-bottom		: 1px;
+	border-left     	: 1px solid #ffffff;
+	border-bottom     	: 1px solid #413a8a;
+}
+.listcell-rowheader-bottom a:link
+{
+	color: #ffffff;
+}
+.listcell-rowheader-bottom a:visited
+{
+	color: #ffffff;
+}
+
+
+/* リストセルの行ヘッダ 左端 */
+.listcell-rowheader-left-bottom
+{
+	background-color	: #413a8a;
+	color				: white;
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	position			: relative;
+	padding-top			: 5px;
+	padding-bottom		: 1px;
+	border-bottom     	: 1px solid #413a8a;
+}
+.listcell-rowheader-left-bottom a:link
+{
+	color: #ffffff;
+}
+.listcell-rowheader-left-bottom a:visited
+{
+	color: #ffffff;
+}
+
+
+/* リストセルの行ヘッダ 右端 */
+.listcell-rowheader-right-bottom
+{
+	background-color	: #413a8a;
+	color				: white;
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	position			: relative;
+	padding-top			: 5px;
+	padding-bottom		: 1px;
+	border-bottom     	: 1px solid #413a8a;
+}
+.listcell-rowheader-right-bottom a:link
+{
+	color: #ffffff;
+}
+.listcell-rowheader-right-bottom a:visited
+{
+	color: #ffffff;
+}
+
+
+/* リスト一覧のボタン列*/
+.listcell-detail-button {
+	text-align			: center;
+/*	color				: black; */
+}
+
+
+/* リストセルの明細行 中央表示 左に区切り線 */
+.listcell-detail-center
+{
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	padding-top			: 4px;
+	padding-right		: 4px;
+	padding-left		: 4px;
+	position			: relative;
+	border-left     	: 1px solid #413a8a;
+}
+
+
+/* リストセルの明細行 中央表示 左/右/最下行に区切り線 */
+.listcell-detail-center-delim
+{
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	padding-top			: 3px;
+	padding-right		: 3px;
+	padding-left		: 4px;
+	position			: relative;
+	border-left     	: 1px solid #413a8a;
+	border-right     	: 1px solid #413a8a;
+	border-bottom     	: 1px solid #413a8a;
+}
+
+
+/* リストセルの明細行 中央表示 区切り線無し */
+.listcell-detail-center-nodelim
+{
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	padding-top			: 4px;
+	padding-right		: 4px;
+	padding-left		: 4px;
+	position			: relative;
+}
+
+
+/* リストセルの明細行 中央表示 右端 */
+.listcell-detail-center-right
+{
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	padding-right		: 4px;
+	padding-left		: 4px;
+	position			: relative;
+	border-left     	: 1px solid #413a8a;
+	border-bottom     	: 1px solid #413a8a;
+}
+
+
+/* リストセルの明細行 中央表示 左端 */
+.listcell-detail-center-left
+{
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	padding-right		: 4px;
+	padding-left		: 4px;
+	position			: relative;
+	border-bottom     	: 1px solid #413a8a;
+}
+
+
+/* リストセルの明細行 右揃表示 */
+.listcell-detail-right
+{
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: right;
+	padding-top			: 4px;
+	padding-right		: 4px;
+	padding-left		: 4px;
+	position			: relative;
+	border-left     	: 1px solid #413a8a;
+}
+
+
+/* リストセルの明細行 右揃表示 区切り線無し*/
+.listcell-detail-right-nodelim
+{
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: right;
+	padding-top			: 4px;
+	padding-right		: 4px;
+	padding-left		: 4px;
+	position			: relative;
+}
+
+
+/* リストセルの明細行 左揃表示 */
+.listcell-detail-left
+{
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: left;
+	padding-top			: 4px;
+	padding-right		: 4px;
+	padding-left		: 4px;
+	position			: relative;
+	border-left     	: 1px solid #413a8a;
+}
+
+
+/* リストセルの明細行 左揃表示 改行あり*/
+.listcell-detail-left-wordbreak
+{
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: left;
+	padding-top			: 4px;
+	padding-right		: 4px;
+	padding-left		: 4px;
+	position			: relative;
+	border-left     	: 1px solid #413a8a;
+	word-break 			: break-all;
+}
+
+
+/* リストセルの明細行 左揃表示 */
+.listcell-detail-left-nodelim
+{
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: left;
+	padding-top			: 4px;
+	padding-right		: 4px;
+	padding-left		: 4px;
+	position			: relative;
+}
+
+
+/*********ScrollListCell **************/
+
+/* スクロールリストセルのヘッダ行 ボタン列専用 */
+.scroll-listcell-header-button
+{
+	color				: white;
+	background-color	: #413a8a;
+	text-align			: center;
+	padding-top			: 0px;
+	padding-bottom		: 0px;
+	padding-right		: 0px;
+	padding-left		: 0px;
+}
+.scroll-listcell-header-button a:link
+{
+	color: #ffffff;
+}
+.scroll-listcell-header-button a:visited
+{
+	color: #ffffff;
+}
+
+
+/* スクロールリストセルのヘッダ行 左に区切り線 */
+.scroll-listcell-header
+{
+	background-color	: #413a8a;
+	color				: white;
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	position			: relative;
+	padding-top			: 4px;
+	padding-bottom		: 1px;
+	padding-right		: 4px;
+	padding-left		: 4px;
+	border-left			: 1px solid #ffffff;
+}
+.scroll-listcell-header a:link
+{
+	color: #ffffff;
+}
+.scroll-listcell-header a:visited
+{
+	color: #ffffff;
+}
+
+
+/* スクロールリストセルのヘッダ行 区切り線無し */
+.scroll-listcell-header-nodelim
+{
+	background-color	: #413a8a;
+	color				: white;
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	position			: relative;
+	padding-top			: 4px;
+	padding-bottom		: 1px;
+	padding-right		: 4px;
+	padding-left		: 5px;
+}
+.scroll-listcell-header-nodelim a:link
+{
+	color: #ffffff;
+}
+.scroll-listcell-header-nodelim a:visited
+{
+	color: #ffffff;
+}
+
+
+/* スクロールリストセルの明細行 ボタン列専用 */
+.scroll-listcell-detail-button
+{
+	text-align			: center;
+	padding-top			: 0px;
+	padding-bottom		: 0px;
+	padding-right		: 0px;
+	padding-left		: 0px;
+}
+
+
+/* スクロールリストセルの明細行 中央表示 左に区切り線 */
+.scroll-listcell-detail-center
+{
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	padding-top			: 4px;
+	padding-right		: 4px;
+	padding-left		: 4px;
+	position			: relative;
+	border-left			: 1px solid #413a8a;
+}
+
+
+/* スクロールリストセルヘッダ行 区切り線無し */
+.scroll-listcell-detail-center-nodelim
+{
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: center;
+	padding-top			: 4px;
+	padding-right		: 4px;
+	padding-left		: 5px;
+	position			: relative;
+}
+
+
+/* スクロールリストセルの明細行右端表示 左に区切り線 */
+.scroll-listcell-detail-right
+{
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: right;
+	padding-top			: 4px;
+	padding-right		: 4px;
+	padding-left		: 4px;
+	position			: relative;
+	border-left			: 1px solid #413a8a;
+}
+
+
+/* スクロールリストセルの明細行 右端表示 区切り線無し */
+.scroll-listcell-detail-right-nodelim
+{
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: right;
+	padding-top			: 4px;
+	padding-right		: 4px;
+	padding-left		: 5px;
+	position			: relative;
+}
+
+
+/* スクロールリストセルの明細行 左端表示 左に区切り線 */
+.scroll-listcell-detail-left
+{
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: left;
+	padding-top			: 4px;
+	padding-right		: 4px;
+	padding-left		: 4px;
+	position			: relative;
+	border-left			: 1px solid #413a8a;
+}
+
+
+/* スクロールリストセルの明細行 左端表示 区切り線無し */
+.scroll-listcell-detail-left-nodelim
+{
+	font-size			: 100%;
+	font-family			: monospace;
+	text-decoration		: none;
+	text-align			: left;
+	padding-top			: 4px;
+	padding-right		: 4px;
+	padding-left		: 5px;
+	position			: relative;
+}
+
+
+/* added for bluedog version upgradation from 4.0.1 */
+.listcell-searchcondition-header
+{
+    background-color    : #b8b7d7;
+    color               : #413a8a;
+    font-size           : 100%;
+    font-family         : monospace;
+    font-weight         : bold;
+    text-decoration     : none;
+    text-align          : left;
+    position            : relative;
+    padding-top         : 5px;
+    padding-left        : 4px;
+    padding-bottom      : 1px;
+}
+.listcell-searchcondition-header a:link
+{
+    color: #ffffff;
+}
+.listcell-searchcondition-header a:visited
+{
+    color: #ffffff;
+}
+/* search condition listcell left detail */
+.listcell-searchcondition-leftdetail-nodelim
+{
+    background-color    : #b8b7d7;
+    color               : black;
+    font-size           : 100%;
+    font-family         : monospace;
+    text-decoration     : none;
+    text-align          : left;
+    padding-top         : 4px;
+    padding-right       : 4px;
+    padding-left        : 4px;
+    border-top          : 1px solid #413a8a;
+}
+/* search condition listcell left detail */
+.listcell-searchcondition-leftdetail
+{
+    background-color    : #b8b7d7;
+    color               : black;
+    font-size           : 100%;
+    font-family         : monospace;
+    text-decoration     : none;
+    text-align          : left;
+    padding-top         : 4px;
+    padding-right       : 4px;
+    padding-left        : 4px;
+    border-left         : 1px solid #413a8a;
+    border-top          : 1px solid #413a8a;
+}
+/* search condition listcell right detail */
+.listcell-searchcondition-rightdetail
+{
+    background-color    : #ffffff;
+    color               : black;
+    font-size           : 100%;
+    font-family         : monospace;
+    text-decoration     : none;
+    text-align          : left;
+    padding-top         : 4px;
+    padding-right       : 4px;
+    padding-left        : 4px;
+    border-left         : 1px solid #413a8a;
+    border-top          : 1px solid #413a8a;
+}

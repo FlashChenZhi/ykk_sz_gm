@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+  <template key="LoginUserMaintenance" keyword="LoginUserMaintenance" description="セッション切断">
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-9000" />
+        <property name="selected" value="true" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="T_BackUp" keyword="" description="作成">
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-T0003" />
+        <property name="selected" value="true" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="T_Configure" keyword="" description="設定">
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-T0001" />
+        <property name="selected" value="true" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="T_FinalCheck" keyword="" description="確認">
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-T0002" />
+        <property name="selected" value="true" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="T_FunctionMap" keyword="" description="一覧-設定">
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-T0005" />
+        <property name="selected" value="true" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-T0001" />
+        <property name="selected" value="false" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="T_Restore" keyword="" description="復元">
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-T0004" />
+        <property name="selected" value="true" />
+      </list-item>
+    </list-items>
+  </template>
+</templates>

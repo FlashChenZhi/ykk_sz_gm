@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE controls[
+<!ELEMENT controls (control?)>
+<!ELEMENT control (single-data+,datas)>
+<!ELEMENT datas (plural-data+)>
+<!ELEMENT plural-data (Item*)>
+<!ATTLIST control
+  id CDATA #REQUIRED
+  reflection (true|false) "false">
+<!ATTLIST single-data
+  name CDATA #REQUIRED
+  value CDATA #REQUIRED>
+<!ATTLIST item
+  value CDATA #REQUIRED>
+]>
+<controls>
+  <control id="lst_OutHistorySummarySection" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_SettingName" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="btn_Help" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="message" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="tab" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="btn_ToMenu" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_Section" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="txt_Section" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+</controls>

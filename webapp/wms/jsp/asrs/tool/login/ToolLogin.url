@@ -1,0 +1,5 @@
+[DEFAULT]
+BASEURL=http://localhost:8090/wms/asrs/tool/Login.do
+[InternetShortcut]
+URL=http://localhost:8090/wms/jsp/asrs/tool/login/openlogin.html
+Modified=10E72AA91061C60102

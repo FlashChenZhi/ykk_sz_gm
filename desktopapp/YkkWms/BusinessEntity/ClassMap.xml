@@ -1,0 +1,848 @@
+﻿<?xml version="1.0" encoding="utf-8"?><map>
+  <!--<class name="AUTHENTICATIONSYSTEMEntity" table="AUTHENTICATIONSYSTEM" database="ykk">
+    <attribute name="AUTHENTICATION" column="AUTHENTICATION" type="Decimal"  key="primary"/>
+    <attribute name="LOGINMAX" column="LOGINMAX" type="Decimal" />
+    <attribute name="SAMELOGINUSER" column="SAMELOGINUSER" type="Decimal" />
+    <attribute name="RESTRICTIONSPLACE" column="RESTRICTIONSPLACE" type="Decimal"  key="primary"/>
+    <attribute name="MAINMENUTYPE" column="MAINMENUTYPE" type="Decimal" key="primary" />
+    <attribute name="LOGOUTPUTABLE" column="LOGOUTPUTABLE" type="Decimal"  key="primary"/>
+    <attribute name="MAILSENDABLE" column="MAILSENDABLE" type="Decimal" key="primary" />
+    <attribute name="MAILADDRESS" column="MAILADDRESS" type="String" />
+    <attribute name="FAILEDLOGINATTEMPTS" column="FAILEDLOGINATTEMPTS" type="Decimal" key="primary" />
+    <attribute name="FAILEDTIME" column="FAILEDTIME" type="Decimal" />
+    <attribute name="EFFECTIPRANGE_MIN" column="EFFECTIPRANGE_MIN" type="String" />
+    <attribute name="EFFECTIPRANGE_MAX" column="EFFECTIPRANGE_MAX" type="String" />
+    <attribute name="UPDATEDATE" column="UPDATEDATE" type="Date" />
+  </class>-->
+  <class name="FHDIFFERENCESTOCKEntity" table="FHDIFFERENCESTOCK" database="ykk">
+    <attribute name="DIFFERENCE_FLAG" column="DIFFERENCE_FLAG" type="String"  key="primary"/>
+    <attribute name="TICKET_NO" column="TICKET_NO" type="String" key="primary" />
+    <attribute name="ITEM_CODE" column="ITEM_CODE" type="String"  key="primary"/>
+    <attribute name="COLOR_CODE" column="COLOR_CODE" type="String" key="primary" />
+    <attribute name="DIFFERENCE_TYPE" column="DIFFERENCE_TYPE" type="String" key="primary" />
+    <attribute name="DIFFERENCE_QTY" column="DIFFERENCE_QTY" type="Decimal" />
+    <attribute name="DIFFERENCE_WEIGHT" column="DIFFERENCE_WEIGHT" type="Decimal" />
+    <attribute name="PROC_FLAG" column="PROC_FLAG" type="String" />
+    <attribute name="REGISTER_DATE" column="REGISTER_DATE" type="String" />
+    <attribute name="REGISTER_TIME" column="REGISTER_TIME" type="String" />
+  </class>
+  <class name="FHRETRIEVALRESULTEntity" table="FHRETRIEVALRESULT" database="ykk">
+    <attribute name="RETRIEVAL_NO" column="RETRIEVAL_NO" type="String" key="primary" />
+    <attribute name="SERIAL_NO" column="SERIAL_NO" type="Decimal"  key="primary"/>
+    <attribute name="TICKET_NO" column="TICKET_NO" type="String" key="primary" />
+    <attribute name="ITEM_CODE" column="ITEM_CODE" type="String"  key="primary"/>
+    <attribute name="COLOR_CODE" column="COLOR_CODE" type="String" key="primary" />
+    <attribute name="DEPOT_CODE" column="DEPOT_CODE" type="String" />
+    <attribute name="SECTION" column="SECTION" type="String" />
+    <attribute name="LINE" column="LINE" type="String" />
+    <attribute name="RESULT_QTY" column="RESULT_QTY" type="Decimal" />
+    <attribute name="RESULT_WEIGHT" column="RESULT_WEIGHT" type="Decimal" />
+    <attribute name="RETRIEVAL_PLANKEY" column="RETRIEVAL_PLANKEY" type="String" />
+    <attribute name="PROC_FLAG" column="PROC_FLAG" type="String" />
+    <attribute name="REGISTER_DATE" column="REGISTER_DATE" type="String" />
+    <attribute name="REGISTER_TIME" column="REGISTER_TIME" type="String" />
+  </class>
+  <class name="FHSTORAGEINFOEntity" table="FHSTORAGEINFO" database="ykk">
+    <attribute name="TICKET_NO" column="TICKET_NO" type="String"  key="primary"/>
+    <attribute name="SERIAL_NO" column="SERIAL_NO" type="Decimal" key="primary" />
+    <attribute name="RECORD_AMOUNT" column="RECORD_AMOUNT" type="Decimal" key="primary" />
+    <attribute name="CARRY_FLAG" column="CARRY_FLAG" type="String" key="primary" />
+    <attribute name="ZAIKEY" column="ZAIKEY" type="String"  key="primary"/>
+    <attribute name="COLOR_CODE" column="COLOR_CODE" type="String" />
+    <attribute name="CARRY_QTY" column="CARRY_QTY" type="Decimal" />
+    <attribute name="CARRY_WEIGHT" column="CARRY_WEIGHT" type="Decimal" />
+    <attribute name="DEPOT_CODE" column="DEPOT_CODE" type="String" />
+    <attribute name="DEST_SECTION" column="DEST_SECTION" type="String" />
+    <attribute name="DEST_LINE" column="DEST_LINE" type="String" />
+    <attribute name="PLAN_DATE" column="PLAN_DATE" type="String" />
+    <attribute name="USED_TIMING_FLAG" column="USED_TIMING_FLAG" type="String" />
+    <attribute name="RETRIEVAL_STATION" column="RETRIEVAL_STATION" type="String" />
+    <attribute name="PENDING_FLAG" column="PENDING_FLAG" type="String" />
+    <attribute name="PROC_FLAG" column="PROC_FLAG" type="String" />
+    <attribute name="REGISTER_DATETIME" column="REGISTER_DATETIME" type="String" />
+  </class>
+  <class name="FHWEIGHTREPORTEntity" table="FHWEIGHTREPORT" database="ykk">
+    <attribute name="TICKET_NO" column="TICKET_NO" type="String" key="primary" />
+    <attribute name="WEIGHT_FLAG" column="WEIGHT_FLAG" type="String" key="primary" />
+    <attribute name="STOCK_UNIT_WEIGHT" column="STOCK_UNIT_WEIGHT" type="Decimal"  key="primary"/>
+    <attribute name="MEASURE_QTY" column="MEASURE_QTY" type="Decimal" />
+    <attribute name="MEASURE_WEIGHT" column="MEASURE_WEIGHT" type="Decimal" />
+    <attribute name="MOVE_FLAG" column="MOVE_FLAG" type="String" />
+    <attribute name="PENDING_FLAG" column="PENDING_FLAG" type="String" />
+    <attribute name="PROC_FLAG" column="PROC_FLAG" type="String" />
+    <attribute name="REGISTER_DATE" column="REGISTER_DATE" type="String" />
+    <attribute name="REGISTER_TIME" column="REGISTER_TIME" type="String" />
+  </class>
+  <class name="FMBUCKETEntity" table="FMBUCKET" database="ykk">
+    <attribute name="BUCKET_NO" column="BUCKET_NO" type="String" key="primary" />
+    <attribute name="PACKING_WEIGHT" column="PACKING_WEIGHT" type="Decimal" />
+    <attribute name="HEIGHT_FLAG" column="HEIGHT_FLAG" type="String" />
+    <attribute name="LASTUPDATE_DATETIME" column="LASTUPDATE_DATETIME" type="String" />
+  </class>
+  <class name="FMPATTERNEntity" table="FMPATTERN" database="ykk">
+    <attribute name="PATTERN_NO" column="PATTERN_NO" type="String"  key="primary"/>
+    <attribute name="START_ST" column="START_ST" type="String" key="primary" />
+    <attribute name="END_ST" column="END_ST" type="String"  key="primary"/>
+    <attribute name="PREV_ST" column="PREV_ST" type="String" />
+    <attribute name="NEXT_ST" column="NEXT_ST" type="String" />
+    <attribute name="TRANS_FLAG" column="TRANS_FLAG" type="String" />
+    <attribute name="LABEL_FLAG" column="LABEL_FLAG" type="String" />
+  </class>
+  <class name="FMZKEYEntity" table="FMZKEY" database="ykk">
+    <attribute name="ZAIKEY" column="ZAIKEY" type="String" key="primary" />
+    <attribute name="ZKNAME1" column="ZKNAME1" type="String" />
+    <attribute name="ZKKBN" column="ZKKBN" type="String" />
+    <attribute name="SEKISAISU" column="SEKISAISU" type="Decimal" />
+    <attribute name="YSHIKIRI" column="YSHIKIRI" type="Decimal" />
+    <attribute name="YSHUBETSU" column="YSHUBETSU" type="String" />
+    <attribute name="SOTOSU" column="SOTOSU" type="Decimal" />
+    <attribute name="UCHISU" column="UCHISU" type="Decimal" />
+    <attribute name="MENTEHIJI" column="MENTEHIJI" type="String" />
+    <attribute name="JOGENSUJ" column="JOGENSUJ" type="Decimal" />
+    <attribute name="KAGENSUJ" column="KAGENSUJ" type="Decimal" />
+    <attribute name="SOFTZONE" column="SOFTZONE" type="String" />
+    <attribute name="ZKNAME2" column="ZKNAME2" type="String" />
+    <attribute name="ZKNAME3" column="ZKNAME3" type="String" />
+    <attribute name="MASTER_UNIT_WEIGHT" column="MASTER_UNIT_WEIGHT" type="Decimal" />
+    <attribute name="ITEM_RANK" column="ITEM_RANK" type="Decimal" />
+    <attribute name="LIMIT_QTY" column="LIMIT_QTY" type="Decimal" />
+    <attribute name="MEASURE_FLAG" column="MEASURE_FLAG" type="String" />
+    <attribute name="REMOVE_CONVENT_FLAG" column="REMOVE_CONVENT_FLAG" type="String" />
+    <attribute name="MEASURE_QTY" column="MEASURE_QTY" type="Decimal" />
+    <attribute name="MANAGE_ITEM_FLAG" column="MANAGE_ITEM_FLAG" type="String" key="primary" />
+    <attribute name="BAG_FLAG" column="BAG_FLAG" type="String" />
+  </class>
+  <class name="FNAILCTLEntity" table="FNAILCTL" database="ykk">
+    <attribute name="AILENO" column="AILENO" type="Decimal"  key="primary"/>
+    <attribute name="AILEORDER" column="AILEORDER" type="Decimal"  key="primary"/>
+    <attribute name="SOKOKBN" column="SOKOKBN" type="String" />
+    <attribute name="STNO" column="STNO" type="String" />
+    <attribute name="AILE_STR_1F" column="AILE_STR_1F" type="Decimal" key="primary" />
+    <attribute name="AILE_STR_2F" column="AILE_STR_2F" type="Decimal"  key="primary"/>
+    <attribute name="AILE_STR_3F" column="AILE_STR_3F" type="Decimal" />
+    <attribute name="SEARCH_BKORDER_1F" column="SEARCH_BKORDER_1F" type="Decimal"  key="primary"/>
+    <attribute name="SEARCH_BKORDER_2F" column="SEARCH_BKORDER_2F" type="Decimal" />
+    <attribute name="SEARCH_BKORDER_3F" column="SEARCH_BKORDER_3F" type="Decimal" />
+    <attribute name="AILE_CAPA_SIZE_1F" column="AILE_CAPA_SIZE_1F" type="Decimal" />
+    <attribute name="AILE_CAPA_SIZE_2F" column="AILE_CAPA_SIZE_2F" type="Decimal" />
+    <attribute name="AILE_CAPA_SIZE_3F" column="AILE_CAPA_SIZE_3F" type="Decimal" />
+    <attribute name="BANKORDER" column="BANKORDER" type="Decimal" />
+    <attribute name="BANKNO" column="BANKNO" type="Decimal" />
+  </class>
+  <class name="FNAKITANAEntity" table="FNAKITANA" database="ykk">
+    <attribute name="SOKOKBN" column="SOKOKBN" type="String" key="primary" />
+    <attribute name="HARDZONE" column="HARDZONE" type="String"  key="primary"/>
+    <attribute name="SOFTZONE" column="SOFTZONE" type="String"  key="primary"/>
+    <attribute name="BANKNO" column="BANKNO" type="Decimal" key="primary" />
+    <attribute name="BAYNO" column="BAYNO" type="Decimal" />
+    <attribute name="LEVELNO" column="LEVELNO" type="Decimal" />
+    <attribute name="TANAFLG" column="TANAFLG" type="String" />
+    <attribute name="ACCESSFLG" column="ACCESSFLG" type="String" />
+    <attribute name="SYOZAIKEY" column="SYOZAIKEY" type="String" />
+  </class>
+  <class name="FNAREAEntity" table="FNAREA" database="ykk">
+    <attribute name="ARCNO" column="ARCNO" type="String"  key="primary"/>
+    <attribute name="SYSTEMFLG" column="SYSTEMFLG" type="String"  key="primary"/>
+    <attribute name="BACHIFLG" column="BACHIFLG" type="String"  key="primary"/>
+    <attribute name="RECOVERFLG" column="RECOVERFLG" type="String" key="primary" />
+    <attribute name="CONTROLLER" column="CONTROLLER" type="String" />
+  </class>
+  <class name="FNBANKCTLEntity" table="FNBANKCTL" database="ykk">
+    <attribute name="SOKOKBN" column="SOKOKBN" type="String" key="primary" />
+    <attribute name="STNO" column="STNO" type="String"  key="primary"/>
+    <attribute name="AILENO" column="AILENO" type="Decimal"  key="primary"/>
+    <attribute name="BANKNO" column="BANKNO" type="Decimal"  key="primary"/>
+    <attribute name="BANKORDER" column="BANKORDER" type="Decimal"  key="primary"/>
+    <attribute name="PAREBANKNO" column="PAREBANKNO" type="Decimal" />
+    <attribute name="DEEPKBN" column="DEEPKBN" type="String" />
+  </class>
+  <class name="FNCART_CTLEntity" table="FNCART_CTL" database="ykk">
+    <attribute name="STNO" column="STNO" type="String"  key="primary"/>
+    <attribute name="SEQ_NO" column="SEQ_NO" type="String" key="primary" />
+    <attribute name="GROUPNO" column="GROUPNO" type="String"  key="primary"/>
+    <attribute name="BUCKET_NO" column="BUCKET_NO" type="String" key="primary" />
+    <attribute name="ITEM_CODE" column="ITEM_CODE" type="String" key="primary" />
+    <attribute name="ITEM_NAME" column="ITEM_NAME" type="String" />
+    <attribute name="ITEM_NAME2" column="ITEM_NAME2" type="String" />
+    <attribute name="ITEM_NAME3" column="ITEM_NAME3" type="String" />
+    <attribute name="SECTION" column="SECTION" type="String" />
+    <attribute name="LINE" column="LINE" type="String" />
+    <attribute name="QTY" column="QTY" type="Decimal" />
+    <attribute name="WEIGHT" column="WEIGHT" type="Decimal" />
+    <attribute name="REGISTER_FLG" column="REGISTER_FLG" type="String" />
+    <attribute name="REGISTER_DATE_TIME" column="REGISTER_DATE_TIME" type="String" />
+  </class>
+  <class name="FNCART_SNDEntity" table="FNCART_SND" database="ykk">
+    <attribute name="STNO" column="STNO" type="String"  key="primary"/>
+    <attribute name="REGISTER_DATE_TIME" column="REGISTER_DATE_TIME" type="String"  key="primary"/>
+    <attribute name="SEQ_NO" column="SEQ_NO" type="String" key="primary" />
+    <attribute name="REPLACE_FLAG" column="REPLACE_FLAG" type="String"  key="primary"/>
+    <attribute name="TRANS_FLAG" column="TRANS_FLAG" type="String" />
+  </class>
+  <class name="FNFORBIDRETRIEVALEntity" table="FNFORBIDRETRIEVAL" database="ykk">
+    <attribute name="ZAIKEY" column="ZAIKEY" type="String" key="primary" />
+    <attribute name="FROM_TICKETNO" column="FROM_TICKETNO" type="String"  key="primary"/>
+    <attribute name="TO_TICKETNO" column="TO_TICKETNO" type="String" key="primary" />
+    <attribute name="COLOR_CODE" column="COLOR_CODE" type="String" key="primary" />
+    <attribute name="REGISTER_DATE_TIME" column="REGISTER_DATE_TIME" type="String"  key="primary"/>
+  </class>
+  <class name="FNGSETEntity" table="FNGSET" database="ykk">
+    <attribute name="KENSAKBN" column="KENSAKBN" type="String" />
+    <attribute name="TSUMISU" column="TSUMISU" type="Decimal" />
+    <attribute name="SYORIFLG" column="SYORIFLG" type="String" />
+    <attribute name="SCHSEQNO" column="SCHSEQNO" type="Decimal" />
+    <attribute name="BACHINO" column="BACHINO" type="String" />
+    <attribute name="NYUSYUSAKI" column="NYUSYUSAKI" type="String" />
+    <attribute name="NYOSYOTEIBI" column="NYOSYOTEIBI" type="String" />
+    <attribute name="NYUSYUDENNO" column="NYUSYUDENNO" type="String" />
+    <attribute name="NSGYONO" column="NSGYONO" type="Decimal" key="primary" />
+    <attribute name="SYUHOMEN" column="SYUHOMEN" type="String" key="primary" />
+    <attribute name="SEISANNO" column="SEISANNO" type="String"  key="primary"/>
+    <attribute name="LINENO" column="LINENO" type="String" />
+    <attribute name="YOKINO" column="YOKINO" type="String" />
+    <attribute name="NYUKOHI" column="NYUKOHI" type="String" />
+    <attribute name="NYUKOJI" column="NYUKOJI" type="String" />
+    <attribute name="SCHNO" column="SCHNO" type="String" />
+    <attribute name="SAKUSEIHIJI" column="SAKUSEIHIJI" type="String" />
+    <attribute name="SOKOKBN" column="SOKOKBN" type="String" />
+    <attribute name="TERMNO" column="TERMNO" type="Decimal" />
+    <attribute name="SAGYOBA" column="SAGYOBA" type="String" />
+    <attribute name="SAGYOKBN" column="SAGYOKBN" type="String" />
+    <attribute name="NYUSYUKBN" column="NYUSYUKBN" type="String" />
+    <attribute name="FRCHUKEY" column="FRCHUKEY" type="String" />
+    <attribute name="TOCHUKEY" column="TOCHUKEY" type="String" />
+    <attribute name="SYUKEY" column="SYUKEY" type="String" />
+    <attribute name="ZAIKEY" column="ZAIKEY" type="String" />
+    <attribute name="LOTNO" column="LOTNO" type="String" />
+    <attribute name="NYUSYUSU" column="NYUSYUSU" type="Decimal" key="primary" />
+    <attribute name="LOCATNO" column="LOCATNO" type="String"  key="primary"/>
+    <attribute name="HARDZONE" column="HARDZONE" type="String"  key="primary"/>
+    <attribute name="SOFTZONE" column="SOFTZONE" type="String" />
+    <attribute name="MOTOSTNO" column="MOTOSTNO" type="String" />
+    <attribute name="SAKISTNO" column="SAKISTNO" type="String" />
+    <attribute name="SAGYONO" column="SAGYONO" type="String" />
+    <attribute name="YUSENKBN" column="YUSENKBN" type="String" />
+    <attribute name="SAINYUKBN" column="SAINYUKBN" type="String" />
+    <attribute name="TSUMIKBN" column="TSUMIKBN" type="String" />
+    <attribute name="SYSTEMID" column="SYSTEMID" type="String" />
+    <attribute name="RETRIEVAL_PLANKEY" column="RETRIEVAL_PLANKEY" type="String" />
+    <attribute name="ZAIKOSU" column="ZAIKOSU" type="Decimal" />
+    <attribute name="SKANOSU" column="SKANOSU" type="Decimal" />
+    <attribute name="UNIT_WEIGHT" column="UNIT_WEIGHT" type="Decimal" />
+    <attribute name="MEMO" column="MEMO" type="String" />
+    <attribute name="MEASURE_WEIGHT" column="MEASURE_WEIGHT" type="Decimal" />
+    <attribute name="ENDSTNO" column="ENDSTNO" type="String" />
+    <attribute name="BARCODE" column="BARCODE" type="String" />
+    <attribute name="MCKEY" column="MCKEY" type="String" />
+    <attribute name="USERID" column="USERID" type="String" />
+    <attribute name="USERNAME" column="USERNAME" type="String" />
+    <attribute name="BUCKET_NO" column="BUCKET_NO" type="String" />
+    <attribute name="PACKING_WEIGHT" column="PACKING_WEIGHT" type="Decimal" />
+    <attribute name="TICKET_NO" column="TICKET_NO" type="String" />
+    <attribute name="COLOR_CODE" column="COLOR_CODE" type="String" />
+    <attribute name="RETRIEVAL_STATION" column="RETRIEVAL_STATION" type="String" />
+    <attribute name="FROM_TICKET_NO" column="FROM_TICKET_NO" type="String" />
+    <attribute name="TO_TICKET_NO" column="TO_TICKET_NO" type="String" />
+    <attribute name="PRINTER_NO" column="PRINTER_NO" type="Decimal" />
+    <attribute name="BAG_FLAG" column="BAG_FLAG" type="String" />
+  </class>
+  <class name="FNHANSOEntity" table="FNHANSO" database="ykk">
+    <attribute name="SEIGYOJOHO" column="SEIGYOJOHO" type="String" />
+    <attribute name="HANSOBI" column="HANSOBI" type="String" />
+    <attribute name="SAGYONO" column="SAGYONO" type="String" />
+    <attribute name="BUCKET_NO" column="BUCKET_NO" type="String" />
+    <attribute name="ENDSTNO" column="ENDSTNO" type="String" />
+    <attribute name="HJYOTAIFLG" column="HJYOTAIFLG" type="String" />
+    <attribute name="SAGYOBA" column="SAGYOBA" type="String" />
+    <attribute name="YUSENKBN" column="YUSENKBN" type="String" />
+    <attribute name="SCHNO" column="SCHNO" type="String" />
+    <attribute name="SYSTEMID" column="SYSTEMID" type="String" />
+    <attribute name="SETKBN" column="SETKBN" type="String" />
+    <attribute name="SAINYUFLG" column="SAINYUFLG" type="String" />
+    <attribute name="BCRDT" column="BCRDT" type="String" />
+    <attribute name="ERRCODE" column="ERRCODE" type="String" />
+    <attribute name="SYUMOTOLOC" column="SYUMOTOLOC" type="String" />
+    <attribute name="HANSOKEY" column="HANSOKEY" type="String" key="primary" />
+    <attribute name="MCKEY" column="MCKEY" type="String" />
+    <attribute name="SOFTZONE" column="SOFTZONE" type="String" />
+    <attribute name="SAGYOKBN" column="SAGYOKBN" type="String" />
+    <attribute name="MOTOSTNO" column="MOTOSTNO" type="String" />
+    <attribute name="SAKISTNO" column="SAKISTNO" type="String" />
+    <attribute name="NYUSYUKBN" column="NYUSYUKBN" type="String" />
+    <attribute name="SIJISYOSAI" column="SIJISYOSAI" type="String" />
+    <attribute name="GROUPNO" column="GROUPNO" type="String" />
+    <attribute name="SAKITANANO" column="SAKITANANO" type="String" />
+    <attribute name="STARTSTNO" column="STARTSTNO" type="String" />
+    <attribute name="CROSS_FLG" column="CROSS_FLG" type="String" />
+  </class>
+  <class name="FNHARDZONEEntity" table="FNHARDZONE" database="ykk">
+    <attribute name="SOKOKBN" column="SOKOKBN" type="String" key="primary" />
+    <attribute name="HARDZONE" column="HARDZONE" type="String" key="primary" />
+    <attribute name="HARDZONESEQ" column="HARDZONESEQ" type="String" key="primary"/>
+  </class>
+  <class name="FNHIKIJHEntity" table="FNHIKIJH" database="ykk">
+    <attribute name="BCRDT" column="BCRDT" type="String" />
+    <attribute name="SCHSEQNO" column="SCHSEQNO" type="Decimal"  key="primary"/>
+    <attribute name="TERMNO" column="TERMNO" type="Decimal"  key="primary"/>
+    <attribute name="BACHINO" column="BACHINO" type="String"  key="primary"/>
+    <attribute name="NYUSYUSAKI" column="NYUSYUSAKI" type="String"  key="primary"/>
+    <attribute name="NYOSYOTEIBI" column="NYOSYOTEIBI" type="String"  key="primary"/>
+    <attribute name="NYUSYUDENNO" column="NYUSYUDENNO" type="String"  key="primary"/>
+    <attribute name="NSGYONO" column="NSGYONO" type="Decimal"  key="primary"/>
+    <attribute name="SYUHOMEN" column="SYUHOMEN" type="String" key="primary" />
+    <attribute name="SEISANNO" column="SEISANNO" type="String" key="primary" />
+    <attribute name="LINENO" column="LINENO" type="String"  key="primary"/>
+    <attribute name="SCHNO" column="SCHNO" type="String" />
+    <attribute name="ENDSTNO" column="ENDSTNO" type="String" />
+    <attribute name="SAGYOBA" column="SAGYOBA" type="String" />
+    <attribute name="SERIALNO" column="SERIALNO" type="Decimal" />
+    <attribute name="SIJISYOSAI" column="SIJISYOSAI" type="String" />
+    <attribute name="SYORIFLG" column="SYORIFLG" type="String" />
+    <attribute name="SYSTEMID" column="SYSTEMID" type="String" />
+    <attribute name="SETKBN" column="SETKBN" type="String" />
+    <attribute name="SAINYUFLG" column="SAINYUFLG" type="String" />
+    <attribute name="SOKOKBN" column="SOKOKBN" type="String" />
+    <attribute name="HANSOKEY" column="HANSOKEY" type="String" />
+    <attribute name="MCKEY" column="MCKEY" type="String" />
+    <attribute name="CHUKEY" column="CHUKEY" type="String" />
+    <attribute name="SYUKEY" column="SYUKEY" type="String" />
+    <attribute name="YOKINO" column="YOKINO" type="String" />
+    <attribute name="ZAIKEY" column="ZAIKEY" type="String" />
+    <attribute name="LOTNO" column="LOTNO" type="String" />
+    <attribute name="YUSENKBN" column="YUSENKBN" type="String" />
+    <attribute name="SYUKASU" column="SYUKASU" type="Decimal" />
+    <attribute name="JISEKISU" column="JISEKISU" type="Decimal" />
+    <attribute name="NYUSYUSU" column="NYUSYUSU" type="Decimal" />
+    <attribute name="SAGYONO" column="SAGYONO" type="String" />
+    <attribute name="MOTOSTNO" column="MOTOSTNO" type="String" />
+    <attribute name="SAKISTNO" column="SAKISTNO" type="String" />
+    <attribute name="GROUPNO" column="GROUPNO" type="String" />
+  </class>
+  <class name="FNHOST_ERREntity" table="FNHOST_ERR" database="ykk">
+    <attribute name="REGISTER_DATE" column="REGISTER_DATE" type="String"  key="primary"/>
+    <attribute name="REGISTER_TIME" column="REGISTER_TIME" type="String" key="primary" />
+    <attribute name="HOST_TABLE" column="HOST_TABLE" type="String"  key="primary"/>
+    <attribute name="TEXT_ID" column="TEXT_ID" type="String" key="primary" />
+    <attribute name="RECV_DATA" column="RECV_DATA" type="String"  key="primary"/>
+    <attribute name="ERR_DATA" column="ERR_DATA" type="String"  key="primary"/>
+    <attribute name="SEND_FLAG" column="SEND_FLAG" type="String"  key="primary"/>
+  </class>
+  <class name="FNHSTLOGEntity" table="FNHSTLOG" database="ykk">
+    <attribute name="TRANSFER_DATETIME" column="TRANSFER_DATETIME" type="String" key="primary" />
+    <attribute name="TRANSFER_FLAG" column="TRANSFER_FLAG" type="String" key="primary" />
+    <attribute name="TEXT_ID" column="TEXT_ID" type="String"  key="primary"/>
+    <attribute name="DATA" column="DATA" type="String" key="primary" />
+    <attribute name="ERR_KBN" column="ERR_KBN" type="String"  key="primary"/>
+    <attribute name="HOST_TABLE" column="HOST_TABLE" type="String" />
+  </class>
+  <class name="FNJISEKIEntity" table="FNJISEKI" database="ykk">
+    <attribute name="MCKEY" column="MCKEY" type="String"  key="primary"/>
+    <attribute name="ZAIKEY" column="ZAIKEY" type="String"  key="primary"/>
+    <attribute name="ZKNAME" column="ZKNAME" type="String"  key="primary"/>
+    <attribute name="ZKNAME2" column="ZKNAME2" type="String" />
+    <attribute name="ZKNAME3" column="ZKNAME3" type="String" />
+    <attribute name="SAKUSEIHIJI" column="SAKUSEIHIJI" type="String" />
+    <attribute name="NYUSYUKBN" column="NYUSYUKBN" type="String"  key="primary"/>
+    <attribute name="SAGYOKBN" column="SAGYOKBN" type="String"  key="primary"/>
+    <attribute name="SAKUKBN" column="SAKUKBN" type="String" key="primary" />
+    <attribute name="NYUSYUSTNO" column="NYUSYUSTNO" type="String"  key="primary"/>
+    <attribute name="TICKET_NO" column="TICKET_NO" type="String"  key="primary"/>
+    <attribute name="BUCKET_NO" column="BUCKET_NO" type="String" />
+    <attribute name="COLOR_CODE" column="COLOR_CODE" type="String" />
+    <attribute name="NYUSYUSU" column="NYUSYUSU" type="Decimal" />
+    <attribute name="RETRIEVAL_NO" column="RETRIEVAL_NO" type="String" />
+    <attribute name="REAL_WORK_NUMBER" column="REAL_WORK_NUMBER" type="Decimal" />
+    <attribute name="SERIAL_NO" column="SERIAL_NO" type="Decimal" />
+    <attribute name="ORDER_NO" column="ORDER_NO" type="String" />
+    <attribute name="ORDER_SERIAL_NO" column="ORDER_SERIAL_NO" type="Decimal" />
+    <attribute name="START_DATE" column="START_DATE" type="String" />
+    <attribute name="START_TIMING_FLAG" column="START_TIMING_FLAG" type="String" />
+    <attribute name="COMPLETE_DATE" column="COMPLETE_DATE" type="String" />
+    <attribute name="COMPLETE_TIMING_FLAG" column="COMPLETE_TIMING_FLAG" type="String" />
+    <attribute name="DEPOT_CODE" column="DEPOT_CODE" type="String" />
+    <attribute name="SECTION" column="SECTION" type="String" />
+    <attribute name="LINE" column="LINE" type="String" />
+    <attribute name="LINE_TYPE" column="LINE_TYPE" type="String" />
+    <attribute name="CUSTOMER_CODE" column="CUSTOMER_CODE" type="String" />
+    <attribute name="CUSTOMER_NAME1" column="CUSTOMER_NAME1" type="String" />
+    <attribute name="CUSTOMER_NAME2" column="CUSTOMER_NAME2" type="String" />
+    <attribute name="PR_NO" column="PR_NO" type="String" />
+    <attribute name="RETRIEVAL_PLANKEY" column="RETRIEVAL_PLANKEY" type="String" />
+    <attribute name="RETRIEVAL_QTY" column="RETRIEVAL_QTY" type="Decimal" />
+    <attribute name="USERID" column="USERID" type="String" />
+    <attribute name="USERNAME" column="USERNAME" type="String" />
+    <attribute name="STARTSTNO" column="STARTSTNO" type="String" />
+    <attribute name="ENDSTNO" column="ENDSTNO" type="String" />
+    <attribute name="SYSTEMID" column="SYSTEMID" type="String" />
+    <attribute name="SYOZAIKEY" column="SYOZAIKEY" type="String" />
+    <attribute name="BACKUP_FLG" column="BACKUP_FLG" type="String" />
+  </class>
+  <class name="FNKANRIEntity" table="FNKANRI" database="ykk">
+    <attribute name="SCHNO" column="SCHNO" type="String" />
+    <attribute name="YUSENKBN" column="YUSENKBN" type="String"  key="primary"/>
+    <attribute name="SYUKEY" column="SYUKEY" type="String" key="primary" />
+    <attribute name="SAGYONOFROM" column="SAGYONOFROM" type="String"  key="primary"/>
+    <attribute name="SAGYONOTO" column="SAGYONOTO" type="String" />
+    <attribute name="SYUSTNO" column="SYUSTNO" type="String" />
+    <attribute name="KAIFLG" column="KAIFLG" type="String" />
+    <attribute name="AILENO" column="AILENO" type="Decimal" />
+  </class>
+  <class name="FNLABELEntity" table="FNLABEL" database="ykk">
+    <attribute name="CREATE_DATETIME" column="CREATE_DATETIME" type="String" />
+    <attribute name="UPDATE_DATETIME" column="UPDATE_DATETIME" type="String" />
+    <attribute name="PRINTER_NO" column="PRINTER_NO" type="Decimal" />
+    <attribute name="LABEL_TYPE" column="LABEL_TYPE" type="String" />
+    <attribute name="TICKET_NO" column="TICKET_NO" type="String" />
+    <attribute name="BUCKET_NO" column="BUCKET_NO" type="String" />
+    <attribute name="ZAIKEY" column="ZAIKEY" type="String" />
+    <attribute name="COLOR_CODE" column="COLOR_CODE" type="String" key="primary" />
+    <attribute name="SECTION" column="SECTION" type="String" />
+    <attribute name="LINE" column="LINE" type="String" />
+    <attribute name="MADE_SECTION" column="MADE_SECTION" type="String"  key="primary"/>
+    <attribute name="MADE_LINE" column="MADE_LINE" type="String" />
+    <attribute name="START_DATE" column="START_DATE" type="String" />
+    <attribute name="START_TIMING_FLAG" column="START_TIMING_FLAG" type="String"  key="primary"/>
+    <attribute name="RETRIEVAL_QTY" column="RETRIEVAL_QTY" type="Decimal" />
+    <attribute name="RETRIEVAL_WEIGHT" column="RETRIEVAL_WEIGHT" type="Decimal" />
+    <attribute name="MASTER_UNIT_WEIGHT" column="MASTER_UNIT_WEIGHT" type="Decimal"  key="primary"/>
+    <attribute name="DEPOT_CODE" column="DEPOT_CODE" type="String" key="primary" />
+    <attribute name="ORDER_NO" column="ORDER_NO" type="String" />
+    <attribute name="CUSTOMER_CODE" column="CUSTOMER_CODE" type="String" />
+    <attribute name="CUSTOMER_NAME1" column="CUSTOMER_NAME1" type="String" />
+    <attribute name="CUSTOMER_NAME2" column="CUSTOMER_NAME2" type="String" />
+    <attribute name="PR_NO" column="PR_NO" type="String" />
+    <attribute name="OPTION_FLAG" column="OPTION_FLAG" type="String" />
+    <attribute name="PRINTING_FLAG" column="PRINTING_FLAG" type="String" />
+    <attribute name="LABEL_KEY" column="LABEL_KEY" type="String" />
+    <attribute name="RETRIEVAL_STATION" column="RETRIEVAL_STATION" type="String" />
+    <attribute name="RETRIEVAL_NO" column="RETRIEVAL_NO" type="String" />
+    <attribute name="SERIAL_NO" column="SERIAL_NO" type="Decimal" />
+    <attribute name="NECESSARY_QTY" column="NECESSARY_QTY" type="Decimal" />
+    <attribute name="USERID" column="USERID" type="String" />
+    <attribute name="USERNAME" column="USERNAME" type="String" />    
+  </class>
+  <class name="FNLCNTLEntity" table="FNLCNTL" database="ykk">
+    <attribute name="TERMNO" column="TERMNO" type="Decimal" key="primary" />
+    <attribute name="LISTNO" column="LISTNO" type="Decimal" key="primary" />
+    <attribute name="FRPARA" column="FRPARA" type="String"  key="primary"/>
+    <attribute name="TOPARA" column="TOPARA" type="String" />
+    <attribute name="SYORIFLG" column="SYORIFLG" type="String" />
+  </class>
+  <class name="FNLOCATEntity" table="FNLOCAT" database="ykk">
+    <attribute name="SYOZAIKEY" column="SYOZAIKEY" type="String" />
+    <attribute name="HANSOKEY" column="HANSOKEY" type="String" />
+    <attribute name="SOKOKBN" column="SOKOKBN" type="String" />
+    <attribute name="BUCKET_NO" column="BUCKET_NO" type="String" />
+    <attribute name="JYURITSU" column="JYURITSU" type="Decimal" />
+    <attribute name="KONSAISU" column="KONSAISU" type="Decimal" />
+    <attribute name="ZAIJYOFLG" column="ZAIJYOFLG" type="String" />
+    <attribute name="SHIKIFLG" column="SHIKIFLG" type="String" />
+    <attribute name="HIKIFLG" column="HIKIFLG" type="String" />
+    <attribute name="ACCESSFLG" column="ACCESSFLG" type="String" />
+    <attribute name="YSHUBETSU" column="YSHUBETSU" type="String" />
+    <attribute name="SYSTEMID" column="SYSTEMID" type="String" key="primary" />
+    <attribute name="SCHNO" column="SCHNO" type="String" />
+    <attribute name="IKISAKI" column="IKISAKI" type="String" />
+    <attribute name="AILESTNO" column="AILESTNO" type="String" />
+  </class>
+  <class name="FNPICK_CTLEntity" table="FNPICK_CTL" database="ykk">
+    <attribute name="TERMNO" column="TERMNO" type="String"  key="primary"/>
+    <attribute name="STNO" column="STNO" type="String"  key="primary"/>
+    <attribute name="MCKEY" column="MCKEY" type="String" key="primary" />
+    <attribute name="BUCKETREADING_FLG" column="BUCKETREADING_FLG" type="String"  key="primary"/>
+  </class>
+  <class name="FNPRINTEREntity" table="FNPRINTER" database="ykk">
+    <attribute name="PRINTER_NO" column="PRINTER_NO" type="Decimal"  key="primary"/>
+    <attribute name="PRINTER_NAME" column="PRINTER_NAME" type="String"  key="primary"/>
+    <attribute name="PRINTER_TYPE" column="PRINTER_TYPE" type="String"  key="primary"/>
+    <attribute name="PRINTER_IP" column="PRINTER_IP" type="String" />
+    <attribute name="ENABLE_FLAG" column="ENABLE_FLAG" type="String" />
+  </class>
+  <class name="FNRANGEEntity" table="FNRANGE" database="ykk">
+    <attribute name="TERMNO" column="TERMNO" type="String" />
+    <attribute name="MADE_SECTION" column="MADE_SECTION" type="String" />
+    <attribute name="MADE_LINE" column="MADE_LINE" type="String" />
+    <attribute name="UNIT_WEIGHT_UPPER" column="UNIT_WEIGHT_UPPER" type="Decimal" key="primary" />
+    <attribute name="UNIT_WEIGHT_LOWER" column="UNIT_WEIGHT_LOWER" type="Decimal"  key="primary"/>
+    <attribute name="STORAGE_UPPER" column="STORAGE_UPPER" type="Decimal" key="primary" />
+    <attribute name="STORAGE_LOWER" column="STORAGE_LOWER" type="Decimal"  key="primary"/>
+    <attribute name="SHIP_UPPER" column="SHIP_UPPER" type="Decimal" />
+    <attribute name="SHIP_LOWER" column="SHIP_LOWER" type="Decimal" />
+  </class>
+  <class name="FNRETRIEVAL_STEntity" table="FNRETRIEVAL_ST" database="ykk">
+    <attribute name="RETRIEVAL_STATION" column="RETRIEVAL_STATION" type="String" />
+    <attribute name="DEFULT_RETRIEVAL_ST_NAME" column="DEFULT_RETRIEVAL_ST_NAME" type="String" key="primary" />
+    <attribute name="RETRIEVAL_ST_NAME" column="RETRIEVAL_ST_NAME" type="String"  key="primary"/>
+    <attribute name="DEFULT_PICKSTNO" column="DEFULT_PICKSTNO" type="String" />
+    <attribute name="PICK_STNO" column="PICK_STNO" type="String" />
+    <attribute name="DEFAULT_REV_PICKSTNO" column="DEFAULT_REV_PICKSTNO" type="String" key="primary" />
+    <attribute name="REV_PICKSTNO" column="REV_PICKSTNO" type="String" />
+    <attribute name="DEFAULT_UNIT_STNO" column="DEFAULT_UNIT_STNO" type="String" />
+    <attribute name="UNIT_STNO" column="UNIT_STNO" type="String" />
+    <attribute name="DEFAULT_REMOVE_STNO" column="DEFAULT_REMOVE_STNO" type="String"  key="primary"/>
+    <attribute name="REMOVE_STNO" column="REMOVE_STNO" type="String" />
+    <attribute name="DEFAULT_FORCED_REMOVE_STNO" column="DEFAULT_FORCED_REMOVE_STNO" type="String" />
+    <attribute name="FORCED_REMOVE_STNO" column="FORCED_REMOVE_STNO" type="String"  key="primary"/>
+    <attribute name="PRINTER_NO_UNIT" column="PRINTER_NO_UNIT" type="Decimal" />
+    <attribute name="UNIFY_TICKET_PRINTFLG" column="UNIFY_TICKET_PRINTFLG" type="String" />
+    <attribute name="TICKET_PRINTFLG" column="TICKET_PRINTFLG" type="String" />
+    <attribute name="CART_TICKET_PRINTFLG" column="CART_TICKET_PRINTFLG" type="String" />
+    <attribute name="PRINTER_NO_PICKING" column="PRINTER_NO_PICKING" type="Decimal" />
+    <attribute name="GROUP_MAX_NUM" column="GROUP_MAX_NUM" type="Decimal" />
+  </class>
+  <class name="FNRUTEEntity" table="FNRUTE" database="ykk">
+    <attribute name="RUTEID" column="RUTEID" type="String"  key="primary"/>
+    <attribute name="STNOFROM" column="STNOFROM" type="String"  key="primary"/>
+    <attribute name="STNOTO" column="STNOTO" type="String"  key="primary"/>
+  </class>
+  <class name="FNRUTESTEntity" table="FNRUTEST" database="ykk">
+    <attribute name="RUTEID" column="RUTEID" type="String"  key="primary"/>
+    <attribute name="STNO" column="STNO" type="String"  key="primary"/>
+    <attribute name="STATUS" column="STATUS" type="String" key="primary" />
+  </class>
+  <class name="FNSAGDATEntity" table="FNSAGDAT" database="ykk">
+    <attribute name="STNO" column="STNO" type="String" />
+    <attribute name="SAKUSEIHIJI" column="SAKUSEIHIJI" type="String" key="primary" />
+    <attribute name="HANSOKEY" column="HANSOKEY" type="String" key="primary" />
+    <attribute name="HYOJIFLG" column="HYOJIFLG" type="String" key="primary" />
+  </class>
+  <class name="FNSAGLSTEntity" table="FNSAGLST" database="ykk">
+    <attribute name="BACHINO" column="BACHINO" type="String" />
+    <attribute name="NYUSYUSAKI" column="NYUSYUSAKI" type="String"  key="primary"/>
+    <attribute name="NYOSYOTEIBI" column="NYOSYOTEIBI" type="String" key="primary" />
+    <attribute name="NYUSYUDENNO" column="NYUSYUDENNO" type="String" key="primary" />
+    <attribute name="NSGYONO" column="NSGYONO" type="Decimal" />
+    <attribute name="SYUHOMEN" column="SYUHOMEN" type="String" />
+    <attribute name="SEISANNO" column="SEISANNO" type="String" />
+    <attribute name="LINENO" column="LINENO" type="String" />
+    <attribute name="YOKINO" column="YOKINO" type="String" />
+    <attribute name="SAKUSEIHIJI" column="SAKUSEIHIJI" type="String"  key="primary"/>
+    <attribute name="SAGYONO" column="SAGYONO" type="String"  key="primary"/>
+    <attribute name="SAGYOKBN" column="SAGYOKBN" type="String" />
+    <attribute name="NYUSYUKBN" column="NYUSYUKBN" type="String" />
+    <attribute name="CHUKEY" column="CHUKEY" type="String" />
+    <attribute name="SYUKEY" column="SYUKEY" type="String" />
+    <attribute name="ZAIKEY" column="ZAIKEY" type="String" />
+    <attribute name="LOTNO" column="LOTNO" type="String" />
+    <attribute name="LOCATNO" column="LOCATNO" type="String" />
+    <attribute name="NYUSYUSU" column="NYUSYUSU" type="Decimal" />
+    <attribute name="SCHNO" column="SCHNO" type="String" />
+    <attribute name="MOTOSTNO" column="MOTOSTNO" type="String" />
+    <attribute name="SAKISTNO" column="SAKISTNO" type="String" />
+    <attribute name="SIJISYOSAI" column="SIJISYOSAI" type="String" />
+    <attribute name="GROUPNO" column="GROUPNO" type="String" />
+    <attribute name="ENDSTNO" column="ENDSTNO" type="String" />
+    <attribute name="SAGYOBA" column="SAGYOBA" type="String" />
+    <attribute name="YUSENKBN" column="YUSENKBN" type="String" />
+    <attribute name="TERMNO" column="TERMNO" type="Decimal" />
+    <attribute name="SYORIFLG" column="SYORIFLG" type="String" />
+    <attribute name="ZAIKOSU" column="ZAIKOSU" type="Decimal" />
+    <attribute name="SKANOSU" column="SKANOSU" type="Decimal" />
+  </class>
+  <class name="FNSAGYOBAEntity" table="FNSAGYOBA" database="ykk">
+    <attribute name="SOKOKBN" column="SOKOKBN" type="String"  key="primary"/>
+    <attribute name="SAGYOBA" column="SAGYOBA" type="String"  key="primary"/>
+    <attribute name="SAGYOBANAME" column="SAGYOBANAME" type="String" />
+    <attribute name="STORDER" column="STORDER" type="Decimal" />
+  </class>
+  <class name="FNSAIBANEntity" table="FNSAIBAN" database="ykk">
+    <attribute name="SAIBANID" column="SAIBANID" type="Decimal" key="primary" />
+    <attribute name="TOPSAINO" column="TOPSAINO" type="Decimal"  key="primary"/>
+    <attribute name="ENDSAINO" column="ENDSAINO" type="Decimal" />
+    <attribute name="SAIBANNO" column="SAIBANNO" type="Decimal" />
+    <attribute name="SAIBANHIJI" column="SAIBANHIJI" type="String" />
+    <attribute name="SAIBANIDNAME" column="SAIBANIDNAME" type="String" />
+  </class>
+  <class name="FNSCNTLEntity" table="FNSCNTL" database="ykk">
+    <attribute name="SAKUSEIHIJI" column="SAKUSEIHIJI" type="String"  key="primary"/>
+    <attribute name="YUSENKBN" column="YUSENKBN" type="String"  key="primary"/>
+    <attribute name="STNO" column="STNO" type="String" />
+    <attribute name="GROUPNO" column="GROUPNO" type="String" key="primary" />
+    <attribute name="SCHNO" column="SCHNO" type="String" />
+    <attribute name="SEQNO" column="SEQNO" type="Decimal" />
+  </class>
+  <class name="FNSIJIEntity" table="FNSIJI" database="ykk">
+    <attribute name="HANSOKEY" column="HANSOKEY" type="String"  key="primary"/>
+    <attribute name="MCKEY" column="MCKEY" type="String" key="primary" />
+    <attribute name="TICKET_NO" column="TICKET_NO" type="String"  key="primary"/>
+    <attribute name="ZAIKEY" column="ZAIKEY" type="String" />
+    <attribute name="COLOR_CODE" column="COLOR_CODE" type="String" />
+    <attribute name="NYUSYUSU" column="NYUSYUSU" type="Decimal" />
+    <attribute name="RETRIEVAL_PLAN_KEY" column="RETRIEVAL_PLAN_KEY" type="String" />
+    <attribute name="LABEL_KEY" column="LABEL_KEY" type="String" />
+    <attribute name="SECTION" column="SECTION" type="String" />
+    <attribute name="LINE" column="LINE" type="String" />
+    <attribute name="LINE_TYPE" column="LINE_TYPE" type="String" />
+    <attribute name="CUSTOMER_CODE" column="CUSTOMER_CODE" type="String" />
+    <attribute name="RETRIEVAL_STATION" column="RETRIEVAL_STATION" type="String" />
+    <attribute name="DEPOT_CODE" column="DEPOT_CODE" type="String" />
+    <attribute name="MANAGE_ITEM_FLAG" column="MANAGE_ITEM_FLAG" type="String" />
+  </class>
+  <class name="FNSOFTZONEEntity" table="FNSOFTZONE" database="ykk">
+    <attribute name="SOKOKBN" column="SOKOKBN" type="String"  key="primary"/>
+    <attribute name="SOFTZONE" column="SOFTZONE" type="String"  key="primary"/>
+    <attribute name="SOFTZONENAME" column="SOFTZONENAME" type="String" />
+    <attribute name="AKIKENKBN" column="AKIKENKBN" type="String" />
+  </class>
+  <class name="FNSOFTZONEYUSENEntity" table="FNSOFTZONEYUSEN" database="ykk">
+    <attribute name="SOFTZONE" column="SOFTZONE" type="String"  key="primary"/>
+    <attribute name="YUSENSOFTZONE" column="YUSENSOFTZONE" type="String"  key="primary"/>
+    <attribute name="SOFTZONEORDER" column="SOFTZONEORDER" type="Decimal"  key="primary"/>
+    <attribute name="AKIKENKBN" column="AKIKENKBN" type="String" />
+  </class>
+  <class name="FNSOKOEntity" table="FNSOKO" database="ykk">
+    <attribute name="SOKOKBN" column="SOKOKBN" type="String"  key="primary"/>
+    <attribute name="SOKONAME" column="SOKONAME" type="String"  key="primary"/>
+    <attribute name="AILEORDER" column="AILEORDER" type="Decimal"  key="primary"/>
+    <attribute name="KONSAIMAX" column="KONSAIMAX" type="Decimal"  key="primary"/>
+    <attribute name="SAILE" column="SAILE" type="Decimal" />
+    <attribute name="EAILE" column="EAILE" type="Decimal" />
+    <attribute name="SBANK" column="SBANK" type="Decimal" />
+    <attribute name="EBANK" column="EBANK" type="Decimal" />
+    <attribute name="SBAY" column="SBAY" type="Decimal" />
+    <attribute name="EBAY" column="EBAY" type="Decimal" />
+    <attribute name="SLEVEL" column="SLEVEL" type="Decimal" />
+    <attribute name="ELEVEL" column="ELEVEL" type="Decimal" />
+    <attribute name="SAINYUSYUBETU" column="SAINYUSYUBETU" type="String" />
+    <attribute name="SOKOSYUBETU" column="SOKOSYUBETU" type="String" />
+    <attribute name="STZAIKOKBN" column="STZAIKOKBN" type="String" />
+    <attribute name="SYSTEMKBN" column="SYSTEMKBN" type="String" />
+    <attribute name="HIRATYPE" column="HIRATYPE" type="String" />
+    <attribute name="AILEORDER2" column="AILEORDER2" type="Decimal" />
+    <attribute name="AILEORDER3" column="AILEORDER3" type="Decimal" />
+  </class>
+  <class name="FNSTATIONEntity" table="FNSTATION" database="ykk">
+    <attribute name="NIDAKAKBN" column="NIDAKAKBN" type="String"  key="primary"/>
+    <attribute name="STLAYKBN" column="STLAYKBN" type="String"  key="primary"/>
+    <attribute name="IDOSTNO" column="IDOSTNO" type="String"  key="primary"/>
+    <attribute name="HANSOMAX" column="HANSOMAX" type="Decimal" key="primary" />
+    <attribute name="SIJIMAX" column="SIJIMAX" type="Decimal" />
+    <attribute name="LINESETKBN" column="LINESETKBN" type="String" />
+    <attribute name="STNO" column="STNO" type="String" />
+    <attribute name="DAIHYOSTNO" column="DAIHYOSTNO" type="String" />
+    <attribute name="STNAME" column="STNAME" type="String" />
+    <attribute name="LAYKBN" column="LAYKBN" type="String" />
+    <attribute name="SOKOKBN" column="SOKOKBN" type="String" />
+    <attribute name="AILENO" column="AILENO" type="Decimal" />
+    <attribute name="UNYOUKBN" column="UNYOUKBN" type="String" />
+    <attribute name="CHUDANFLG" column="CHUDANFLG" type="String" />
+    <attribute name="ARCNO" column="ARCNO" type="String" />
+    <attribute name="NYUSYUMODE" column="NYUSYUMODE" type="String" />
+    <attribute name="MODEREQFLG" column="MODEREQFLG" type="String" />
+    <attribute name="MODECHGKBN" column="MODECHGKBN" type="String" />
+    <attribute name="HARAIDKBN" column="HARAIDKBN" type="String" />
+    <attribute name="ZKAKFLG" column="ZKAKFLG" type="String" />
+    <attribute name="TOUCYAKUKBN" column="TOUCYAKUKBN" type="String" />
+    <attribute name="TERMKBN" column="TERMKBN" type="String" />
+    <attribute name="SETKBN" column="SETKBN" type="String" />
+    <attribute name="STATION_TYPE" column="STATION_TYPE" type="String" />
+    <attribute name="INTO_FLAG" column="INTO_FLAG" type="String" />
+  </class>
+  <class name="FNSTCTLEntity" table="FNSTCTL" database="ykk">
+    <attribute name="SAGYOBA" column="SAGYOBA" type="String"  key="primary"/>
+    <attribute name="STNO" column="STNO" type="String"  key="primary"/>
+    <attribute name="STORDER" column="STORDER" type="Decimal"  key="primary"/>
+    <attribute name="SAGRETNUM" column="SAGRETNUM" type="Decimal" />
+  </class>
+  <class name="FNSYOTEIEntity" table="FNSYOTEI" database="ykk">
+    <attribute name="CREATE_DATETIME" column="CREATE_DATETIME" type="String"  key="primary"/>
+    <attribute name="RETRIEVAL_NO" column="RETRIEVAL_NO" type="String"  key="primary"/>
+    <attribute name="SERIAL_NO" column="SERIAL_NO" type="Decimal"  key="primary"/>
+    <attribute name="RETRIEVAL_AMOUNT" column="RETRIEVAL_AMOUNT" type="Decimal"  key="primary"/>
+    <attribute name="ORDER_NO" column="ORDER_NO" type="String"  key="primary"/>
+    <attribute name="ORDER_SERIAL_NO" column="ORDER_SERIAL_NO" type="Decimal"  key="primary"/>
+    <attribute name="ORDER_NO_AMOUNT" column="ORDER_NO_AMOUNT" type="Decimal"  key="primary"/>
+    <attribute name="START_DATE" column="START_DATE" type="String" />
+    <attribute name="START_TIMING_FLAG" column="START_TIMING_FLAG" type="String" />
+    <attribute name="COMPLETE_DATE" column="COMPLETE_DATE" type="String" />
+    <attribute name="COMPLETE_TIMING_FLAG" column="COMPLETE_TIMING_FLAG" type="String" />
+    <attribute name="DEPOT_CODE" column="DEPOT_CODE" type="String" />
+    <attribute name="SECTION" column="SECTION" type="String" />
+    <attribute name="LINE" column="LINE" type="String" />
+    <attribute name="LINE_TYPE" column="LINE_TYPE" type="String" />
+    <attribute name="CUSTOMER_CODE" column="CUSTOMER_CODE" type="String" />
+    <attribute name="CUSTOMER_NAME1" column="CUSTOMER_NAME1" type="String" />
+    <attribute name="CUSTOMER_NAME2" column="CUSTOMER_NAME2" type="String" />
+    <attribute name="PR_NO" column="PR_NO" type="String" />
+    <attribute name="ZAIKEY" column="ZAIKEY" type="String" />
+    <attribute name="COLOR_CODE" column="COLOR_CODE" type="String" />
+    <attribute name="NECESSARY_QTY" column="NECESSARY_QTY" type="Decimal" />
+    <attribute name="NECESSARY_WEIGHT" column="NECESSARY_WEIGHT" type="Decimal" />
+    <attribute name="ALLOCATION_QTY" column="ALLOCATION_QTY" type="Decimal" />
+    <attribute name="ALLOCATION_WEIGHT" column="ALLOCATION_WEIGHT" type="Decimal" />
+    <attribute name="RETRIEVAL_QTY" column="RETRIEVAL_QTY" type="Decimal" />
+    <attribute name="RETRIEVAL_WEIGHT" column="RETRIEVAL_WEIGHT" type="Decimal" />
+    <attribute name="RETRIEVAL_STATION" column="RETRIEVAL_STATION" type="String" />
+    <attribute name="CMT" column="CMT" type="String" />
+    <attribute name="RETRIEVAL_PLANKEY" column="RETRIEVAL_PLANKEY" type="String" key="primary" />
+    <attribute name="RETRIEVAL_ALLOC_QTY" column="RETRIEVAL_ALLOC_QTY" type="Decimal" />
+    <attribute name="PROC_FLAG" column="PROC_FLAG" type="String" />
+  </class>
+  <class name="FNSYSTEMEntity" table="FNSYSTEM" database="ykk">
+    <attribute name="SYSNO" column="SYSNO" type="String" />
+    <attribute name="SYSNAME" column="SYSNAME" type="String"  key="primary"/>
+    <attribute name="SYSHIJI" column="SYSHIJI" type="String" key="primary" />
+    <attribute name="BATCH_FLAG" column="BATCH_FLAG" type="String" key="primary" />
+    <attribute name="AUTO_SPLIT_FLAG" column="AUTO_SPLIT_FLAG" type="String" />
+    <attribute name="KEPT_FREESHELF_NUM" column="KEPT_FREESHELF_NUM" type="Decimal" />
+    <attribute name="PICKING_PER" column="PICKING_PER" type="Decimal" />
+    <attribute name="REV_PICKING_LOWLIMIT" column="REV_PICKING_LOWLIMIT" type="Decimal" />
+    <attribute name="DEST_WAITTING_TIME" column="DEST_WAITTING_TIME" type="Decimal" />
+    <attribute name="BAG_WEIGHT" column="BAG_WEIGHT" type="Decimal" />
+  </class>
+  <class name="FNTERMFUNCEntity" table="FNTERMFUNC" database="ykk">
+    <attribute name="TERMNO" column="TERMNO" type="Decimal"  key="primary"/>
+    <attribute name="PROGRAMID" column="PROGRAMID" type="String" key="primary" />
+  </class>
+  <class name="FNTERMONAREAEntity" table="FNTERMONAREA" database="ykk">
+    <attribute name="TERMNO" column="TERMNO" type="Decimal"  key="primary"/>
+    <attribute name="SAGYOBA" column="SAGYOBA" type="String"  key="primary"/>
+    <attribute name="DFLTKBN" column="DFLTKBN" type="String"  key="primary"/>
+  </class>
+  <class name="FNTOUCYAKUEntity" table="FNTOUCYAKU" database="ykk">
+    <attribute name="MCKEY" column="MCKEY" type="String"  key="primary"/>
+    <attribute name="STNO" column="STNO" type="String"  key="primary"/>
+    <attribute name="HARDZONE" column="HARDZONE" type="String"  key="primary"/>
+    <attribute name="TOUCYKUHIJI" column="TOUCYKUHIJI" type="String"  key="primary"/>
+    <attribute name="SOUSINKBN" column="SOUSINKBN" type="String"  key="primary"/>
+    <attribute name="HANSOKEY" column="HANSOKEY" type="String"  key="primary"/>
+    <attribute name="BUCKET_NO" column="BUCKET_NO" type="String" />
+    <attribute name="HEIGHT_FLAG" column="HEIGHT_FLAG" type="String" />
+    <attribute name="SYORIFLG" column="SYORIFLG" type="String" />
+    <attribute name="CTLINFO" column="CTLINFO" type="String" />
+  </class>
+  <class name="FNUNITEntity" table="FNUNIT" database="ykk">
+    <attribute name="STNO" column="STNO" type="String"  key="primary"/>
+    <attribute name="UNITCODE" column="UNITCODE" type="String"  key="primary"/>
+    <attribute name="UNITNO" column="UNITNO" type="String"  key="primary"/>
+    <attribute name="UNITSTAT" column="UNITSTAT" type="String" />
+    <attribute name="CONTROLNAME" column="CONTROLNAME" type="String"  key="primary"/>
+    <attribute name="AILESTNO" column="AILESTNO" type="String" />
+  </class>
+  <class name="FNZAIKOEntity" table="FNZAIKO" database="ykk">
+    <attribute name="TICKET_NO" column="TICKET_NO" type="String" />
+    <attribute name="ZAIKEY" column="ZAIKEY" type="String" />
+    <attribute name="COLOR_CODE" column="COLOR_CODE" type="String" />
+    <attribute name="DEPOT_CODE" column="DEPOT_CODE" type="String" />
+    <attribute name="LOTNO" column="LOTNO" type="String" />
+    <attribute name="ZAIKOSU" column="ZAIKOSU" type="Decimal" />
+    <attribute name="NYOTEISU" column="NYOTEISU" type="Decimal" />
+    <attribute name="SKANOSU" column="SKANOSU" type="Decimal" />
+    <attribute name="SAINYUSU" column="SAINYUSU" type="Decimal" />
+    <attribute name="NYUKOHIJI" column="NYUKOHIJI" type="String" />
+    <attribute name="KAKUNINHIJI" column="KAKUNINHIJI" type="String" />
+    <attribute name="KOSHINHIJI" column="KOSHINHIJI" type="String" />
+    <attribute name="SAINYUKBN" column="SAINYUKBN" type="String" />
+    <attribute name="TSUMIKBN" column="TSUMIKBN" type="String" />
+    <attribute name="KENSAKBN" column="KENSAKBN" type="String" />
+    <attribute name="SYSTEMID" column="SYSTEMID" type="String"  key="primary" />
+    <attribute name="PLAN_QTY" column="PLAN_QTY" type="Decimal" />
+    <attribute name="PLAN_WEIGHT" column="PLAN_WEIGHT" type="Decimal" />
+    <attribute name="MOVE_FLAG" column="MOVE_FLAG" type="String" />
+    <attribute name="MADE_SECTION" column="MADE_SECTION" type="String" />
+    <attribute name="MADE_LINE" column="MADE_LINE" type="String" />
+    <attribute name="REAL_UNIT_WEIGHT" column="REAL_UNIT_WEIGHT" type="Decimal" />
+    <attribute name="WEIGHT_REPORT_COMPLETE_FLAG" column="WEIGHT_REPORT_COMPLETE_FLAG" type="String" />
+    <attribute name="STORAGE_PLACE_FLAG" column="STORAGE_PLACE_FLAG" type="String" />
+    <attribute name="BUCKET_NO" column="BUCKET_NO" type="String" />
+    <attribute name="MEMO" column="MEMO" type="String" />
+    <attribute name="MANAGE_ITEM_FLAG" column="MANAGE_ITEM_FLAG" type="String" />
+    <attribute name="RECEPTION_DATETIME" column="RECEPTION_DATETIME" type="String" />
+    <attribute name="USERID" column="USERID" type="String" />
+    <attribute name="USERNAME" column="USERNAME" type="String" />
+    <attribute name="REMEASURE_FLAG" column="REMEASURE_FLAG" type="String" />
+    <attribute name="BAG_FLAG" column="BAG_FLAG" type="String" />
+  </class>
+  <class name="FUNCTIONEntity" table="FUNCTION" database="ykk">
+    <attribute name="MAINFUNCTIONID" column="MAINFUNCTIONID" type="String" key="primary" />
+    <attribute name="FUNCTIONDISPNUMBER" column="FUNCTIONDISPNUMBER" type="Decimal" />
+    <attribute name="FUNCTIONRESOURCEKEY" column="FUNCTIONRESOURCEKEY" type="String" />
+    <attribute name="MENUID" column="MENUID" type="String" />
+    <attribute name="UPDATEDATE" column="UPDATEDATE" type="Date" />
+  </class>
+  <class name="FUNCTIONMAPEntity" table="FUNCTIONMAP" database="ykk">
+    <attribute name="FUNCTIONID" column="FUNCTIONID" type="String" key="primary" />
+    <attribute name="MAINFUNCTIONID" column="MAINFUNCTIONID" type="String" />
+    <attribute name="BUTTONDISPNUMBER" column="BUTTONDISPNUMBER" type="Decimal" />
+    <attribute name="BUTTONRESOURCEKEY" column="BUTTONRESOURCEKEY" type="String" />
+    <attribute name="PAGENAMERESOURCEKEY" column="PAGENAMERESOURCEKEY" type="String" />
+    <attribute name="DOAUTHENTICATION" column="DOAUTHENTICATION" type="Decimal" />
+    <attribute name="URI" column="URI" type="String" />
+    <attribute name="FRAMENAME" column="FRAMENAME" type="String" />
+    <attribute name="UPDATEDATE" column="UPDATEDATE" type="Date" />
+  </class>
+  <class name="LOGINUSEREntity" table="LOGINUSER" database="ykk">
+    <attribute name="USERID" column="USERID" type="String" key="primary" />
+    <attribute name="PASSWORD" column="PASSWORD" type="String" />
+    <attribute name="PWDEXPIRES" column="PWDEXPIRES" type="Date" />
+    <attribute name="PWDCHANGEINTERVAL" column="PWDCHANGEINTERVAL" type="Decimal" />
+    <attribute name="ROLEID" column="ROLEID" type="String" />
+    <attribute name="LASTACCESSDATE" column="LASTACCESSDATE" type="Date" />
+    <attribute name="SAMEUSERLOGINMAX" column="SAMEUSERLOGINMAX" type="Decimal" />
+    <attribute name="FAILEDLOGINATTEMPTS" column="FAILEDLOGINATTEMPTS" type="Decimal" />
+    <attribute name="FAILEDCOUNT" column="FAILEDCOUNT" type="Decimal" />
+    <attribute name="FAILEDSTARTDATE" column="FAILEDSTARTDATE" type="Date" />
+    <attribute name="UPDATEDATE" column="UPDATEDATE" type="Date" />
+  </class>
+  <class name="MAINMENUEntity" table="MAINMENU" database="ykk">
+    <attribute name="MENUID" column="MENUID" type="String" key="primary" />
+    <attribute name="MENUDISPNUMBER" column="MENUDISPNUMBER" type="Decimal" />
+    <attribute name="MENURESOURCEKEY" column="MENURESOURCEKEY" type="String" />
+    <attribute name="SHOWTYPE" column="SHOWTYPE" type="Decimal" />
+    <attribute name="UPDATEDATE" column="UPDATEDATE" type="Date" />
+  </class>
+  <class name="ROLEEntity" table="ROLE" database="ykk">
+    <attribute name="ROLEID" column="ROLEID" type="String" key="primary" />
+    <attribute name="ROLENAME" column="ROLENAME" type="String" />
+    <attribute name="FAILEDLOGINATTEMPTS" column="FAILEDLOGINATTEMPTS" type="Decimal" />
+    <attribute name="UPDATEDATE" column="UPDATEDATE" type="Date" />
+  </class>
+  <class name="ROLEMAPEntity" table="ROLEMAP" database="ykk">
+    <attribute name="ROLEID" column="ROLEID" type="String" key="primary" />
+    <attribute name="FUNCTIONID" column="FUNCTIONID" type="String" key="primary" />
+    <attribute name="UPDATEDATE" column="UPDATEDATE" type="Date" />
+  </class>
+  <class name="TERMINALEntity" table="TERMINAL" database="ykk">
+    <attribute name="TERMINALNUMBER" column="TERMINALNUMBER" type="String" key="primary" />
+    <attribute name="TERMINALNAME" column="TERMINALNAME" type="String" />
+    <attribute name="IPADDRESS" column="IPADDRESS" type="String" />
+    <attribute name="ROLEID" column="ROLEID" type="String" />
+    <attribute name="PRINTER_NO" column="PRINTER_NO" type="Decimal" />
+    <attribute name="UPDATEDATE" column="UPDATEDATE" type="Date" />
+    <attribute name="PROC" column="PROC" type="String" />
+    <attribute name="STNO" column="STNO" type="String" />
+    <attribute name="FIXED_WEIGHT" column="FIXED_WEIGHT" type="Decimal" />
+  </class>
+  <class name="USERATTRIBUTEEntity" table="USERATTRIBUTE" database="ykk">
+    <attribute name="USERID" column="USERID" type="String" key="primary" />
+    <attribute name="USERNAME" column="USERNAME" type="String" />
+    <attribute name="BELONGING" column="BELONGING" type="String" />
+    <attribute name="BIRTHDATE" column="BIRTHDATE" type="Date" />
+    <attribute name="SEX" column="SEX" type="Decimal" />
+    <attribute name="NOTE" column="NOTE" type="String" />
+    <attribute name="UPDATEDATE" column="UPDATEDATE" type="Date" />
+  </class>
+  <class name="USERTERMINALEntity" table="USERTERMINAL" database="ykk">
+    <attribute name="USERID" column="USERID" type="String"  key="primary"/>
+    <attribute name="TERMINALNUMBER" column="TERMINALNUMBER" type="String"  key="primary"/>
+  </class>
+  <!--<class name="WARENAVI_SYSTEMEntity" table="WARENAVI_SYSTEM" database="ykk">
+    <attribute name="SYSTEM_NO" column="SYSTEM_NO" type="Decimal" key="primary" />
+    <attribute name="WORK_DATE" column="WORK_DATE" type="String" />
+    <attribute name="DC_OPERATION" column="DC_OPERATION" type="String" />
+    <attribute name="TC_OPERATION" column="TC_OPERATION" type="String" />
+    <attribute name="CROSSDOCK_OPERATION" column="CROSSDOCK_OPERATION" type="String" />
+    <attribute name="RESULT_HOLD_PERIOD" column="RESULT_HOLD_PERIOD" type="Decimal" />
+    <attribute name="PLAN_HOLD_PERIOD" column="PLAN_HOLD_PERIOD" type="Decimal" />
+    <attribute name="INSTOCK_PACK" column="INSTOCK_PACK" type="String" />
+    <attribute name="STORAGE_PACK" column="STORAGE_PACK" type="String" />
+    <attribute name="RETRIEVAL_PACK" column="RETRIEVAL_PACK" type="String" />
+    <attribute name="SORTING_PACK" column="SORTING_PACK" type="String" />
+    <attribute name="SHIPPING_PACK" column="SHIPPING_PACK" type="String" />
+    <attribute name="STOCK_PACK" column="STOCK_PACK" type="String" />
+    <attribute name="CROSSDOCK_PACK" column="CROSSDOCK_PACK" type="String" />
+    <attribute name="IDM_PACK" column="IDM_PACK" type="String" />
+    <attribute name="DAILY_UPDATE" column="DAILY_UPDATE" type="String" />
+    <attribute name="LOAD_DATA" column="LOAD_DATA" type="String" />
+    <attribute name="REPORT_DATA" column="REPORT_DATA" type="String" />
+  </class>--></map>

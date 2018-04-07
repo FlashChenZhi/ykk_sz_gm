@@ -1,0 +1,923 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+  <template key="T_UserList" keyword="" description="ユーザ一覧">
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="ListCellClass" />
+    <property name="maxRows" value="1" />
+    <property name="errRequired" value="" />
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="48" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9002" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-detail-button" />
+        <property name="controlName" value="SubmitButton" />
+        <property name="templateKey" value="No" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="210" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0031" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0027" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="510" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0028" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="T_TerminalList" keyword="" description="端末一覧">
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="ListCellClass" />
+    <property name="maxRows" value="1" />
+    <property name="errRequired" value="" />
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="48" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9002" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-detail-button" />
+        <property name="controlName" value="SubmitButton" />
+        <property name="templateKey" value="No" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="140" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0040" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="210" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0041" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="210" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0042" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0027" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="190" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0043" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="T_RoleMap" keyword="" description="ロールマップ登録">
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="ListCellClass" />
+    <property name="maxRows" value="1" />
+    <property name="errRequired" value="" />
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="210" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0024" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-detail-left-nodelim-rowline" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="1" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="260" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0025" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left-rowline" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="2" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="48" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0007" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-center-rowline" />
+        <property name="controlName" value="CheckBox" />
+        <property name="templateKey" value="T_RoleMap" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="210" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0019" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left-rowline" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="T_RoleList" keyword="" description="ロール一覧">
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="ListCellClass" />
+    <property name="maxRows" value="1" />
+    <property name="errRequired" value="" />
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="48" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9002" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-detail-button" />
+        <property name="controlName" value="SubmitButton" />
+        <property name="templateKey" value="No" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0027" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="550" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0028" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="210" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0029" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="T_ResourceList" keyword="" description="リソース一覧">
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="listcell-table-combination" />
+    <property name="maxRows" value="1" />
+    <property name="errRequired" value="" />
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="48" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9002" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-detail-button" />
+        <property name="controlName" value="SubmitButton" />
+        <property name="templateKey" value="No" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="150" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0058" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="410" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0059" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="T_MainMenuList" keyword="" description="メインメニュー一覧">
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="ListCellClass" />
+    <property name="maxRows" value="1" />
+    <property name="errRequired" value="" />
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="48" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9002" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-detail-button" />
+        <property name="controlName" value="SubmitButton" />
+        <property name="templateKey" value="No" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0001" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="390" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0004" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="210" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0005" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="190" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0006" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="T_FunctionMap" keyword="" description="サブメニューボタン設定">
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="ListCellClass" />
+    <property name="maxRows" value="1" />
+    <property name="errRequired" value="" />
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="220" />
+        <property name="height" value="30" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="" />
+        <property name="detailCssClass" value="listcell-detail-left-nodelim" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="header" value="false" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="160" />
+        <property name="height" value="30" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="" />
+        <property name="detailCssClass" value="listcell-detail-button" />
+        <property name="controlName" value="SubmitButton" />
+        <property name="templateKey" value="T_Function" />
+        <property name="header" value="false" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="160" />
+        <property name="height" value="30" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="" />
+        <property name="detailCssClass" value="listcell-detail-button" />
+        <property name="controlName" value="SubmitButton" />
+        <property name="templateKey" value="T_Function" />
+        <property name="header" value="false" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="160" />
+        <property name="height" value="30" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="" />
+        <property name="detailCssClass" value="listcell-detail-button" />
+        <property name="controlName" value="SubmitButton" />
+        <property name="templateKey" value="T_Function" />
+        <property name="header" value="false" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="160" />
+        <property name="height" value="30" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="" />
+        <property name="detailCssClass" value="listcell-detail-button" />
+        <property name="controlName" value="SubmitButton" />
+        <property name="templateKey" value="T_Function" />
+        <property name="header" value="false" />
+        <property name="spanLevel" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="T_FunctionList" keyword="" description="サブメニュー一覧">
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="listcell-table-combination" />
+    <property name="maxRows" value="1" />
+    <property name="errRequired" value="" />
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="180" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0005" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-detail-left-nodelim-rowline" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="1" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="48" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9002" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-button" />
+        <property name="controlName" value="SubmitButton" />
+        <property name="templateKey" value="No" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="2" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="180" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0008" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left-rowline" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="260" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0010" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left-rowline" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="280" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0011" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left-rowline" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="T_FinalCheck" keyword="" description="整合性確認">
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="ListCellClass" />
+    <property name="maxRows" value="1" />
+    <property name="errRequired" value="" />
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="48" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9002" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-detail-center-nodelim" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="50" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0053" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="210" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0050" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="610" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-T0051" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="LoginUserMaintenance" keyword="LoginUserMaintenance" description="ログインユーザメンテナンス">
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="ListCellClass" />
+    <property name="maxRows" value="1" />
+    <property name="errRequired" value="" />
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="50" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9002" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-Number-Button" />
+        <property name="controlName" value="SubmitButton" />
+        <property name="templateKey" value="BC_No" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="300" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9005" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="100" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9006" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="140" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9007" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="140" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9008" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="220" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9009" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="LoginUserList" keyword="LoginUserList" description="ログインユーザ一覧">
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="ListCellClass" />
+    <property name="maxRows" value="1" />
+    <property name="errRequired" value="" />
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="50" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9002" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-detail-center-nodelim" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="300" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9005" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="100" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9006" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="140" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9007" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="140" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9008" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="220" />
+        <property name="height" value="" />
+        <property name="rowspan" value="" />
+        <property name="colspan" value="" />
+        <property name="newrow" value="false" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-9009" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="header" value="true" />
+        <property name="spanLevel" value="" />
+      </list-item>
+    </list-items>
+  </template>
+</templates>

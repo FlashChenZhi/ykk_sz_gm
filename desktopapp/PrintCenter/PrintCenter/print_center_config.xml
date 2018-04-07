@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<setting>
+  <directory_to_monitor>c:\tasks</directory_to_monitor>
+  <number_of_file_to_keep>5</number_of_file_to_keep>
+</setting> 

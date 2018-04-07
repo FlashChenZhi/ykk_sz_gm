@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE screen-template [
+<!ELEMENT templates (template+)>
+
+<!ATTLIST template display-name CDATA #REQUIRED
+                       description CDATA #REQUIRED
+                       jsp CDATA #REQUIRED
+                       preview-image CDATA #REQUIRED>
+]>
+
+<templates>
+<!--
+  <template
+    display-name="01_login display"
+    description="01_login description"
+    jsp="/WEB-INF/tool/template/01_login.jsp"
+    preview-image="/WEB-INF/tool/template/01_login.jpg" />
+-->
+  <template
+    display-name="02_uppertab-only display"
+    description="02_uppertab-only description"
+    jsp="/WEB-INF/tool/template/02_uppertab-only.jsp"
+    preview-image="/WEB-INF/tool/template/02_uppertab-only.jpg" />
+  <template
+    display-name="03_upper-only display"
+    description="03_upper-only description"
+    jsp="/WEB-INF/tool/template/03_upper-only.jsp"
+    preview-image="/WEB-INF/tool/template/03_upper-only.jpg" />
+  <template
+    display-name="04_uppertab-lowertab display"
+    description="04_uppertab-lowertab description"
+    jsp="/WEB-INF/tool/template/04_uppertab-lowertab.jsp"
+    preview-image="/WEB-INF/tool/template/04_uppertab-lowertab.jpg" />
+  <template
+    display-name="05_uppertab-lower display"
+    description="05_uppertab-lower description"
+    jsp="/WEB-INF/tool/template/05_uppertab-lower.jsp"
+    preview-image="/WEB-INF/tool/template/05_uppertab-lower.jpg" />
+  <template
+    display-name="06_upper-lowertab display"
+    description="06_upper-lowertab description"
+    jsp="/WEB-INF/tool/template/06_upper-lowertab.jsp"
+    preview-image="/WEB-INF/tool/template/06_upper-lowertab.jpg" />
+  <template
+    display-name="07_upper-lower display"
+    description="07_upper-lower description"
+    jsp="/WEB-INF/tool/template/07_upper-lower.jsp"
+    preview-image="/WEB-INF/tool/template/07_upper-lower.jpg" />
+  <template
+    display-name="08_listbox display"
+    description="08_listbox description"
+    jsp="/WEB-INF/tool/template/08_listbox.jsp"
+    preview-image="/WEB-INF/tool/template/08_listbox.jpg" />
+  <template
+    display-name="09_uppertab-listbox display"
+    description="09_uppertab-listbox description"
+    jsp="/WEB-INF/tool/template/09_uppertab-listbox.jsp"
+    preview-image="/WEB-INF/tool/template/09_uppertab-listbox.jpg" />
+  <template
+    display-name="10_uppertab-lowertab-listbox display"
+    description="10_uppertab-lowertab-listbox description"
+    jsp="/WEB-INF/tool/template/10_uppertab-lowertab-listbox.jsp"
+    preview-image="/WEB-INF/tool/template/10_uppertab-lowertab-listbox.jpg" />
+<!--
+  <template
+    display-name="11_menu display"
+    description="11_menu description"
+    jsp="/WEB-INF/tool/template/11_menu.jsp"
+    preview-image="/WEB-INF/tool/template/11_menu.jpg" />
+-->
+</templates>

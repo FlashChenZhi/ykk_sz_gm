@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page-setting[
+<!ELEMENT page-setting (css-files?,jscript-files?,pages?)>
+<!ELEMENT css-files (css-file+)>
+<!ELEMENT jscript-files (jscript-file+)>
+<!ELEMENT pages (page+)>
+<!ELEMENT page (enterkey-orders?)>
+<!ELEMENT enterkey-orders (enterkey-order+)>
+<!ATTLIST css-file 
+  path CDATA #REQUIRED>
+<!ATTLIST jscript-file 
+  path CDATA #REQUIRED>
+<!ATTLIST page
+  path CDATA #REQUIRED
+  resource-key CDATA #REQUIRED>
+<!ATTLIST enterkey-order
+  order NMTOKEN #REQUIRED
+  control-id CDATA #REQUIRED>
+]>
+<page-setting>
+  <css-files>
+    <css-file path="/css/common.css" />
+    <css-file path="/css/listcell.css" />
+    <css-file path="/css/tool.css" />
+  </css-files>
+  <jscript-files>
+    <jscript-file path="/jscript/user.js" />
+  </jscript-files>
+  <pages>
+    <page path="/mainmenu/MainMenu" resource-key="TLE-T0001">
+      <enterkey-orders>
+        <enterkey-order order="1" control-id="txt_MenuResourceKey" />
+        <enterkey-order order="2" control-id="rdo_EnableClick" />
+      </enterkey-orders>
+    </page>
+    <page path="/mainmenulist/MainMenuList" resource-key="TLE-T0002">
+      <enterkey-orders />
+    </page>
+    <page path="/listbox/resourcelist/ResourceList" resource-key="TLE-T0003">
+      <enterkey-orders />
+    </page>
+    <page path="/mainmenuorder/MainMenuOrder" resource-key="TLE-T0004">
+      <enterkey-orders />
+    </page>
+    <page path="/function/Function" resource-key="TLE-T0005">
+      <enterkey-orders>
+        <enterkey-order order="2" control-id="txt_MenuId" />
+        <enterkey-order order="1" control-id="txt_FunctionResourceKey" />
+      </enterkey-orders>
+    </page>
+    <page path="/listbox/functionlist/FunctionList" resource-key="TLE-T0005">
+      <enterkey-orders />
+    </page>
+    <page path="/functionorder/FunctionOrder" resource-key="TLE-T0007">
+      <enterkey-orders />
+    </page>
+    <page path="/functionmap/FunctionMap" resource-key="">
+      <enterkey-orders />
+    </page>
+    <page path="/functionmap/FunctionMap2" resource-key="TLE-T0008">
+      <enterkey-orders>
+        <enterkey-order order="1" control-id="txt_ButtonResourceKey" />
+        <enterkey-order order="2" control-id="txt_PageNameResouceKey" />
+        <enterkey-order order="3" control-id="txt_URI" />
+        <enterkey-order order="4" control-id="txt_FrameName" />
+      </enterkey-orders>
+    </page>
+    <page path="/functionmaporder/FunctionMapOrder" resource-key="TLE-T0010">
+      <enterkey-orders />
+    </page>
+    <page path="/role/Role" resource-key="TLE-T0011">
+      <enterkey-orders>
+        <enterkey-order order="1" control-id="txt_RoleName" />
+      </enterkey-orders>
+    </page>
+    <page path="/listbox/rolelist/RoleList" resource-key="TLE-T0012">
+      <enterkey-orders />
+    </page>
+    <page path="/rolemap/RoleMap" resource-key="TLE-T0013">
+      <enterkey-orders />
+    </page>
+    <page path="/user/User" resource-key="TLE-T0014">
+      <enterkey-orders>
+        <enterkey-order order="1" control-id="txt_Password" />
+        <enterkey-order order="2" control-id="txt_PwdChangeInterval" />
+        <enterkey-order order="3" control-id="txt_RoleId" />
+        <enterkey-order order="4" control-id="txt_SameUserLoginMax" />
+        <enterkey-order order="5" control-id="txt_UserName" />
+        <enterkey-order order="6" control-id="txt_Belonging" />
+        <enterkey-order order="7" control-id="txt_BirthDate" />
+        <enterkey-order order="8" control-id="txt_Note" />
+      </enterkey-orders>
+    </page>
+    <page path="/listbox/userlist/UserList" resource-key="TLE-T0015">
+      <enterkey-orders />
+    </page>
+    <page path="/terminal/Terminal" resource-key="TLE-T0016">
+      <enterkey-orders>
+        <enterkey-order order="1" control-id="txt_TerminalName" />
+        <enterkey-order order="2" control-id="txt_IpAddress" />
+        <enterkey-order order="3" control-id="txt_RoleId" />
+        <enterkey-order order="4" control-id="txt_PrinterName" />
+      </enterkey-orders>
+    </page>
+    <page path="/listbox/terminallist/TerminalList" resource-key="TLE-T0017">
+      <enterkey-orders />
+    </page>
+    <page path="/authenticationsystem/AuthenticationSystem" resource-key="TLE-T0018">
+      <enterkey-orders>
+        <enterkey-order order="1" control-id="txt_LoginMax" />
+        <enterkey-order order="2" control-id="rdo_Permission" />
+        <enterkey-order order="3" control-id="rdo_EnableCheck" />
+        <enterkey-order order="4" control-id="rdo_LargeIcon" />
+        <enterkey-order order="5" control-id="txt_FailedTime" />
+      </enterkey-orders>
+    </page>
+    <page path="/finalcheck/FinalCheck" resource-key="TLE-T0019">
+      <enterkey-orders />
+    </page>
+    <page path="/backup/BackUp" resource-key="TLE-T0020">
+      <enterkey-orders />
+    </page>
+    <page path="/restore/Restore" resource-key="TLE-T0021">
+      <enterkey-orders />
+    </page>
+    <page path="/functionmap/FunctionMap1" resource-key="TLE-T0008">
+      <enterkey-orders />
+    </page>
+    <page path="/TestDisp" resource-key="">
+      <enterkey-orders />
+    </page>
+    <page path="/listbox/mainmenulist/MainMenuList" resource-key="TLE-T0002">
+      <enterkey-orders />
+    </page>
+    <page path="//backup/BackUp" resource-key="">
+      <enterkey-orders />
+    </page>
+  </pages>
+</page-setting>

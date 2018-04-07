@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?><map>
+  <class name="FMZKEYEntity" table="FMZKEY" database="ykk">
+    <attribute name="ZAIKEY" column="ZAIKEY" type="String" key="primary" />
+    <attribute name="ZKNAME1" column="ZKNAME1" type="String" />
+    <attribute name="ZKKBN" column="ZKKBN" type="String" />
+    <attribute name="SEKISAISU" column="SEKISAISU" type="Decimal" />
+    <attribute name="YSHIKIRI" column="YSHIKIRI" type="Decimal" />
+    <attribute name="YSHUBETSU" column="YSHUBETSU" type="String" />
+    <attribute name="SOTOSU" column="SOTOSU" type="Decimal" />
+    <attribute name="UCHISU" column="UCHISU" type="Decimal" />
+    <attribute name="MENTEHIJI" column="MENTEHIJI" type="String" />
+    <attribute name="JOGENSUJ" column="JOGENSUJ" type="Decimal" />
+    <attribute name="KAGENSUJ" column="KAGENSUJ" type="Decimal" />
+    <attribute name="SOFTZONE" column="SOFTZONE" type="String" />
+    <attribute name="ZKNAME2" column="ZKNAME2" type="String" />
+    <attribute name="ZKNAME3" column="ZKNAME3" type="String" />
+    <attribute name="MASTER_UNIT_WEIGHT" column="MASTER_UNIT_WEIGHT" type="Decimal" />
+    <attribute name="ITEM_RANK" column="ITEM_RANK" type="Decimal" />
+    <attribute name="LIMIT_QTY" column="LIMIT_QTY" type="Decimal" />
+    <attribute name="MEASURE_FLAG" column="MEASURE_FLAG" type="String" />
+    <attribute name="REMOVE_CONVENT_FLAG" column="REMOVE_CONVENT_FLAG" type="String" />
+    <attribute name="MEASURE_QTY" column="MEASURE_QTY" type="Decimal" />
+    <attribute name="MANAGE_ITEM_FLAG" column="MANAGE_ITEM_FLAG" type="String" key="primary" />
+  </class>
+  <class name="FNCART_CTLEntity" table="FNCART_CTL" database="ykk">
+    <attribute name="STNO" column="STNO" type="String" key="primary" />
+    <attribute name="SEQ_NO" column="SEQ_NO" type="String" key="primary" />
+    <attribute name="GROUPNO" column="GROUPNO" type="String" key="primary" />
+    <attribute name="BUCKET_NO" column="BUCKET_NO" type="String" />
+    <attribute name="ITEM_CODE" column="ITEM_CODE" type="String" />
+    <attribute name="ITEM_NAME" column="ITEM_NAME" type="String" />
+    <attribute name="ITEM_NAME2" column="ITEM_NAME2" type="String" />
+    <attribute name="ITEM_NAME3" column="ITEM_NAME3" type="String" />
+    <attribute name="SECTION" column="SECTION" type="String" />
+    <attribute name="LINE" column="LINE" type="String" />
+    <attribute name="QTY" column="QTY" type="Decimal" />
+    <attribute name="WEIGHT" column="WEIGHT" type="Decimal" />
+    <attribute name="REGISTER_FLG" column="REGISTER_FLG" type="String" />
+    <attribute name="REGISTER_DATE_TIME" column="REGISTER_DATE_TIME" type="String" />
+    <attribute name="COLOR_CODE" column="COLOR_CODE" type="String" />
+  </class>
+  <class name="FNLABELEntity" table="FNLABEL" database="ykk">
+    <attribute name="CREATE_DATETIME" column="CREATE_DATETIME" type="String" />
+    <attribute name="UPDATE_DATETIME" column="UPDATE_DATETIME" type="String" />
+    <attribute name="PRINTER_NO" column="PRINTER_NO" type="Decimal" />
+    <attribute name="LABEL_TYPE" column="LABEL_TYPE" type="String" />
+    <attribute name="TICKET_NO" column="TICKET_NO" type="String" />
+    <attribute name="BUCKET_NO" column="BUCKET_NO" type="String" />
+    <attribute name="ZAIKEY" column="ZAIKEY" type="String" />
+    <attribute name="COLOR_CODE" column="COLOR_CODE" type="String" key="primary" />
+    <attribute name="SECTION" column="SECTION" type="String" />
+    <attribute name="LINE" column="LINE" type="String" />
+    <attribute name="MADE_SECTION" column="MADE_SECTION" type="String"  key="primary"/>
+    <attribute name="MADE_LINE" column="MADE_LINE" type="String" />
+    <attribute name="START_DATE" column="START_DATE" type="String" />
+    <attribute name="START_TIMING_FLAG" column="START_TIMING_FLAG" type="String"  key="primary"/>
+    <attribute name="RETRIEVAL_QTY" column="RETRIEVAL_QTY" type="Decimal" />
+    <attribute name="RETRIEVAL_WEIGHT" column="RETRIEVAL_WEIGHT" type="Decimal" />
+    <attribute name="MASTER_UNIT_WEIGHT" column="MASTER_UNIT_WEIGHT" type="Decimal"  key="primary"/>
+    <attribute name="DEPOT_CODE" column="DEPOT_CODE" type="String" key="primary" />
+    <attribute name="ORDER_NO" column="ORDER_NO" type="String" />
+    <attribute name="CUSTOMER_CODE" column="CUSTOMER_CODE" type="String" />
+    <attribute name="CUSTOMER_NAME1" column="CUSTOMER_NAME1" type="String" />
+    <attribute name="CUSTOMER_NAME2" column="CUSTOMER_NAME2" type="String" />
+    <attribute name="PR_NO" column="PR_NO" type="String" />
+    <attribute name="OPTION_FLAG" column="OPTION_FLAG" type="String" />
+    <attribute name="PRINTING_FLAG" column="PRINTING_FLAG" type="String" />
+    <attribute name="LABEL_KEY" column="LABEL_KEY" type="String"  key="primary"/>
+    <attribute name="RETRIEVAL_STATION" column="RETRIEVAL_STATION" type="String" />
+    <attribute name="RETRIEVAL_NO" column="RETRIEVAL_NO" type="String" />
+    <attribute name="SERIAL_NO" column="SERIAL_NO" type="Decimal" />
+    <attribute name="NECESSARY_QTY" column="NECESSARY_QTY" type="Decimal" />
+    <attribute name="USERID" column="USERID" type="String" />
+    <attribute name="USERNAME" column="USERNAME" type="String" />
+  </class>
+  <class name="FNPRINTBODYEntity" table="FNPRINTBODY" database="ykk">
+    <attribute name="LISTKEY" column="LISTKEY" type="String" key="primary" />
+    <attribute name="RANGE1" column="RANGE1" type="String" key="primary" />
+    <attribute name="RANGE2" column="RANGE2" type="String" key="primary" />
+    <attribute name="RANGE3" column="RANGE3" type="String" />
+    <attribute name="RANGE4" column="RANGE4" type="String" />
+    <attribute name="RANGE5" column="RANGE5" type="String" />
+    <attribute name="RANGE6" column="RANGE6" type="String" />
+    <attribute name="RANGE7" column="RANGE7" type="String" />
+    <attribute name="RANGE8" column="RANGE8" type="String" />
+    <attribute name="RANGE9" column="RANGE9" type="String" />
+    <attribute name="RANGE10" column="RANGE10" type="String" />
+    <attribute name="RANGE11" column="RANGE11" type="String" />
+  </class>
+  <class name="FNPRINTHEADEntity" table="FNPRINTHEAD" database="ykk">
+    <attribute name="LISTKEY" column="LISTKEY" type="String" key="primary" />
+    <attribute name="PROC_FLAG" column="PROC_FLAG" type="String" />
+    <attribute name="PRINTER_NAME" column="PRINTER_NAME" type="String" />
+    <attribute name="LISTTYPE" column="LISTTYPE" type="String" />
+    <attribute name="ORDER_FLAG" column="ORDER_FLAG" type="String" />
+    <attribute name="RANGE1" column="RANGE1" type="String" />
+    <attribute name="RANGE2" column="RANGE2" type="String" />
+    <attribute name="RANGE3" column="RANGE3" type="String" />
+    <attribute name="RANGE4" column="RANGE4" type="String" />
+    <attribute name="RANGE5" column="RANGE5" type="String" />
+  </class>
+  <class name="FNRETRIEVAL_STEntity" table="FNRETRIEVAL_ST" database="ykk">
+    <attribute name="RETRIEVAL_STATION" column="RETRIEVAL_STATION" type="String" key="primary" />
+    <attribute name="DEFAULT_RETRIEVAL_ST_NAME" column="DEFAULT_RETRIEVAL_ST_NAME" type="String" key="primary" />
+    <attribute name="RETRIEVAL_ST_NAME" column="RETRIEVAL_ST_NAME" type="String" key="primary" />
+    <attribute name="DEFAULT_PICKSTNO" column="DEFAULT_PICKSTNO" type="String" />
+    <attribute name="PICK_STNO" column="PICK_STNO" type="String" />
+    <attribute name="DEFAULT_REV_PICKSTNO" column="DEFAULT_REV_PICKSTNO" type="String" />
+    <attribute name="REV_PICKSTNO" column="REV_PICKSTNO" type="String" />
+    <attribute name="DEFAULT_UNIT_STNO" column="DEFAULT_UNIT_STNO" type="String" />
+    <attribute name="UNIT_STNO" column="UNIT_STNO" type="String" />
+    <attribute name="DEFAULT_REMOVE_STNO" column="DEFAULT_REMOVE_STNO" type="String" />
+    <attribute name="REMOVE_STNO" column="REMOVE_STNO" type="String" />
+    <attribute name="DEFAULT_FORCED_REMOVE_STNO" column="DEFAULT_FORCED_REMOVE_STNO" type="String" />
+    <attribute name="FORCED_REMOVE_STNO" column="FORCED_REMOVE_STNO" type="String" />
+    <attribute name="PRINTER_NO_UNIT" column="PRINTER_NO_UNIT" type="Decimal" />
+    <attribute name="UNIFY_TICKET_PRINTFLG" column="UNIFY_TICKET_PRINTFLG" type="String" />
+    <attribute name="TICKET_PRINTFLG" column="TICKET_PRINTFLG" type="String" />
+    <attribute name="CART_TICKET_PRINTFLG" column="CART_TICKET_PRINTFLG" type="String" />
+    <attribute name="PRINTER_NO_PICKING" column="PRINTER_NO_PICKING" type="Decimal" />
+    <attribute name="GROUP_MAX_NUM" column="GROUP_MAX_NUM" type="Decimal" />
+    <attribute name="PRINTER_NO_CART" column="PRINTER_NO_CART" type="Decimal" />
+  </class>
+  <class name="FNPRINTEREntity" table="FNPRINTER" database="ykk">
+    <attribute name="PRINTER_NO" column="PRINTER_NO" type="Decimal" key="primary" />
+    <attribute name="PRINTER_NAME" column="PRINTER_NAME" type="String" key="primary" />
+    <attribute name="PRINTER_TYPE" column="PRINTER_TYPE" type="String" key="primary" />
+    <attribute name="PRINTER_IP" column="PRINTER_IP" type="String" key="primary" />
+    <attribute name="ENABLE_FLAG" column="ENABLE_FLAG" type="String" />
+  </class>
+</map>

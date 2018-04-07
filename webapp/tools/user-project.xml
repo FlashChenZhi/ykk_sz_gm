@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<userProject version="1.01" xmlns="userProject" xsi:schemaLocation="userProject user-project.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <lastLanguage>Japanese</lastLanguage>
+  <controls>
+    <control name="RadioButton">
+      <!--終了時の表示列設定-->
+      <displayProperties>
+        <property name="checked" />
+        <property name="groupName" />
+        <property name="resourceKey" />
+        <property name="visible" />
+        <property name="clickEvent" />
+        <property name="value" />
+        <property name="enabled" />
+      </displayProperties>
+    </control>
+    <control name="Label">
+      <!--終了時の表示列設定-->
+      <displayProperties>
+        <property name="onmouseover" />
+        <property name="onmouseout" />
+        <property name="visible" />
+        <property name="ondblclick" />
+        <property name="onmousemove" />
+        <property name="resourceKey" />
+        <property name="onclick" />
+        <property name="serverEvents" />
+        <property name="onmouseup" />
+        <property name="onmousedown" />
+        <property name="cssClass" />
+        <property name="text" />
+      </displayProperties>
+    </control>
+    <control name="FreeTextBox">
+      <!--終了時の表示列設定-->
+      <displayProperties>
+        <property name="errMsgParamKey" />
+        <property name="errMaxLength" />
+        <property name="accessKey" />
+        <property name="inputMode" />
+        <property name="errRequired" />
+        <property name="errInputMode" />
+        <property name="maxLength" />
+        <property name="text" />
+        <property name="clientErrMaxLength" />
+        <property name="cssClass" />
+        <property name="clientErrInputMode" />
+      </displayProperties>
+    </control>
+    <control name="NumberTextBox">
+      <!--終了時の表示列設定-->
+      <displayProperties>
+        <property name="errMsgParamKey" />
+        <property name="size" />
+        <property name="visible" />
+        <property name="clientErrInputMode" />
+        <property name="errLength" />
+        <property name="enterKeyEvent" />
+        <property name="errRequired" />
+        <property name="errInputMode" />
+        <property name="clientErrLength" />
+        <property name="tabKeyEvent" />
+        <property name="readOnly" />
+        <property name="comma" />
+        <property name="length" />
+        <property name="cssClass" />
+      </displayProperties>
+    </control>
+    <control name="ImageButton">
+      <!--終了時の表示列設定-->
+      <displayProperties>
+        <property name="border" />
+        <property name="src" />
+        <property name="visible" />
+      </displayProperties>
+    </control>
+    <control name="SubmitButton">
+      <!--終了時の表示列設定-->
+      <displayProperties>
+        <property name="onmouseup" />
+        <property name="onconfirmOK" />
+        <property name="onclick" />
+        <property name="resourceKey" />
+        <property name="beforeConfirm" />
+        <property name="text" />
+      </displayProperties>
+    </control>
+    <control name="ListCell">
+      <!--終了時の表示列設定-->
+      <displayProperties>
+        <property name="ListCellColumns" />
+        <property name="errRequired" />
+        <property name="visible" />
+        <property name="maxRows" />
+        <property name="tableCssClass" />
+      </displayProperties>
+    </control>
+  </controls>
+  <taskOption>
+    <global>
+      <option name="enabled" value="true" />
+      <option name="checkAtSaveTime" value="true" />
+    </global>
+    <templateFile>
+      <option name="adjustmentResourceKey" value="true" />
+      <option name="adjustmentTemplateKey" value="true" />
+      <option name="languageFileExistence" value="true" />
+      <option name="requireDefaultColumn" value="true" />
+      <option name="undefinedProperty" value="true" />
+    </templateFile>
+    <propertyFile>
+      <option name="byteCountOfMessageResource" value="true" />
+      <option name="duplicationValue" value="false" />
+      <option name="languageFileExistence" value="true" />
+      <option name="undefinedValue" value="true" />
+    </propertyFile>
+  </taskOption>
+</userProject>

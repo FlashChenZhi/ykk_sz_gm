@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<map>
+  <database name="ykk" type="Oracle">
+    <parameter name="Provider" value="MSDAORA.1" />
+    <parameter name="Data Source" value="awc" />
+    <parameter name="User ID" value="awc" />
+    <parameter name="Password" value="awc" />
+    <classMapFile path="ClassMap.xml" />
+  </database>
+</map>

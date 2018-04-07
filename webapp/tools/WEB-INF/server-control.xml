@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE server-control [
+<!ELEMENT server-control (tlds?,jscript-files?,controls?)>
+<!ELEMENT tlds (tld+)>
+<!ELEMENT jscript-files (jscript-file+)>
+<!ELEMENT controls (page+,control*)>
+<!ELEMENT control (event*)>
+<!ATTLIST tld  
+	file CDATA #REQUIRED
+	prefix NMTOKEN #REQUIRED>
+<!ATTLIST jscript-file  path CDATA #REQUIRED>
+<!ATTLIST page path CDATA #REQUIRED>
+<!ATTLIST control
+  name NMTOKEN #REQUIRED
+  id NMTOKEN #REQUIRED
+  display-name CDATA #REQUIRED
+  control-class NMTOKEN #REQUIRED
+  factory-class NMTOKEN #REQUIRED
+  taglib NMTOKEN #REQUIRED
+  tag-name CDATA #REQUIRED
+  image-root CDATA ""
+  template CDATA #REQUIRED
+  parsexsl CDATA #REQUIRED
+  focus (true|false) "false">
+]>
+
+<server-control>
+
+<tlds>
+<tld uri="/WEB-INF/control/bluedog-html.tld" prefix="h" />
+</tlds>
+
+  <jscript-files>
+    <jscript-file path="/jscript/control.js" />
+  </jscript-files>
+
+  <controls>
+    <page
+      path="/WEB-INF/control/template/Page.xml"/>
+    <control
+      name="Label"
+	  id="lbl_"
+      display-name="Label"
+      control-class="jp.co.daifuku.bluedog.ui.control.Label"
+      factory-class="jp.co.daifuku.bluedog.ui.control.LabelFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.LabelTag"
+      tag-name="h:label"
+      image-root=""
+      template="/WEB-INF/control/template/Label-template.xml"
+      parsexsl="/WEB-INF/control/xsl/Label-preview.xsl"
+      focus="false">
+      <event name="Server"/>
+    </control>
+    <control
+      name="Message"
+	  id="message"
+      display-name="Message"
+      control-class="jp.co.daifuku.bluedog.ui.control.Message"
+      factory-class="jp.co.daifuku.bluedog.ui.control.MessageFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.MessageTag"
+      tag-name="h:message"
+      image-root="/img/control/message"
+      template="/WEB-INF/control/template/Message-template.xml"
+      parsexsl="/WEB-INF/control/xsl/Message-preview.xsl"
+      focus="false">
+    </control>
+    <control
+      name="FreeTextBox"
+	  id="txt_"
+      display-name="TextBox(Free)"
+      control-class="jp.co.daifuku.bluedog.ui.control.FreeTextBox"
+      factory-class="jp.co.daifuku.bluedog.ui.control.FreeTextBoxFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.FreeTextBoxTag"
+      tag-name="h:freetextbox"
+      image-root=""
+      template="/WEB-INF/control/template/FreeTextBox-template.xml"
+      parsexsl="/WEB-INF/control/xsl/FreeTextBox-preview.xsl"
+      focus="true">
+      <event name="InputComplete"/>
+      <event name="TabKey"/>
+      <event name="EnterKey"/>
+      <event name="Server"/>
+    </control>
+    <control
+      name="NumberTextBox"
+	  id="txt_"
+      display-name="TextBox(Number)"
+      control-class="jp.co.daifuku.bluedog.ui.control.NumberTextBox"
+      factory-class="jp.co.daifuku.bluedog.ui.control.NumberTextBoxFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.NumberTextBoxTag"
+      tag-name="h:numbertextbox"
+      image-root=""
+      template="/WEB-INF/control/template/NumberTextBox-template.xml"
+      parsexsl="/WEB-INF/control/xsl/NumberTextBox-preview.xsl"
+      focus="true">
+      <event name="TabKey"/>
+      <event name="EnterKey"/>
+      <event name="Server"/>
+    </control>
+    <control
+      name="FormatTextBox"
+	  id="txt_"
+      display-name="TextBox(Format)"
+      control-class="jp.co.daifuku.bluedog.ui.control.FormatTextBox"
+      factory-class="jp.co.daifuku.bluedog.ui.control.FormatTextBoxFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.FormatTextBoxTag"
+      tag-name="h:formattextbox"
+      image-root=""
+      template="/WEB-INF/control/template/FormatTextBox-template.xml"
+      parsexsl="/WEB-INF/control/xsl/FormatTextBox-preview.xsl"
+      focus="true">
+      <event name="TabKey"/>
+      <event name="EnterKey"/>
+      <event name="Server"/>
+    </control>
+    <control
+      name="DateTextBox"
+	  id="txt_"
+      display-name="TextBox(Date)"
+      control-class="jp.co.daifuku.bluedog.ui.control.DateTextBox"
+      factory-class="jp.co.daifuku.bluedog.ui.control.DateTextBoxFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.DateTextBoxTag"
+      tag-name="h:datetextbox"
+      image-root=""
+      template="/WEB-INF/control/template/DateTextBox-template.xml"
+      parsexsl="/WEB-INF/control/xsl/DateTextBox-preview.xsl"
+      focus="true">
+      <event name="TabKey"/>
+      <event name="EnterKey"/>
+      <event name="Server"/>
+    </control>
+    <control
+      name="TimeTextBox"
+	  id="txt_"
+      display-name="TextBox(Time)"
+      control-class="jp.co.daifuku.bluedog.ui.control.TimeTextBox"
+      factory-class="jp.co.daifuku.bluedog.ui.control.TimeTextBoxFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.TimeTextBoxTag"
+      tag-name="h:timetextbox"
+      image-root=""
+      template="/WEB-INF/control/template/TimeTextBox-template.xml"
+      parsexsl="/WEB-INF/control/xsl/TimeTextBox-preview.xsl"
+      focus="true">
+      <event name="TabKey"/>
+      <event name="EnterKey"/>
+      <event name="Server"/>
+    </control>
+    <control
+      name="BarCodeTextBox"
+	  id="txt_"
+      display-name="TextBox(BarCode)"
+      control-class="jp.co.daifuku.bluedog.ui.control.BarCodeTextBox"
+      factory-class="jp.co.daifuku.bluedog.ui.control.BarCodeTextBoxFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.BarCodeTextBoxTag"
+      tag-name="h:barcodetextbox"
+      image-root=""
+      template="/WEB-INF/control/template/BarCodeTextBox-template.xml"
+      parsexsl="/WEB-INF/control/xsl/BarCodeTextBox-preview.xsl"
+      focus="true">
+      <event name="InputComplete"/>
+      <event name="TabKey"/>
+      <event name="EnterKey"/>
+      <event name="Server"/>
+    </control>
+    <control
+      name="PasswordTextBox"
+	  id="txt_"
+      display-name="PasswordTextBox"
+      control-class="jp.co.daifuku.bluedog.ui.control.PasswordTextBox"
+      factory-class="jp.co.daifuku.bluedog.ui.control.PasswordTextBoxFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.PasswordTextBoxTag"
+      tag-name="h:passwordtextbox"
+      image-root=""
+      template="/WEB-INF/control/template/PasswordTextBox-template.xml"
+      parsexsl="/WEB-INF/control/xsl/PasswordTextBox-preview.xsl"
+      focus="true">
+      <event name="TabKey"/>
+      <event name="EnterKey"/>
+      <event name="Server"/>
+    </control>
+    <control
+      name="TextArea"
+	  id="txa_"
+      display-name="TextArea"
+      control-class="jp.co.daifuku.bluedog.ui.control.TextArea"
+      factory-class="jp.co.daifuku.bluedog.ui.control.TextAreaFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.TextAreaTag"
+      tag-name="h:textarea"
+      image-root=""
+      template="/WEB-INF/control/template/TextArea-template.xml"
+      parsexsl="/WEB-INF/control/xsl/TextArea-preview.xsl"
+      focus="true">
+      <event name="Server"/>
+    </control>
+    <control
+      name="PullDown"
+	  id="pul_"
+      display-name="PullDown"
+      control-class="jp.co.daifuku.bluedog.ui.control.PullDown"
+      factory-class="jp.co.daifuku.bluedog.ui.control.PullDownFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.PullDownTag"
+      tag-name="h:pulldown"
+      image-root=""
+      template="/WEB-INF/control/template/PullDown-template.xml"
+      parsexsl="/WEB-INF/control/xsl/PullDown-preview.xsl"
+      focus="true">
+      <event name="Change"/>
+      <event name="Server"/>
+    </control>
+    <control
+      name="LinkedPullDown"
+	  id="pul_"
+      display-name="LinkedPullDown"
+      control-class="jp.co.daifuku.bluedog.ui.control.LinkedPullDown"
+      factory-class="jp.co.daifuku.bluedog.ui.control.LinkedPullDownFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.LinkedPullDownTag"
+      tag-name="h:linkedpulldown"
+      image-root=""
+      template="/WEB-INF/control/template/LinkedPullDown-template.xml"
+      parsexsl="/WEB-INF/control/xsl/LinkedPullDown-preview.xsl"
+      focus="true">
+      <event name="Change"/>
+      <event name="Server"/>
+    </control>
+    <control
+      name="ListBox"
+	  id="ltb_"
+      display-name="ListBox"
+      control-class="jp.co.daifuku.bluedog.ui.control.ListBox"
+      factory-class="jp.co.daifuku.bluedog.ui.control.ListBoxFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.ListBoxTag"
+      tag-name="h:listbox"
+      image-root=""
+      template="/WEB-INF/control/template/ListBox-template.xml"
+      parsexsl="/WEB-INF/control/xsl/ListBox-preview.xsl"
+      focus="true">
+      <event name="Change"/>
+      <event name="Server"/>
+    </control>
+    <control
+      name="RadioButton"
+	  id="rdo_"
+      display-name="RadioButton"
+      control-class="jp.co.daifuku.bluedog.ui.control.RadioButton"
+      factory-class="jp.co.daifuku.bluedog.ui.control.RadioButtonFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.RadioButtonTag"
+      tag-name="h:radiobutton"
+      image-root=""
+      template="/WEB-INF/control/template/RadioButton-template.xml"
+      parsexsl="/WEB-INF/control/xsl/RadioButton-preview.xsl"
+      focus="true">
+      <event name="Click"/>
+      <event name="Server"/>
+    </control>
+   <control
+      name="CheckBox"
+	  id="chk_"
+      display-name="CheckBox"
+      control-class="jp.co.daifuku.bluedog.ui.control.CheckBox"
+      factory-class="jp.co.daifuku.bluedog.ui.control.CheckBoxFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.CheckBoxTag"
+      tag-name="h:checkbox"
+      image-root=""
+      template="/WEB-INF/control/template/CheckBox-template.xml"
+      parsexsl="/WEB-INF/control/xsl/CheckBox-preview.xsl"
+      focus="true">
+      <event name="Change"/>
+      <event name="Server"/>
+    </control>
+   <control
+      name="FileBrows"
+	  id="flb_"
+      display-name="FileBrows"
+      control-class="jp.co.daifuku.bluedog.ui.control.FileBrows"
+      factory-class="jp.co.daifuku.bluedog.ui.control.FileBrowsFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.FileBrowsTag"
+      tag-name="h:filebrows"
+      image-root=""
+      template="/WEB-INF/control/template/FileBrows-template.xml"
+      parsexsl="/WEB-INF/control/xsl/FileBrows-preview.xsl"
+      focus="true">
+      <event name="Server"/>
+    </control>
+    <control
+      name="SubmitButton"
+	  id="btn_"
+      display-name="SubmitButton"
+      control-class="jp.co.daifuku.bluedog.ui.control.SubmitButton"
+      factory-class="jp.co.daifuku.bluedog.ui.control.SubmitButtonFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.SubmitButtonTag"
+      tag-name="h:submitbutton"
+      image-root=""
+      template="/WEB-INF/control/template/SubmitButton-template.xml"
+      parsexsl="/WEB-INF/control/xsl/SubmitButton-preview.xsl"
+      focus="true">
+      <event name="Click"/>
+      <event name="Server"/>
+    </control> 
+    <control
+      name="LinkButton"
+	  id="btn_"
+      display-name="LinkButton"
+      control-class="jp.co.daifuku.bluedog.ui.control.LinkButton"
+      factory-class="jp.co.daifuku.bluedog.ui.control.LinkButtonFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.LinkButtonTag"
+      tag-name="h:linkbutton"
+      image-root=""
+      template="/WEB-INF/control/template/LinkButton-template.xml"
+      parsexsl="/WEB-INF/control/xsl/LinkButton-preview.xsl"
+      focus="false">
+      <event name="Server"/>
+    </control>
+    <control
+      name="SubmitLabel"
+	  id="slb_"
+      display-name="SubmitLabel"
+      control-class="jp.co.daifuku.bluedog.ui.control.SubmitLabel"
+      factory-class="jp.co.daifuku.bluedog.ui.control.SubmitLabelFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.SubmitLabelTag"
+      tag-name="h:submitlabel"
+      image-root=""
+      template="/WEB-INF/control/template/SubmitLabel-template.xml"
+      parsexsl="/WEB-INF/control/xsl/SubmitLabel-preview.xsl"
+      focus="true">
+      <event name="Click"/>
+      <event name="Server"/>
+    </control>
+    <control
+      name="LinkLabel"
+	  id="llb_"
+      display-name="LinkLabel"
+      control-class="jp.co.daifuku.bluedog.ui.control.LinkLabel"
+      factory-class="jp.co.daifuku.bluedog.ui.control.LinkLabelFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.LinkLabelTag"
+      tag-name="h:linklabel"
+      image-root=""
+      template="/WEB-INF/control/template/LinkLabel-template.xml"
+      parsexsl="/WEB-INF/control/xsl/LinkLabel-preview.xsl"
+      focus="true">
+      <event name="Server"/>
+    </control>
+    <control
+      name="ImageButton"
+	  id="img_"
+      display-name="ImageButton"
+      control-class="jp.co.daifuku.bluedog.ui.control.ImageButton"
+      factory-class="jp.co.daifuku.bluedog.ui.control.ImageButtonFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.ImageButtonTag"
+      tag-name="h:imagebutton"
+      image-root="/img/control/imagebutton"
+      template="/WEB-INF/control/template/ImageButton-template.xml"
+      parsexsl="/WEB-INF/control/xsl/ImageButton-preview.xsl"
+      focus="true">
+      <event name="Click"/>
+      <event name="Server"/>
+    </control>
+    <control
+      name="ImageLink"
+	  id="img_"
+      display-name="ImageLink"
+      control-class="jp.co.daifuku.bluedog.ui.control.ImageLink"
+      factory-class="jp.co.daifuku.bluedog.ui.control.ImageLinkFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.ImageLinkTag"
+      tag-name="h:imagelink"
+      image-root="/img/control/imagelink"
+      template="/WEB-INF/control/template/ImageLink-template.xml"
+      parsexsl="/WEB-INF/control/xsl/ImageLink-preview.xsl"
+      focus="true">
+      <event name="Server"/>
+    </control>
+    <control
+      name="Tab"
+      display-name="Tab"
+	  id="tab_"
+      control-class="jp.co.daifuku.bluedog.ui.control.Tab"
+      factory-class="jp.co.daifuku.bluedog.ui.control.TabFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.TabTag"
+      tag-name="h:tab"
+      image-root="/img/control/tab"
+      template="/WEB-INF/control/template/Tab-template.xml"
+      parsexsl="/WEB-INF/control/xsl/Tab-preview.xsl"
+      focus="false">
+    </control>
+     <control
+      name="Pager"
+	  id="pgr_"
+      display-name="Pager"
+      control-class="jp.co.daifuku.bluedog.ui.control.Pager"
+      factory-class="jp.co.daifuku.bluedog.ui.control.PagerFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.PagerTag"
+      tag-name="h:pager"
+      image-root="/img/control/pager"
+      template="/WEB-INF/control/template/Pager-template.xml"
+      parsexsl="/WEB-INF/control/xsl/Pager-preview.xsl"
+      focus="false">
+      <event name="First"/>
+      <event name="Last"/>
+      <event name="Prev"/>
+      <event name="Next"/>
+    </control>
+    <control
+      name="ListCell"
+	  id="lst_"
+      display-name="ListCell"
+      control-class="jp.co.daifuku.bluedog.ui.control.ListCell"
+      factory-class="jp.co.daifuku.bluedog.ui.control.ListCellFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.ListCellTag"
+      tag-name="h:listcell"
+      image-root=""
+      template="/WEB-INF/control/template/ListCell-template.xml"
+      parsexsl="/WEB-INF/control/xsl/ListCell-preview.xsl"
+      focus="true">
+      <event name="Click"/>
+      <event name="Change"/>
+      <event name="Server"/>
+      <event name="ColumClick"/>
+      <event name="InputComplete"/>
+      <event name="TabKey"/>
+      <event name="EnterKey"/>
+    </control>
+    <control
+      name="FixedListCell"
+      display-name="FixedListCell"
+      control-class="jp.co.daifuku.bluedog.ui.control.FixedListCell"
+      factory-class="jp.co.daifuku.bluedog.ui.control.FixedListCellFactory"
+      taglib="jp.co.daifuku.bluedog.ui.taglib.FixedListCellTag"
+      tag-name="h:fixedlistcell"
+      image-root=""
+      template="/WEB-INF/control/template/FixedListCell-template.xml"
+      parsexsl="/WEB-INF/control/xsl/FixedListCell-preview.xsl"
+      focus="true">
+      <event name="Click"/>
+      <event name="Change"/>
+      <event name="Server"/>
+      <event name="ColumClick"/>
+      <event name="InputComplete"/>
+      <event name="TabKey"/>
+      <event name="EnterKey"/>
+    </control>
+  </controls>
+
+</server-control>

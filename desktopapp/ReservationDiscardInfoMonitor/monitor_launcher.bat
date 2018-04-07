@@ -1,0 +1,1 @@
+java -classpath .\bin;.\lib\log4j-1.2.15.jar;.\lib\commons-lang-2.0.jar;.\lib\ojdbc14.jar com.worgsoft.ykk.monitor.MonitorLauncher

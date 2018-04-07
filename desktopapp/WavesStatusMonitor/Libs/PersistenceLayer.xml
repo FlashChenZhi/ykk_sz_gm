@@ -1,0 +1,1843 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PersistenceLayer</name>
+    </assembly>
+    <members>
+        <member name="T:PersistenceLayer.DeleteCommander">
+            <summary>
+            DeleteCommander 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.SqlCommander">
+            <summary>
+            SqlCommand 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.InsertCommander">
+            <summary>
+            InsertCommander封装构造Insert Command的功能
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.SelectCommander">
+            <summary>
+            	SelectCommand 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.UpdateCommander">
+            <summary>
+            UpdateCommander 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.GlobalCacheControl">
+            <summary>
+            DirtyControl 的摘要说明。
+            脏数据库控制类，用于控制实体的脏数据
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.IConfigLoader">
+            <summary>
+            IConfigLoader 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.PersistenceBroker">
+            <summary>
+            实体层的关键类 
+            他保持与Persistence Mechanisms的连接
+            并管理他们的程序和他们的交互
+            使用Singleton模式 
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.#ctor">
+            <summary>
+            构造方法.在使用PL层时,必定要进行这个构造方式.把数据库映射与表映射都载入内存.
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.Instance">
+            <summary>
+            	得到PersistenceBroker的实例
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.ExecuteQuery(System.Data.IDbCommand,System.String,System.Int32)">
+            <summary>
+            返回前N条记录
+            add by tintown at 2004-09-06
+            </summary>
+            <param name="cmd"></param>
+            <param name="rdbName"></param>
+            <param name="top">N</param>
+            <returns></returns>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.ExecuteSql(System.String,PersistenceLayer.RelationalDatabase)">
+            <summary>
+            add by tintown at 2004-09-06
+            执行SQL语句
+            </summary>
+            <param name="sqlstring">语句</param>
+            <param name="rdb">数据库</param>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.GetDatabase(System.String)">
+            <summary>
+            DataBase操作区 开始
+            tintown add at 2004-10-24
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.AppendDatabase(System.String,System.String,System.String)">
+            <summary>
+            追加数据连接
+            add by tintown
+            </summary>
+            <param name="name"></param>
+            <param name="DatabaseType"></param>
+            <param name="connectionString"></param>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.AppendDatabase(System.String,System.String,System.String,System.String)">
+            <summary>
+            追加数据连接并载入指定的ClassMap文件信息
+            </summary>
+            <param name="name"></param>
+            <param name="DatabaseType"></param>
+            <param name="connectionString"></param>
+            <param name="classMapPath"></param>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.GetEntityObject(System.Type,System.String,System.Data.DataRow)">
+            <summary>
+            DataBase 操作区结束
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.ProcessTransactionSingleDatabase(PersistenceLayer.Transaction)">
+            <summary>
+            处理一个事务(只适用于单数据库)
+            add by tintown at 2004-09-06
+            添加执行SQL语句的事务处理
+            由于可以进行自行配置数据库连接，所以在事务中，都采用MultiDatabase的方法。
+            此方法暂时无效
+            </summary>
+            <param name="tran"></param>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.ProcessRetrieveCriteria(PersistenceLayer.RetrieveCriteria)">
+            <summary>
+            
+            </summary>
+            <param name="rc"></param>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.ProcessTransactionMultiDatabases(PersistenceLayer.Transaction)">
+            <summary>
+            处理多数据库的事务处理
+            add by tintown at 2004-09-06
+            处理SQL的事务处理
+            </summary>
+            <param name="tran"></param>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.DoQueryTransaction(System.Collections.Hashtable,System.Collections.Hashtable)">
+            <summary>
+            在事务中执行查询SQL语句
+            </summary>
+            <param name="htSql">语句</param>
+            <param name="rdbs">连接集</param>
+            <returns></returns>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.DoTransaction(System.Object,PersistenceLayer.ActionTypes,System.Collections.Hashtable,System.Boolean)">
+            <summary>
+            立即执行事务的操作
+            </summary>
+            <param name="obj">对象</param>
+            <param name="actionType">类型</param>
+            <param name="rdbs">连接集</param>
+            <param name="isForceCommit">强行执行</param>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.DoRetrieveCriteraTransaction(System.Object,System.Collections.Hashtable)">
+            <summary>
+            在事务中执行获取标准
+            </summary>
+            <param name="obj">标准</param>
+            <param name="rdbs">连接集</param>
+            <returns></returns>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.GetDatabaseName(PersistenceLayer.EntityObject)">
+            <summary>
+            	返回实体对象所在数据库名
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.ProcessCriteria(PersistenceLayer.PersistentCriteria)">
+            <summary>
+            	处理DeleteCriteria,UpdateCriteria
+            </summary>
+            <param name="criteria">对应的PesistentCriteria</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.ProcessCriteria(PersistenceLayer.PersistentCriteria,PersistenceLayer.RelationalDatabase)">
+            <summary>
+            	在事务中处理DeleteCriteria,UpdateCriteria
+            </summary>
+            <param name="criteria">对应的PesistentCriteria</param>
+            <param name="rdb">需要处理实体对象所在数据库</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.AddOracleTopWhere(System.String,System.Int32)">
+            <summary>
+            静态的给ORACLE添加TOP功能的方法，在WHERE后添加rownum
+            </summary>
+            <param name="sqlString"></param>
+            <param name="top"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PersistenceLayer.PersistenceBroker.AddMySqlTopWhere(System.String,System.Int32)">
+            <summary>
+            静态的给MySql添加TOP功能的方法????
+            </summary>
+            <param name="sqlString"></param>
+            <param name="top"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PersistenceLayer.XmlConfigLoader">
+            <summary>
+            XmlConfigLoader 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.XmlConfigLoader.LoadDatabaseInformation">
+            <summary>
+            从XML文件中获取数据库连接信息
+            
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.XmlConfigLoader.GetRelationalDatabase(System.Xml.XmlNodeReader)">
+            <summary>
+            从一个数据库配置节点,获取一个数据库连接
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PersistenceLayer.DeleteCriteria">
+            <summary>
+            	DeleteCriteria 该类根据Condition对象指定过滤条件删除一个或多个实体对象
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.PersistentCriteria">
+            <summary>
+            标准的一个基类，UpdateCriteria与DeleteCriteria都继承自此类
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.PersistentCriteria._databaseName">
+            <summary>
+            指定数据源名
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.PersistentCriteria._memoryKey">
+            <summary>
+            内存镜像时Key值
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.PersistentCriteria._IsSaveInMemory">
+            <summary>
+            是否要内存镜像
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.PersistentCriteria.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.PersistentCriteria.ForClass">
+            <summary>
+            作用的类型
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.PersistentCriteria.CriteriaType">
+            <summary>
+            标准的类型
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.PersistentCriteria.DatabaseName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.PersistentCriteria.MemoryKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.DeleteCriteria.#ctor(System.Type)">
+            <summary>
+            	生成一个DeleteCriteria
+            </summary>
+            <param name="classType">需要处理实体对象的Tpye对象</param>
+        </member>
+        <member name="M:PersistenceLayer.DeleteCriteria.#ctor(System.Type,System.String)">
+            <summary>
+            生成一个DeleteCriteria
+            </summary>
+            <param name="classType">实体类型</param>
+            <param name="databaseName">数据源名称</param>
+        </member>
+        <member name="M:PersistenceLayer.DeleteCriteria.Perform">
+            <summary>
+            	执行删除操作
+            </summary>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:PersistenceLayer.DeleteCriteria.GetNewCondition">
+            <summary>
+            	得到一个新条件类对象 
+            </summary>
+            <returns>Condition对象，可以在Condition对象指定过滤条件</returns>
+        </member>
+        <member name="P:PersistenceLayer.DeleteCriteria.SqlString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.DeleteCriteria.classMapName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.RetrieveCriteria">
+            <summary>
+            	RetrieveCriteria 该类封装了一次获取一个或多个EntityObject对象的行为。
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.RetrieveCriteria._IsSaveInMemory">
+            <summary>
+            用于控制此返回是否要保存在内存
+            false:不保存在内存中。则每次都从数据库读取，此为默认值
+            true:保存到内存中，如果内存中存在就直接从内存中读取，对于基础数据建议使用此功能。
+            对于操作性数据不推荐，这导致大量内存被占
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.RetrieveCriteria._memoryKey">
+            <summary>
+            如果要保存到内存的话，将把此值作为唯一的KEY值。
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.RetrieveCriteria.#ctor(System.Type)">
+            <summary>
+            	生成一个RetrieveCriteria实例
+            </summary>
+            <param name="classType">EntityObject的Type对象</param>
+        </member>
+        <member name="M:PersistenceLayer.RetrieveCriteria.#ctor(System.Type,System.String)">
+            <summary>
+            add by tintown at 2004-10-23
+            </summary>
+            <param name="classType"></param>
+            <param name="databaseName"></param>
+        </member>
+        <member name="M:PersistenceLayer.RetrieveCriteria.AddSelect(System.String)">
+             <summary>
+            增加一个属性，并以属性名作为返回DataTable的列名
+             </summary>
+             <param name="attributeName"></param>
+        </member>
+        <member name="M:PersistenceLayer.RetrieveCriteria.AddSelect(System.String,System.String)">
+            <summary>
+            	增加一个属性 并以asName作为返回DataTable的列名 
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.RetrieveCriteria.AddSelect(PersistenceLayer.AttributeType)">
+            <summary>
+            定义选择所有的属性
+            </summary>
+            <param name="all"></param>
+        </member>
+        <member name="M:PersistenceLayer.RetrieveCriteria.AsCursor">
+            <summary>
+            	返回一个ObjectCursor对象 
+            </summary>
+            <returns>ObjectCursor</returns>
+        </member>
+        <member name="M:PersistenceLayer.RetrieveCriteria.AsEntity">
+            <summary>
+            tintown add at 2004-10-24
+            此方法主要方便于那些非主键查询，能及时获取唯一对象
+            如果查询中存在多个对象，系统则返回第一条记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PersistenceLayer.RetrieveCriteria.AsEntityContainer">
+            <summary>
+            返回实体集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PersistenceLayer.RetrieveCriteria.AsDataTable">
+            <summary>
+            	根据查询条件返回一个结果集
+            </summary>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:PersistenceLayer.RetrieveCriteria.GetNewCondition">
+            <summary>
+            	得到一个新条件类对象
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.RetrieveCriteria.OrderBy(System.String)">
+            <summary>
+            	等价于OrderBy(attributeName,true)
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.RetrieveCriteria.OrderBy(System.String,System.Boolean)">
+            <summary>
+            	获取的对象排序。
+            </summary>
+            <param name="attributeName">排序依据的属性</param>
+            <param name="isAsc">isAsc=true ,按升序排序，isAsc=false 则按降序排序</param>
+        </member>
+        <member name="M:PersistenceLayer.RetrieveCriteria.Clear">
+            <summary>
+            	清除所有已设置的Condition对象
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.RetrieveCriteria.ForClass">
+            <summary>
+            	指定的类的Type类型
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.RetrieveCriteria.IsIncludeAssociation">
+            <summary>
+            	是否获取各个关联对象 
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.RetrieveCriteria.SqlString">
+            <summary>
+            	返回Sql语句
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.RetrieveCriteria.Top">
+            <summary>
+            头N条属性
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.RetrieveCriteria.DatabaseName">
+            <summary>
+            数据源名称
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.RetrieveCriteria.MemoryKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.SelectionCriteria">
+            <summary>
+            SelectionCriteria 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.UpdateCriteria">
+            <summary>
+            UpdateCriteria 更新标准
+            可以完成一个实体上的指定条件的指定更新字段操作
+            生成Update table set field=value where ...
+            这是批量更新模式
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.UpdateCriteria.#ctor(System.Type)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="classType">类型</param>
+        </member>
+        <member name="M:PersistenceLayer.UpdateCriteria.#ctor(System.Type,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="classType">类型</param>
+            <param name="databaseName">数据源名称</param>
+        </member>
+        <member name="M:PersistenceLayer.UpdateCriteria.Perform">
+            <summary>
+            	执行批更新操作
+            </summary>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:PersistenceLayer.UpdateCriteria.GetNewCondition">
+            <summary>
+            	得到一个新条件类对象
+            </summary>
+            <returns>Condition实例</returns>
+        </member>
+        <member name="M:PersistenceLayer.UpdateCriteria.AddAttributeForUpdate(System.String,System.Object)">
+            <summary>
+            增加一个需要更新属性
+            由此方法添加需要更新的字段与值
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.UpdateCriteria.SqlString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.UpdateCriteria.classMap">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.Informix">
+            <summary>
+            OtherDataBase 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.RelationalDatabase">
+            <summary>
+            	RelationalDatabase 
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.RelationalDatabase.DoSql(System.String)">
+            <summary>
+            执行一条SQL语句 
+            add by tintown at 2004-09-06
+            </summary>
+            <param name="sqlstring">语句</param>
+            <returns>影响条数</returns>
+        </member>
+        <member name="M:PersistenceLayer.RelationalDatabase.GetQuotationColumn(System.String)">
+            <summary>
+            根据列名生成带有间隔符的列名
+            如Password 生成为[Password]或者"Password"
+            </summary>
+            <param name="columnName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PersistenceLayer.Informix.AsDataTable(System.Data.IDbCommand,System.Int32)">
+            <summary>
+            获取前N条记录(未实现Oracle功能)
+            add by tintown at 2004-09-06
+            </summary>
+            <param name="cmd"></param>
+            <param name="top"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PersistenceLayer.MsAccess">
+            <summary>
+            	MsAccess 数据库
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.MsAccess.AsDataTable(System.Data.IDbCommand,System.Int32)">
+            <summary>
+            获取前Ｎ条记录
+            add by tintown at 2004-09-06
+            </summary>
+            <param name="cmd"></param>
+            <param name="top"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PersistenceLayer.MsSqlServer">
+            <summary>
+            	MsSqlServer 数据库
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.MsSqlServer.AsDataTable(System.Data.IDbCommand,System.Int32)">
+            <summary>
+            获取前N条记录(类似于AsDataTable的方法)
+            </summary>
+            <param name="cmd">Command</param>
+            <param name="top">前N条</param>
+            <returns></returns>
+        </member>
+        <member name="T:PersistenceLayer.MySql">
+            <summary>
+            ODP 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.MySql.AsDataTable(System.Data.IDbCommand,System.Int32)">
+            <summary>
+            获取前N条记录(未实现MySql功能)
+            add by tintown at 2004-09-06
+            </summary>
+            <param name="cmd"></param>
+            <param name="top"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PersistenceLayer.Odbc">
+            <summary>
+            	MsSqlServer 数据库
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.Odbc.AsDataTable(System.Data.IDbCommand,System.Int32)">
+            <summary>
+            获取前N条记录(类似于AsDataTable的方法)
+            </summary>
+            <param name="cmd">Command</param>
+            <param name="top">前N条</param>
+            <returns></returns>
+        </member>
+        <member name="T:PersistenceLayer.ODP">
+            <summary>
+            ODP 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.ODP.AsDataTable(System.Data.IDbCommand,System.Int32)">
+            <summary>
+            获取前N条记录(未实现Oracle功能)
+            add by tintown at 2004-09-06
+            </summary>
+            <param name="cmd"></param>
+            <param name="top"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PersistenceLayer.Oracle">
+            <summary>
+            OtherDataBase 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.Oracle.AsDataTable(System.Data.IDbCommand,System.Int32)">
+            <summary>
+            获取前N条记录(未实现Oracle功能)
+            add by tintown at 2004-09-06
+            </summary>
+            <param name="cmd"></param>
+            <param name="top"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PersistenceLayer.CardinalityTypes">
+            <summary>
+            	CardinalityTypes 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.ActionTypes">
+            <summary>
+            	ActionTypes 的摘要说明。
+            	tintown Add "SqlCommand" at 2004-09-06
+            	添加处理SQL事务的类型
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.ActionTypes.PesistentCriteria">
+            <summary>
+            	处理标准
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.ColumnKeyTypes">
+            <summary>
+            	ColumnKeyTypes 数据表Column的键类型
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.ErrorTypes">
+            <summary>
+            	实体层错误类型
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.FormatException">
+            <summary>格式错误</summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.NotFound">
+            <summary>未发现</summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.XmlError">
+            <summary>Xml文件错误</summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.Unknown">
+            <summary>未知错误 </summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.DatabaseError">
+            <summary>数据库错误</summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.DatabaseConnectionError">
+            <summary>
+            数据库不存在错误
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.DatabaseUnknwnError">
+            <summary>数据库未处理错误</summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.NotUnique">
+            <summary>数据不唯一，原因可能是标识该条记录的主键、索引重复</summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.DataTooLong">
+            <summary>数据过长</summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.NotAllowStringEmpty">
+            <summary>字符串不能为零长度</summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.NotAllowDataNull">
+            <summary>数据不能为空</summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.DataTypeNotMatch">
+            <summary>数据类型不匹配</summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.AutoValueOn">
+            <summary>自动产生值，不能指定</summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.UpdateFail">
+            <summary>更新失败，原因可能是数据已被删除，或则数据被其他人修改</summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.RestrictError">
+            <summary>由于约束机制，导致的错误</summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.RequireAttribute">
+            <summary>缺少必要的属性(null)，如标识该对象的属性</summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.PesistentError">
+            <summary>实体层一般错误 </summary>
+        </member>
+        <member name="F:PersistenceLayer.ErrorTypes.DirtyEntity">
+            <summary>
+            更新中有脏数据，可能是并发引起的
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.CriteriaTypes">
+            <summary>
+            标准类型
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.SqlValueTypes.PrototypeString">
+            <summary>字符串型</summary>
+        </member>
+        <member name="F:PersistenceLayer.SqlValueTypes.SimpleQuotesString">
+            <summary>'xxxx'型的字符串</summary>
+        </member>
+        <member name="T:PersistenceLayer.AttributeType">
+            <summary>
+            定义返回所有属性
+            在RetrieveCriteria中可以使用
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.AttributeType.All">
+            <summary>
+            返回所有的字段
+            这相当于"*"功能
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.Association">
+            <summary>
+            	This class contains information about association map.
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.AttributeMap">
+            <summary>
+            Attribute 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.ClassMap">
+            <summary>
+            ClassMap 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.ClassMap._IsSaveToMemory">
+            <summary>
+            tintown add at 2004-10-29
+            此实体是否要保存到内存中
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.ClassMap.GetFullyQualifiedName(System.String)">
+            <summary>
+            获取字段完整的名称，比如“[table].[column]”tintown add at 2005-4-21
+            </summary>
+            <param name="columnName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PersistenceLayer.ColumnMap">
+            <summary>
+            ColumnMap 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.DatabaseMap">
+            <summary>
+            DatabaseMap 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.TableMap">
+            <summary>
+            TableMap 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.OrderEntry">
+            <summary>
+            OrderEntry 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.Condition">
+            <summary>
+            	该类定义用以限定对象范围的选择条件。用户不能直接生成他的实例。
+            	如要得到Conditon，需要通过RetrieveCriteria、DeleteCriteria的GetNewConditon()创建。
+            	Condition内部是"AND"关系、Condition与Condition之间是"OR"的关系，如：
+            	RetrieveCriteria rc=new RetrieveCrititeria(typeof(aEntity));
+            	Condition c1=rc.GetNewCondition();
+            	c1.AddEqualTo(aEntity.Name,"听棠");
+            	c1.AddEqualTo(aEntity.Age,"27");
+            	Condtion c2=rc.GetNewCondition();
+            	c2.AddEqualTo(aEntity.City,"苏州");
+            	则最终生成的查询是：where (Name="听棠" and Age=27) or (City="苏州")
+            	若为了生成"(a or b) and c"这种形式，则请参考GetOrGroup()方法
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddEqualTo(System.String,System.Object)">
+            <summary>
+            	“=”比较指定值与指定属性
+            </summary>
+            <param name="attributeName">比较的属性</param>
+            <param name="attributeValue">指定值</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddEqualToField(System.String,System.String)">
+            <summary>
+            "="比较两个字段是否相等
+            </summary>
+            <param name="attributeName">第一个字段名</param>
+            <param name="attributeName2">第二个字段名</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddGreaterThan(System.String,System.Object)">
+            <summary>
+            	“>”比较指定值与指定属性
+            </summary>
+            <param name="attributeName">比较的属性</param>
+            <param name="attributeValue">指定值</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddGreaterThanField(System.String,System.String)">
+            <summary>
+            ">"比较第一个字段是否大于第二个字段
+            </summary>
+            <param name="attributeName">第一个字段名称</param>
+            <param name="attributeName2">第二个字段名称</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddGreaterThanOrEqualTo(System.String,System.Object)">
+            <summary>
+            	“>=”比较指定值与指定属性
+            </summary>
+            <param name="attributeName">比较的属性</param>
+            <param name="attributeValue">指定值</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddGreaterThanOrEqualToField(System.String,System.String)">
+            <summary>
+            ">="比较第一个字段是否大于等于第二个字段
+            </summary>
+            <param name="attributeName">第一个字段名称</param>
+            <param name="attributeName2">第二个字段名称</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddNotEqualTo(System.String,System.Object)">
+            <summary>
+            	“不等于”"比较指定值与指定属性
+            </summary>
+            <param name="attributeName">比较的属性</param>
+            <param name="attributeValue">指定值</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddNotEqualToField(System.String,System.String)">
+            <summary>
+            "不相等"比较两个字段是否不相等
+            </summary>
+            <param name="attributeName">第一个字段名称</param>
+            <param name="attributeName2">第二个字段名称</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddLessThan(System.String,System.Object)">
+            <summary>
+            	“小于”比较指定值与指定属性
+            </summary>
+            <param name="attributeName">比较的属性</param>
+            <param name="attributeValue">指定值</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddLessThanField(System.String,System.String)">
+            <summary>
+            "小于"比较第一个字段是否小于第二个字段
+            </summary>
+            <param name="attributeName">第一个字段名称</param>
+            <param name="attributeName2">第二个字段名称</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddLessThanOrEqualTo(System.String,System.Object)">
+            <summary>
+            	“ 小于等于 ”"比较指定值与指定属性
+            </summary>
+            <param name="attributeName">比较的属性</param>
+            <param name="attributeValue">指定值</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddLessThanOrEqualToField(System.String,System.String)">
+            <summary>
+            "小于等于"比较第一个字段是否小于等于第二个字段
+            </summary>
+            <param name="attributeName">第一个字段</param>
+            <param name="attributeName2">第二个字段</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddMatch(System.String,System.String)">
+            <summary>
+            	指定子字符串与指定属匹配
+            </summary>
+            <param name="attributeName">属性</param>
+            <param name="attributeValue">指定字符串</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddNotMatch(System.String,System.String)">
+            <summary>
+            	指定子字符串与指定属不匹配
+            </summary>
+            <param name="attributeName">属性</param>
+            <param name="attributeValue">指定字符串</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddMatchPrefix(System.String,System.String)">
+            <summary>
+            	前缀匹配
+            </summary>
+            <param name="attributeName">属性</param>
+            <param name="attributeValue">匹配值</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddNotMatchPrefix(System.String,System.String)">
+            <summary>
+            	前缀不匹配
+            </summary>
+            <param name="attributeName">属性</param>
+            <param name="attributeValue">匹配值</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddMatchSuffix(System.String,System.String)">
+            <summary>
+            	后缀匹配
+            </summary>
+            <param name="attributeName">属性</param>
+            <param name="attributeValue">匹配值</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddNotMatchSuffix(System.String,System.String)">
+            <summary>
+            	后缀不匹配
+            </summary>
+            <param name="attributeName">属性</param>
+            <param name="attributeValue">匹配值</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddIn(System.String,System.Object[])">
+            <summary>
+            	与给定的列表list里的值匹配
+            </summary>
+            <param name="attributeName">属性</param>
+            <param name="list">值列表</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.AddNotIn(System.String,System.Object[])">
+            <summary>
+            	与给定的列表list里的值不匹配
+            </summary>
+            <param name="attributeName">属性</param>
+            <param name="list">值列表</param>
+        </member>
+        <member name="M:PersistenceLayer.Condition.GetNewOrGroup">
+            <summary>
+            创建一个OrGroup对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PersistenceLayer.Condition.Clear">
+            <summary>
+            	清楚所有条件
+            </summary>
+        </member>
+        <!-- 对于成员“T:PersistenceLayer.EntityContainer”忽略有格式错误的 XML 注释 -->
+        <member name="M:PersistenceLayer.EntityContainer.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.EntityContainer.Add(PersistenceLayer.EntityObject)">
+            <summary>
+            添加对象
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="P:PersistenceLayer.EntityContainer.Item(System.Int32)">
+            <summary>
+            第N个对象
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.EntityObject">
+            <summary>
+            	所有实体类的基类,其他实体类都从此继承
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.EntityObject._databaseName">
+            <summary>
+            实体自己的数据源，在进行实体的操作时，使用此数据库
+            以便于实体动态的进行不同数据库的存取
+            tintown add by 2004-10-23
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.EntityObject._IsSaveInMemory">
+            <summary>
+            实体是否要保存到内存中，从XML中读取此值
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.EntityObject.GetClassName(System.Type)">
+            <summary>
+            	返回Type类对象classType的对象名
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.EntityObject.#ctor">
+            <summary>
+            	constructor
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.EntityObject.GetClassName">
+            <summary>
+            	返回对象的类名 
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.EntityObject.Save">
+            <summary>
+            使对象实体化,根据IsPersistent决定是更新还是插入操作
+            如果IsPersistent为True，则自动会进行Update操作，在使用Retrieve()后会自动赋上此值，如：
+            entity.Retrieve();
+            if(entity.IsPersistent)
+            {会进行更新操作}
+            虽然IsPersistent是public的，但一般的情况下，不建议进行赋值。
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.EntityObject.Retrieve">
+            <summary>
+            根据对象的主键获取唯一对象
+            注意，这个方法必须与只能通过主键来获取，因为只有主键在逻辑能确定唯一
+            支持双主键，如果是双主键，则两个主键属性必须都要赋上
+            如果不能通过主键唯一确定的，则可以通过RetrieveCriteria对象来获取。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PersistenceLayer.EntityObject.Delete">
+            <summary>
+            	删除 
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.EntityObject.SetAttributeValue(System.String,System.Object)">
+            <summary>
+            根据属性名动态设置属性值
+            </summary>
+            <param name="name"></param>
+            <param name="objValue"></param>
+        </member>
+        <member name="M:PersistenceLayer.EntityObject.DeepClone">
+            <summary>
+            引方法用于实体的深度Clone，返回对象后进行强行转化一下就可以使用
+            注意：实体对象必须是“可序列化的”,即实体类要标明[Serializable]属性方可使用。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:PersistenceLayer.EntityObject.IsPersistent">
+            <summary>
+            	指示该实体对象是否已经实体化。
+            	true则表示在Save时执行Update操作，false则表示在Save时执行Insert操作。
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.EntityObject.DatabaseName">
+            <summary>
+            数据源名称
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.EntityObjectCollection">
+            <summary>
+            	EntityObject对象集合。用于实现实体类之间的1-N的关联。
+            	该类是个抽象类不能直接实例化。你需要从该类派生，得到一个强类型的对象集合。
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.EntityObjectCollection.#ctor(System.Type)">
+            <summary>
+            	生成一个EntityObjectCollection实例
+            </summary>
+            <param name="entityObjectType"></param>
+        </member>
+        <member name="M:PersistenceLayer.EntityObjectCollection.Add(PersistenceLayer.EntityObject)">
+            <summary>
+            	加入一个实体对象 
+            </summary>
+            <param name="aEntityObject">加入集合的实体对象</param>
+        </member>
+        <member name="M:PersistenceLayer.EntityObjectCollection.Remove(PersistenceLayer.EntityObject)">
+            <summary>
+            	移除一个实体对象
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.EntityObjectCollection.RemoveAt(System.Int32)">
+            <summary>
+            	要移除的实体对象从零开始的索引
+            </summary>
+            <param name="index">索引</param>
+        </member>
+        <member name="M:PersistenceLayer.EntityObjectCollection.Clear">
+            <summary>
+            	移出集合中的所有对象
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.EntityObjectCollection.Items(System.Int32)">
+            <summary>
+            	索引器
+            </summary>
+            <param name="index">索引号</param>
+            <returns>返回实体对象</returns>
+        </member>
+        <member name="P:PersistenceLayer.EntityObjectCollection.Count">
+            <summary>
+            	实体对象总数
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.EntityObjectCollection.EntityObjectType">
+            <summary>
+            	该集合所容纳实体对象的Type实例。
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.EntityObjectCollection.FullName">
+            <summary>
+            	该集合所容纳实体对象的类名。
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.ObjectCursor">
+            <summary>
+            对象集合游标类，一般在RetrieveCriteria中创建：
+             ObjectCursor oc=rc.AsObjectCursor();此游标指向获取到的对象集
+             for(oc.HasObject()) //循环判断，这跟使用EntityContainer很类似
+            {
+             entity e=(entity)oc.NextObject();
+            }
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.ObjectCursor.NextObject">
+            <summary>
+            	返回下一个对象对象
+            </summary>
+            <returns>EntityObject</returns>
+        </member>
+        <member name="M:PersistenceLayer.ObjectCursor.HasObject">
+            <summary>
+            	是否还有对象	 
+            </summary>
+            <returns>true：仍有对象，false：无对象</returns>
+        </member>
+        <member name="M:PersistenceLayer.ObjectCursor.MoveFirst">
+            <summary>
+            	将指针移动到第一个实体对象处 
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.ObjectCursor.Count">
+            <summary>
+            	所包含实体对象的总数
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.OrGroup">
+            <summary>
+            OrGroup与Condition的用法基本上一致的
+            OrGroup内部都是"AND"关系
+            为了实现(a or b ) and c这样的效果，a条件与b条件之间是or关系，再与c进行and组合
+            假设c为已经实例化的对象
+            OrGroup og=c.GetOrGroup();
+            og.AddEqualTo(...)  //条件a
+            og.AddEqualTo(...)  //条件b
+            c.AddEuqalTo(...)   //条件c
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddEqualTo(System.String,System.Object)">
+            <summary>
+            	“=”比较指定值与指定属性
+            </summary>
+            <param name="attributeName">比较的属性</param>
+            <param name="attributeValue">指定值</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddEqualToField(System.String,System.String)">
+            <summary>
+            "="比较两个字段是否相等　
+            </summary>
+            <param name="attributeName">第一个字段名</param>
+            <param name="attributeName2">第二个字段名</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddGreaterThan(System.String,System.Object)">
+            <summary>
+            	“>”比较指定值与指定属性
+            </summary>
+            <param name="attributeName">比较的属性</param>
+            <param name="attributeValue">指定值</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddGreaterThanField(System.String,System.String)">
+            <summary>
+            ">"比较第一个字段是否大于第二个字段
+            </summary>
+            <param name="attributeName">第一个字段名称</param>
+            <param name="attributeName2">第二个字段名称</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddGreaterThanOrEqualTo(System.String,System.Object)">
+            <summary>
+            	“>=”比较指定值与指定属性
+            </summary>
+            <param name="attributeName">比较的属性</param>
+            <param name="attributeValue">指定值</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddGreaterThanOrEqualToField(System.String,System.String)">
+            <summary>
+            ">="比较第一个字段是否大于等于第二个字段
+            </summary>
+            <param name="attributeName">第一个字段名称</param>
+            <param name="attributeName2">第二个字段名称</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddNotEqualTo(System.String,System.Object)">
+            <summary>
+            	“不等于”"比较指定值与指定属性
+            </summary>
+            <param name="attributeName">比较的属性</param>
+            <param name="attributeValue">指定值</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddNotEqualToField(System.String,System.String)">
+            <summary>
+            "不等于"比较两个字段是否不相等
+            </summary>
+            <param name="attributeName">第一个字段名称</param>
+            <param name="attributeName2">第二个字段名称</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddLessThan(System.String,System.Object)">
+            <summary>
+            	“小于”比较指定值与指定属性
+            </summary>
+            <param name="attributeName">比较的属性</param>
+            <param name="attributeValue">指定值</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddLessThanField(System.String,System.String)">
+            <summary>
+            "小于"比较第一个字段是否小于第二个字段
+            </summary>
+            <param name="attributeName">第一个字段名称</param>
+            <param name="attributeName2">第二个字段名称</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddLessThanOrEqualTo(System.String,System.Object)">
+            <summary>
+            	“ 小于等于 ”"比较指定值与指定属性
+            </summary>
+            <param name="attributeName">比较的属性</param>
+            <param name="attributeValue">指定值</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddLessThanOrEqualToField(System.String,System.String)">
+            <summary>
+            "小于等于"比较第一个字段是否小于等于第二个字段
+            </summary>
+            <param name="attributeName">第一个字段</param>
+            <param name="attributeName2">第二个字段</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddMatch(System.String,System.String)">
+            <summary>
+            	指定子字符串与指定属匹配
+            </summary>
+            <param name="attributeName">属性</param>
+            <param name="attributeValue">指定字符串</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddMatchPrefix(System.String,System.String)">
+            <summary>
+            	前缀匹配
+            </summary>
+            <param name="attributeName">属性</param>
+            <param name="attributeValue">匹配值</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddNotMatchPrefix(System.String,System.String)">
+            <summary>
+            	前缀不匹配
+            </summary>
+            <param name="attributeName">属性</param>
+            <param name="attributeValue">匹配值</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddMatchSuffix(System.String,System.String)">
+            <summary>
+            	后缀匹配
+            </summary>
+            <param name="attributeName">属性</param>
+            <param name="attributeValue">匹配值</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddNotMatchSuffix(System.String,System.String)">
+            <summary>
+            	后缀不匹配
+            </summary>
+            <param name="attributeName">属性</param>
+            <param name="attributeValue">匹配值</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddIn(System.String,System.Object[])">
+            <summary>
+            	与给定的列表list里的值匹配
+            </summary>
+            <param name="attributeName">属性</param>
+            <param name="list">值列表</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AddNotIn(System.String,System.Object[])">
+            <summary>
+            	与给定的列表list里的值不匹配
+            </summary>
+            <param name="attributeName">属性</param>
+            <param name="list">值列表</param>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.Clear">
+            <summary>
+            	清楚所有条件
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.OrGroup.AsSqlClause">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PersistenceLayer.PlException">
+            <summary>
+            	PlException 实体控制层异常。在实体层发生的异常都会以PlExcetion异常抛出。
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.PlException.#ctor(System.String)">
+            <summary>
+            	生成一个PlException异常实例
+            </summary>
+            <param name="message">异常信息</param>
+        </member>
+        <member name="M:PersistenceLayer.PlException.#ctor(System.String,PersistenceLayer.ErrorTypes)">
+            <summary>
+            	生成一个PlException异常实例
+            </summary>
+            <param name="message">异常信息</param>
+            <param name="errorType">异常代码</param>
+        </member>
+        <member name="M:PersistenceLayer.PlException.#ctor(System.Exception)">
+            <summary>
+            	生成一个PlException异常实例
+            </summary>
+            <param name="e">异常实例</param>
+        </member>
+        <member name="P:PersistenceLayer.PlException.ErrorType">
+            <summary>
+            	返回当前PlExcetpion实例的错误代码(枚举类型)
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.PlException.ErrorSource">
+            <summary>
+            	返回引起抛出PlExcetpion的Exception。当从PlException无法得到足够的错误信息，
+            	可从这里获得引发异常的原始Exception。
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.Query">
+            <summary>
+            	Query类是RetrieveCriteria的一个增强类。
+            	RetrieveCriteria不能完成的工作可以由Query来完成
+            	Query可以进行联合查询、执行Sql语句、执行存储过程等
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.Query.#ctor(System.String)">
+            <summary>
+            	生成一个Query实例
+            </summary>
+            <param name="className">EntityObject的类名</param>
+        </member>
+        <member name="M:PersistenceLayer.Query.#ctor(System.Type)">
+            <summary>
+            	生成一个Query实例
+            </summary>
+            <param name="classType">EntityObject对象的Type实例</param>
+        </member>
+        <member name="M:PersistenceLayer.Query.#ctor(System.Type,System.String)">
+            <summary>
+            	生成一个Query实例
+            </summary>
+            <param name="classType">EntityObject对象的Type实例</param>
+            <param name="DatabaseName">多帐套数据库的数据库名</param>
+        </member>
+        <member name="M:PersistenceLayer.Query.RunProcedure(System.String,System.Data.IDataParameter[],System.Int32@,System.String)">
+            <summary>
+            	执行存储过程
+            </summary>
+            <param name="storeProcName">存储过程名</param>
+            <param name="param">存储过程所需参数数组</param>
+            <param name="affected">存储过程影响的行数</param>
+            <param name="dbName">数据库名</param>
+            <returns>存储过程的返回代码</returns>
+        </member>
+        <member name="M:PersistenceLayer.Query.RunProcedure(System.String,System.Data.IDataParameter[],System.Int32@,System.String,System.Int32)">
+            <summary>
+            	执行存储过程(可以指定存储过程Timeout时间:0代表永远)
+            </summary>
+            <param name="storeProcName">存储过程名</param>
+            <param name="param">存储过程所需参数数组</param>
+            <param name="affected">存储过程影响的行数</param>
+            <param name="dbName">数据库名</param>
+            <param name="commandTimeout">执行时间(秒)，默认为30,如果设为0则无限制</param>
+            <returns>存储过程的返回代码</returns>
+        </member>
+        <member name="M:PersistenceLayer.Query.RunProcedure(System.String,System.Data.IDataParameter[],System.String)">
+            <summary>
+            	执行存储过程,返回DataTable 
+            </summary>
+            <param name="storeProcName">存储过程名</param>
+            <param name="ps">存储过程所需参数数组</param>
+            <param name="dbName">数据库名</param>
+            <returns>存储过程返回的DataTable</returns>
+        </member>
+        <member name="M:PersistenceLayer.Query.RunProcedure(System.String,System.Data.IDataParameter[],System.String,System.Int32)">
+            <summary>
+            	执行存储过程,返回DataTable (指定Command执行时间，0永不过期)
+            </summary>
+            <param name="storeProcName">存储过程名</param>
+            <param name="ps">存储过程所需参数数组</param>
+            <param name="dbName">数据库名</param>
+            <param name="commandTimeout">timeout秒数</param>
+            <returns>存储过程返回的DataTable</returns>
+        </member>
+        <member name="M:PersistenceLayer.Query.ProcessSql(System.String,System.String)">
+            <summary>
+            	执行Sql语句返回DataTable
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="dbName">操作的数据库名</param>
+            <returns>SQL语句查询结果集</returns>
+        </member>
+        <member name="M:PersistenceLayer.Query.ProcessSqlNonQuery(System.String,System.String)">
+            <summary>
+            	执行Sql语句返回影响条数
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="dbName">操作的数据库名</param>
+            <returns>SQL语句影响条数</returns>
+        </member>
+        <member name="M:PersistenceLayer.Query.GetParameter(System.String)">
+            <summary>
+            	返回一个IDataParameter,是SqlParameter,还是OleDbParameter
+            	由databaseName对应数据库的数据库类型确定
+            </summary>
+            <param name="databaseName">数据库名</param>
+            <returns></returns>
+        </member>
+        <member name="M:PersistenceLayer.Query.GetQueryCondition">
+            <summary>
+            	返回一个条件类对象 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PersistenceLayer.Query.AddAttribute(System.String)">
+             <summary>
+            增加一个属性，并以属性名作为返回DataTable的列名
+             </summary>
+             <param name="attributeName"></param>
+        </member>
+        <member name="M:PersistenceLayer.Query.AddAttribute(System.String,System.String)">
+            <summary>
+            	增加一个属性 并以asName作为返回DataTable的列名 
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.Query.AddAttribute(PersistenceLayer.AttributeType)">
+            <summary>
+            定义选择所有的属性
+            </summary>
+            <param name="all"></param>
+        </member>
+        <member name="M:PersistenceLayer.Query.SelectMax(System.String,System.String)">
+            <summary>
+            	返回所选对象中指定属性的Max
+            </summary>
+            <param name="attributeName">取Max值的属性名</param>
+            <param name="asName">返回Max值在DataTable中的列名</param>
+        </member>
+        <member name="M:PersistenceLayer.Query.SelectCount(System.String,System.String)">
+            <summary>
+            	返回所选对象中指定属性的Count值
+            </summary>
+            <param name="attributeName">取Count值的属性名</param>
+            <param name="asName">返回Count值在DataTable中的列名</param>
+        </member>
+        <member name="M:PersistenceLayer.Query.SelectSum(System.String,System.String)">
+            <summary>
+            	返回所选对象中指定属性的Sum值
+            </summary>
+            <param name="attributeName">取Sum值的属性名</param>
+            <param name="asName">返回Sum值在DataTable中的列名</param>
+        </member>
+        <member name="M:PersistenceLayer.Query.SelectAvg(System.String,System.String)">
+            <summary>
+            	返回所选对象中指定属性的Avg值
+            </summary>
+            <param name="attributeName">取Avg值的属性名</param>
+            <param name="asName">返回Avg值在DataTable中的列名</param>
+        </member>
+        <member name="M:PersistenceLayer.Query.AddJoinQuery(System.String,PersistenceLayer.Query,System.String)">
+            <summary>
+            	等值连接一个Query类对象
+            </summary>
+            <param name="fromAttribute"></param>
+            <param name="q"></param>
+            <param name="toAttribute"></param>
+        </member>
+        <member name="M:PersistenceLayer.Query.Execute">
+            <summary>
+            	执行查询，并返回查询结果集
+            </summary>
+            <returns>查询结果</returns>
+        </member>
+        <member name="M:PersistenceLayer.Query.ExecuteScalar">
+            <summary>
+            	执行查询，并返回查询所返回结果集的第一行第一列。忽略额外的行或列
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PersistenceLayer.Query.Clear">
+            <summary>
+            	清除所有条件和连接
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.Query.OrderBy(System.String)">
+            <summary>
+            	结果排序，升序
+            </summary>
+            <param name="attributeName">按attributeName排序</param>
+        </member>
+        <member name="M:PersistenceLayer.Query.OrderBy(System.String,System.Boolean)">
+            <summary>
+            	结果排序
+            </summary>
+            <param name="attributeName">按attributeName排序</param>
+            <param name="isAsc">是否升序</param>
+        </member>
+        <member name="M:PersistenceLayer.Query.GroupBy(System.String)">
+            <summary>
+            对查询结果集按属性分组
+            </summary>
+            <param name="name">分组的属性名</param>
+        </member>
+        <member name="P:PersistenceLayer.Query.Top">
+            <summary>
+            头N条属性
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.Query.ClassName">
+            <summary>
+            	查询名
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.Query.IsDistinct">
+            <summary>
+            	是否排除重复行？
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.Query.SqlString">
+            <summary>
+            	返回Sql语句
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.Query.DatabaseName">
+            <summary>
+            数据源名称
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.Setting">
+            <summary>
+            	该类封装了设置、得到xml文件路径，以及取得数据库连接字符串的功能
+            	不能直接生成这个类的实例，只能通过静态方法Instance()得到。
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.Setting.#ctor">
+            <summary>
+            	生成一个Setting类的实例
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.Setting.Instance">
+            <summary>
+            	该类的实例只能同过本方法取得
+            </summary>
+            <returns>返回一个Setting实例</returns>
+        </member>
+        <member name="M:PersistenceLayer.Setting.GetConnectionString(System.String)">
+            <summary>
+            	得到一个指定数据库的连接字串 
+            </summary>
+            <param name="databaseName">数据库映射名</param>
+            <returns>返回连接字符串</returns>
+        </member>
+        <member name="M:PersistenceLayer.Setting.Initialize">
+            <summary>
+            	环境初始化
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.Setting.AppendDatabase(System.String,PersistenceLayer.DatabaseType,System.String)">
+            <summary>
+            追加数据源，此方法提供代码追加数据源的可能性
+            在多帐套的情况下，一般是需要动态追加数据源的
+            如果数据源名称重复，则会自动覆盖原连接，如果数据源名称不同，则会自动追加进去。
+            
+            </summary>
+            <param name="name">数据源名</param>
+            <param name="databaseType">类型</param>
+            <param name="connectionString">连接字符串</param>
+        </member>
+        <member name="M:PersistenceLayer.Setting.LoadClassMap(System.String)">
+            <summary>
+            手动加载ClassMap文件。
+            </summary>
+            <param name="classMapPath">ClassMap地址</param>
+        </member>
+        <member name="M:PersistenceLayer.Setting.AppendDatabase(System.String,PersistenceLayer.DatabaseType,System.String,System.String)">
+            <summary>
+            追加数据源，此方法提供代码追加数据源的可能性
+            在多帐套的情况下，一般是需要动态追加数据源的
+            如果数据源名称重复，则会自动覆盖原连接，如果数据源名称不同，则会自动追加进去。
+            同时会加载ClassMap信息。
+            </summary>
+            <param name="name">数据源名称</param>
+            <param name="databaseType">数据源类型</param>
+            <param name="connectionString">连接字符串</param>
+            <param name="ClassMapPath">ClassMap地址</param>
+        </member>
+        <member name="M:PersistenceLayer.Setting.GetDatabaseVendor(System.String)">
+            <summary>
+            获取数据源的数据库提供者
+            </summary>
+            <param name="dbName">数据源名称</param>
+            <returns></returns>
+        </member>
+        <member name="P:PersistenceLayer.Setting.DatabaseMapFile">
+            <summary>
+            	设置、返回数据库映射文件
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.DatabaseType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.DatabaseType.MsSqlServer">
+            <summary>
+            SQL数据库
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.DatabaseType.MsAccess">
+            <summary>
+            Access数据库
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.DatabaseType.Oracle">
+            <summary>
+            Oracle数据库
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.DatabaseType.Odbc">
+            <summary>
+            Odbc数据库
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.DatabaseType.ODP">
+            <summary>
+            ODP.NET连接Oracle
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.DatabaseVendor">
+            <summary>
+            数据库提供者类型
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.DatabaseVendor.MsSqlServer">
+            <summary>
+            Microsoft SQL Server 数据库
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.DatabaseVendor.MsAccess">
+            <summary>
+            Microsoft Access 数据库
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.DatabaseVendor.Oracle">
+            <summary>
+            Oracle 数据库
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.DatabaseVendor.Odbc">
+            <summary>
+            ODBC连接方式
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.DatabaseVendor.Informix">
+            <summary>
+            Informix数据库
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.DatabaseVendor.MySql">
+            <summary>
+            MySql 数据库（采用.NET连接）
+            </summary>
+        </member>
+        <member name="T:PersistenceLayer.Transaction">
+            <summary>
+            事务处理类
+            此事务处理支持两种机制，一种是使用Add...与Process()的一次性提交机制
+            另一种是使用Do..与Commit()或RollBack()的实时提交机制
+            两种机制不能混合使用，即要是使用Process()方式 的，那么只能使用Add的方法
+            如果是使用Commit()的话，则只能用Do方法，因此在使用时需要注意。
+            此两种机制各有优势，都支持多异构数据库组合。
+            </summary>
+        </member>
+        <member name="F:PersistenceLayer.Transaction.m_IsForceCommit">
+            <summary>
+            tintown added at 2005-3-23
+            用于判断是否强行Commit，默认为false
+            flase:不强行Commit，是指在实体Save()或是实体Delete()时，返回false就回滚整个事务,这用于并发性处理
+            true:强行Commit,是指忽略实体Save()与Delete()返回的false状态，因为有时这在业务上本身就是允许的。
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.#ctor">
+            <summary>
+            	Constructor
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.AddSaveObject(PersistenceLayer.EntityObject)">
+            <summary>
+            	在任务中增加一个Save任务 
+            </summary>
+            <param name="obj">需要执行Save的实体对象</param>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.DoSaveObject(PersistenceLayer.EntityObject,System.Boolean)">
+            <summary>
+            执行保存对象操作
+            </summary>
+            <param name="obj">实体对象</param>
+            <param name="isForceCommit">
+            是否强制执行,默认为false
+            true:强制执行，即就算遇到更新为零的操作，也不会抛出异常
+            flase:非强制执行，如果遇到更新为零，则抛出异常PLException，类型为DirthEntity，表示存在并发错误
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.DoSaveObject(PersistenceLayer.EntityObject)">
+            <summary>
+            执行保存对象操作（采用Transaction设定的IsForceCommit）
+            </summary>
+            <param name="obj">对象</param>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.DoDeleteObject(PersistenceLayer.EntityObject,System.Boolean)">
+             <summary>
+             在事务中执行实体删除操作
+             </summary>
+             <param name="obj"></param>
+             <param name="isForceCommit">
+             是否强制执行,默认为false
+             true:强制执行，即就算遇到更新为零的操作，也不会抛出异常
+             flase:非强制执行，如果遇到更新为零，则抛出异常PLException，类型为DirthEntity，表示存在并发错误
+            </param>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.DoDeleteObject(PersistenceLayer.EntityObject)">
+            <summary>
+            在事务中执行实体删除操作
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.DoRetrieveObject(PersistenceLayer.EntityObject)">
+            <summary>
+            在事务中进行实体查询（在执行后实体本身会被赋上值）
+            </summary>
+            <param name="obj">实体</param>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.DoDeleteCriteria(PersistenceLayer.DeleteCriteria)">
+            <summary>
+            在事务中执行删除标准操作
+            </summary>
+            <param name="delete">删除标准</param>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.DoDeleteCriteria(PersistenceLayer.DeleteCriteria,System.Boolean)">
+            <summary>
+            在事务中执行删除标准操作
+            </summary>
+            <param name="delete">删除标准</param>
+            <param name="isForceCommit">
+            是否强制执行,默认为false
+            true:强制执行，即就算遇到更新为零的操作，也不会抛出异常
+            flase:非强制执行，如果遇到更新为零，则抛出异常PLException，类型为DirthEntity，表示存在并发错误
+            </param>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.DoUpdateCriteria(PersistenceLayer.UpdateCriteria)">
+            <summary>
+            在事务中执行更新标准操作
+            </summary>
+            <param name="update">更新标准</param>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.DoRetrieveCriteria(PersistenceLayer.RetrieveCriteria)">
+            <summary>
+            在事务中执行RetrieveCriteria查询
+            </summary>
+            <param name="retrieve">查询标准</param>
+            <returns></returns>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.DoUpdateCriteria(PersistenceLayer.UpdateCriteria,System.Boolean)">
+            <summary>
+            在事务中执行更新标准操作
+            </summary>
+            <param name="update">更新标准</param>
+            <param name="isForceCommit">
+            是否强制执行,默认为false
+            true:强制执行，即就算遇到更新为零的操作，也不会抛出异常
+            flase:非强制执行，如果遇到更新为零，则抛出异常PLException，类型为DirthEntity，表示存在并发错误
+            </param>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.DoSqlNonQueryString(System.String,System.String)">
+            <summary>
+            在事务中执行非查询SQL语句
+            </summary>
+            <param name="strSql">sql语句</param>
+            <param name="dbName">数据源名称</param>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.DoSqlQueryString(System.String,System.String)">
+            <summary>
+            在事务中执行查询SQL语句
+            </summary>
+            <param name="strSql">SQL语句</param>
+            <param name="dbName">数据源名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.DoSqlNonQueryString(System.String,System.String,System.Boolean)">
+            <summary>
+            在事务中执行SQL语句
+            </summary>
+            <param name="strSql">sql语句</param>
+            <param name="dbName">数据源名称</param>
+            <param name="isForceCommit">
+            是否强制执行,默认为false
+            true:强制执行，即就算遇到更新为零的操作，也不会抛出异常
+            flase:非强制执行，如果遇到更新为零，则抛出异常PLException，类型为DirthEntity，表示存在并发错误 
+            </param>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.Commit">
+            <summary>
+            提交事务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.RollBack">
+            <summary>
+            回滚事务
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.AddDeleteObject(PersistenceLayer.EntityObject)">
+            <summary>
+            	在任务中增加一个Delete任务 
+            </summary>
+            <param name="obj">需要执行Delete的实体对象</param>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.AddRetrieveObject(PersistenceLayer.EntityObject)">
+            <summary>
+            	在任务中增加一个Retrieve任务 
+            </summary>
+            <param name="obj">需要执行Retrieve的实体对象</param>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.AddDeleteCriteria(PersistenceLayer.DeleteCriteria)">
+            <summary>
+            	在任务中增加一个DeleteCriteria任务
+            </summary>
+            <param name="delete">DeleteCriteria实例</param>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.AddUpdateCriteria(PersistenceLayer.UpdateCriteria)">
+            <summary>
+            	在任务中增加一个UpdateCriteria任务
+            </summary>
+            <param name="update">UpdateCriteria实例</param>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.AddSqlString(System.String,System.String)">
+            <summary>
+            添加SQL的事务处理功能(单数据库)
+            add by tintown
+            </summary>
+            <param name="sqlstring">执行的语句</param>
+            <param name="DbName">数据库名称{逻辑数据库名}</param>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.Clear">
+            <summary>
+            	清除所有加入到事务里的对象 
+            </summary>
+        </member>
+        <member name="M:PersistenceLayer.Transaction.Process">
+            <summary>
+            	事务处理 
+            </summary>
+            <returns>如果事务成功返回true，失败返回false</returns>
+        </member>
+        <member name="P:PersistenceLayer.Transaction.Count">
+            <summary>
+            	返回事务处理队列中的对象数目
+            </summary>
+        </member>
+        <member name="P:PersistenceLayer.Transaction.IsForceCommit">
+            <summary>
+            tintown added at 2005-3-23
+            用于判断是否强行Commit，默认为false
+            flase:不强行Commit，是指在实体Save()或是实体Delete()时，返回false就回滚整个事务,这用于并发性处理
+            true:强行Commit,是指忽略实体Save()与Delete()返回的false状态，因为有时这在业务上本身就是允许的。
+            </summary>
+        </member>
+    </members>
+</doc>

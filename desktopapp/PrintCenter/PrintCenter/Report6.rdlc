@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>a00172ac-3c34-4667-8117-9efc1c15b4df</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1cm</BottomMargin>
+  <RightMargin>1cm</RightMargin>
+  <PageWidth>29.7cm</PageWidth>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>29.7cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Table Name="table1">
+        <DataSetName>BusinessEntity_FNPRTDATAEntity</DataSetName>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ITEMCD_1">
+                      <rd:DefaultName>ITEMCD_1</rd:DefaultName>
+                      <ZIndex>5</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ITEMCD.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ITEMNAME">
+                      <rd:DefaultName>ITEMNAME</rd:DefaultName>
+                      <ZIndex>4</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ITEMNAME.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="SUBIVT">
+                      <rd:DefaultName>SUBIVT</rd:DefaultName>
+                      <ZIndex>3</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!SUBIVT.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ERPLOC">
+                      <rd:DefaultName>ERPLOC</rd:DefaultName>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ERPLOC.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ColSpan>3</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="RESERVE3">
+                      <rd:DefaultName>RESERVE3</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!RESERVE3.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>7</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox6">
+                      <rd:DefaultName>textbox6</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>7</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox15">
+                      <rd:DefaultName>textbox15</rd:DefaultName>
+                      <ZIndex>12</ZIndex>
+                      <Style>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>SimSun</FontFamily>
+                        <FontSize>11pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>="货品:   "&amp; First(Fields!RANGE_1.Value, "BusinessEntity_FNPRTHEDEntity") &amp; "～" &amp; First(Fields!RANGE_2.Value, "BusinessEntity_FNPRTHEDEntity") &amp; "    SubInventory:" &amp; First(Fields!RANGE_3.Value, "BusinessEntity_FNPRTHEDEntity") &amp; "      Erp Locator:   " &amp; First(Fields!RANGE_4.Value, "BusinessEntity_FNPRTHEDEntity")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>7</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
+                      <ZIndex>11</ZIndex>
+                      <Style>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontSize>11pt</FontSize>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <ZIndex>10</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>货品代码</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox8">
+                      <rd:DefaultName>textbox8</rd:DefaultName>
+                      <ZIndex>9</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>货品名称</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <ZIndex>8</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>SubInventory</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox16">
+                      <rd:DefaultName>textbox16</rd:DefaultName>
+                      <ZIndex>7</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Erp Locator</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ColSpan>3</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox19">
+                      <rd:DefaultName>textbox19</rd:DefaultName>
+                      <ZIndex>6</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>栈板数</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>6.02645cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>9.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>5.75cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.25cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.25cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>3.1746cm</Height>
+      </Table>
+    </ReportItems>
+    <Height>20cm</Height>
+  </Body>
+  <PageHeader>
+    <ReportItems>
+      <Textbox Name="textbox2">
+        <Left>24.5cm</Left>
+        <Top>0.25cm</Top>
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <ZIndex>2</ZIndex>
+        <Width>2.75001cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>="Page   " &amp; Globals!PageNumber</Value>
+      </Textbox>
+      <Textbox Name="textbox3">
+        <Left>9.24009cm</Left>
+        <Top>1.25cm</Top>
+        <rd:DefaultName>textbox3</rd:DefaultName>
+        <ZIndex>1</ZIndex>
+        <Width>8.76984cm</Width>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Value>＊＊＊ 　总库存清单 ＊＊＊</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <Left>16.5cm</Left>
+        <Top>0.25cm</Top>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Width>7.75cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>=Globals!ExecutionTime</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>1.88492cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+  </PageHeader>
+  <rd:ReportID>b33ce181-a7e1-4c45-8b63-0428dd354a5d</rd:ReportID>
+  <LeftMargin>1cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="BusinessEntity_FNPRTHEDEntity">
+      <rd:DataSetInfo>
+        <rd:DataSetName>BusinessEntity</rd:DataSetName>
+        <rd:ObjectDataSourceType>BusinessEntity.FNPRTHEDEntity, LabelPrinter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>FNPRTHEDEntity</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="DatabaseName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DatabaseName</DataField>
+        </Field>
+        <Field Name="IsPersistent">
+          <rd:TypeName>System.Boolean</rd:TypeName>
+          <DataField>IsPersistent</DataField>
+        </Field>
+        <Field Name="LISTKBN">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>LISTKBN</DataField>
+        </Field>
+        <Field Name="LISTWKNO">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>LISTWKNO</DataField>
+        </Field>
+        <Field Name="PRINTDATE">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PRINTDATE</DataField>
+        </Field>
+        <Field Name="PRTCATE">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PRTCATE</DataField>
+        </Field>
+        <Field Name="RANGE_1">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RANGE_1</DataField>
+        </Field>
+        <Field Name="RANGE_10">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RANGE_10</DataField>
+        </Field>
+        <Field Name="RANGE_11">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RANGE_11</DataField>
+        </Field>
+        <Field Name="RANGE_12">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RANGE_12</DataField>
+        </Field>
+        <Field Name="RANGE_13">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RANGE_13</DataField>
+        </Field>
+        <Field Name="RANGE_14">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RANGE_14</DataField>
+        </Field>
+        <Field Name="RANGE_15">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RANGE_15</DataField>
+        </Field>
+        <Field Name="RANGE_2">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RANGE_2</DataField>
+        </Field>
+        <Field Name="RANGE_3">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RANGE_3</DataField>
+        </Field>
+        <Field Name="RANGE_4">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RANGE_4</DataField>
+        </Field>
+        <Field Name="RANGE_5">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RANGE_5</DataField>
+        </Field>
+        <Field Name="RANGE_6">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RANGE_6</DataField>
+        </Field>
+        <Field Name="RANGE_7">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RANGE_7</DataField>
+        </Field>
+        <Field Name="RANGE_8">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RANGE_8</DataField>
+        </Field>
+        <Field Name="RANGE_9">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RANGE_9</DataField>
+        </Field>
+        <Field Name="REPRTFLG">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>REPRTFLG</DataField>
+        </Field>
+        <Field Name="TERMID">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TERMID</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="BusinessEntity_FNPRTDATAEntity">
+      <rd:DataSetInfo>
+        <rd:DataSetName>BusinessEntity</rd:DataSetName>
+        <rd:ObjectDataSourceType>BusinessEntity.FNPRTDATAEntity, LabelPrinter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>FNPRTDATAEntity</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="ACTCARTONNO">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ACTCARTONNO</DataField>
+        </Field>
+        <Field Name="ACTERPLOC">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ACTERPLOC</DataField>
+        </Field>
+        <Field Name="ACTITEMNO">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ACTITEMNO</DataField>
+        </Field>
+        <Field Name="ACTNAME">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ACTNAME</DataField>
+        </Field>
+        <Field Name="ACTPALLETNO">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ACTPALLETNO</DataField>
+        </Field>
+        <Field Name="ACTQTY">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ACTQTY</DataField>
+        </Field>
+        <Field Name="ACTSUBIVT">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ACTSUBIVT</DataField>
+        </Field>
+        <Field Name="CARTONNO">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CARTONNO</DataField>
+        </Field>
+        <Field Name="CHKCATE">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CHKCATE</DataField>
+        </Field>
+        <Field Name="CUSTOMERNAME">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CUSTOMERNAME</DataField>
+        </Field>
+        <Field Name="DatabaseName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DatabaseName</DataField>
+        </Field>
+        <Field Name="DATASEQNO">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DATASEQNO</DataField>
+        </Field>
+        <Field Name="ERPLOC">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ERPLOC</DataField>
+        </Field>
+        <Field Name="FROMST">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>FROMST</DataField>
+        </Field>
+        <Field Name="INQTY">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>INQTY</DataField>
+        </Field>
+        <Field Name="INVTQTY">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>INVTQTY</DataField>
+        </Field>
+        <Field Name="INVTSTFLG">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>INVTSTFLG</DataField>
+        </Field>
+        <Field Name="IsPersistent">
+          <rd:TypeName>System.Boolean</rd:TypeName>
+          <DataField>IsPersistent</DataField>
+        </Field>
+        <Field Name="ITEMCD">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ITEMCD</DataField>
+        </Field>
+        <Field Name="ITEMNAME">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ITEMNAME</DataField>
+        </Field>
+        <Field Name="LISTWKNO">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>LISTWKNO</DataField>
+        </Field>
+        <Field Name="LOCATNO">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>LOCATNO</DataField>
+        </Field>
+        <Field Name="LOG_ID">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>LOG_ID</DataField>
+        </Field>
+        <Field Name="LOTNO">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>LOTNO</DataField>
+        </Field>
+        <Field Name="ORDERNO">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ORDERNO</DataField>
+        </Field>
+        <Field Name="OUTQTY">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>OUTQTY</DataField>
+        </Field>
+        <Field Name="OUTTYPE">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>OUTTYPE</DataField>
+        </Field>
+        <Field Name="PACKCATE">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PACKCATE</DataField>
+        </Field>
+        <Field Name="PICKSTNO">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PICKSTNO</DataField>
+        </Field>
+        <Field Name="PICKWKPLACE">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PICKWKPLACE</DataField>
+        </Field>
+        <Field Name="PLTNO">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PLTNO</DataField>
+        </Field>
+        <Field Name="QTY">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>QTY</DataField>
+        </Field>
+        <Field Name="REMARK">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>REMARK</DataField>
+        </Field>
+        <Field Name="RESDATE">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RESDATE</DataField>
+        </Field>
+        <Field Name="RESERVE1">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RESERVE1</DataField>
+        </Field>
+        <Field Name="RESERVE2">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RESERVE2</DataField>
+        </Field>
+        <Field Name="RESERVE3">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RESERVE3</DataField>
+        </Field>
+        <Field Name="RESERVE4">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RESERVE4</DataField>
+        </Field>
+        <Field Name="RESERVE5">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RESERVE5</DataField>
+        </Field>
+        <Field Name="RESERVE6">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RESERVE6</DataField>
+        </Field>
+        <Field Name="RTNO">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RTNO</DataField>
+        </Field>
+        <Field Name="SHIPPLTNO">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SHIPPLTNO</DataField>
+        </Field>
+        <Field Name="SPECCODE">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SPECCODE</DataField>
+        </Field>
+        <Field Name="STOCKDATE">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>STOCKDATE</DataField>
+        </Field>
+        <Field Name="STOCKDTTM">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>STOCKDTTM</DataField>
+        </Field>
+        <Field Name="STUBCATE">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>STUBCATE</DataField>
+        </Field>
+        <Field Name="SUBIVT">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SUBIVT</DataField>
+        </Field>
+        <Field Name="SYSCARTONNO">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SYSCARTONNO</DataField>
+        </Field>
+        <Field Name="SYSERPLOC">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SYSERPLOC</DataField>
+        </Field>
+        <Field Name="SYSITEMNO">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SYSITEMNO</DataField>
+        </Field>
+        <Field Name="SYSQTY">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>SYSQTY</DataField>
+        </Field>
+        <Field Name="SYSSUBIVT">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SYSSUBIVT</DataField>
+        </Field>
+        <Field Name="TOST">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TOST</DataField>
+        </Field>
+        <Field Name="TRANSCATE">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TRANSCATE</DataField>
+        </Field>
+        <Field Name="UNIT">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>UNIT</DataField>
+        </Field>
+        <Field Name="USERID">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="WKNO">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>WKNO</DataField>
+        </Field>
+        <Field Name="WKPLACE">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>WKPLACE</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>27.77645cm</Width>
+  <InteractiveHeight>21cm</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>1cm</TopMargin>
+  <PageHeight>21cm</PageHeight>
+</Report>

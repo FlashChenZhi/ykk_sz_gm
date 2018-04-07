@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE datasource [
+<!ELEMENT datasources (datasource*)>
+<!ELEMENT datasource (property*)>
+<!ATTLIST datasource
+  name NMTOKEN #REQUIRED>
+<!ATTLIST property
+  name NMTOKEN #REQUIRED
+  value CDATA #REQUIRED>
+]>
+
+<datasources>
+  <datasource name="MenuTool">
+    <property name="username" value="awc"/>
+    <property name="password" value="awc"/>
+    <property name="url" value="jdbc:oracle:thin:@172.23.81.6:1521:orcl"/>
+    <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+    <property name="defaultAutoCommit" value="false"/>
+    <property name="defaultReadOnly" value="false"/>
+    <property name="maxActive" value="30"/>
+    <property name="maxIdle" value="30"/>
+    <property name="minIdle" value="1"/>
+    <property name="maxWait" value="1"/>
+    <property name="removeAbandoned" value="true"/>
+    <property name="removeAbandonedTimeout" value="10"/>
+    <property name="logAbandoned" value="true"/>
+  </datasource>
+</datasources>

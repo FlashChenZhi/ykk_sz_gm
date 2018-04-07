@@ -1,0 +1,103 @@
+<html>
+<head>
+	<title>TextBox Input Mode</title>
+	<style>
+	table, td {
+		border: 1px solid black;
+	}
+	table {
+		border-collapse  : collapse;
+		background-color : #dad9ee;
+	}
+	td {
+		padding : 10px;
+	}
+	b {
+		color : red;
+	}
+	</style>
+</head>
+<body>
+<form>
+<BR>
+<B>TextBox Input Mode</B>
+
+<table>
+<tr>
+	<td align=CENTER>
+		<b>34567</b><BR>
+		<A href="#" id="34567"><img src="../toolimg/34567.gif" border=0></A>
+	</td>
+	<td>
+		&nbsp; For alphanumeric.<BR>
+		&nbsp; (Including sign and space)<BR><BR>
+		<img alt="Japanese comments" src="../toolimg/comment/inputmode34567_jp.png" border=0>
+	</td>
+	<td>
+	
+<pre>
+ alphabet               : 3 
+ number                 : 4
+ sign                   : 5
+ space                  : 6
+ forbidden char check   : 7
+</pre>
+		<img alt="Japanese comments" src="../toolimg/comment/inputmodecomment34567_jp.png" border=0>
+
+	</td>
+</tr>
+
+<tr>
+	<td align=CENTER>
+		<b>347</b><BR>
+		<A href="#" id="347"><img src="../toolimg/347.gif" border=0></A>
+	</td>
+	<td nowrap valign="top">
+		&nbsp; For alphanumeric.<BR>
+		&nbsp; (Excluding sign and space)<BR><BR>
+		<img alt="Japanese comments" src="../toolimg/comment/inputmode347_jp.png" border=0>
+	</td>
+	<td>
+<pre>
+ alphabet               : 3
+ number                 : 4
+ forbidden char check   : 7
+</pre>
+		<img alt="Japanese comments" src="../toolimg/comment/inputmodecomment347_jp.png" border=0>
+	</td>
+</tr>
+
+<tr>
+	<td align=CENTER>
+		<b>17</b><BR>
+		<A href="#" id="17"><img src="../toolimg/17.gif" border=0></A>
+	</td>
+	<td nowrap valign="top">
+		&nbsp Double -byte charactor<BR>
+		&nbsp (If '1' is set, include all kind of charactors can be used.)<BR><BR>
+		<img alt="Japanese comments" src="../toolimg/comment/inputmode17_jp.png" border=0>
+
+	</td>
+	<td>
+<pre>
+ double-byte charactor  : 1
+ forbidden char check   : 7
+</pre>
+		<img alt="Japanese comments" src="../toolimg/comment/inputmodecomment17_jp.png" border=0>
+	</td>
+</tr>
+
+<tr>
+	<td colspan=3>
+		&nbsp; &lt;Information&gt;<BR>
+		&nbsp; &bull; The IME mode of the forcused textbox can be turned off by adding &rsquo;8&rsquo; to InputMode.  <BR>
+		&nbsp; &bull; It is possible to use it as a text box for the password input by adding &rsquo;9&rsquo; at the end of inputMode. <BR>
+		<img alt="Japanese comments" src="../toolimg/comment/inputmode8_jp.png" border=0><BR>
+		<img alt="Japanese comments" src="../toolimg/comment/inputmode9_jp.png" border=0><BR>
+		<img src="../toolimg/password.gif" border=0>
+	</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

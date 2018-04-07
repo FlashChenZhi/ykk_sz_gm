@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE datasource [
+<!ELEMENT datasources (datasource*)>
+<!ELEMENT datasource (property*)>
+<!ATTLIST datasource
+  name NMTOKEN #REQUIRED
+  connectionLog (true|false) "false">
+<!ATTLIST property
+  name NMTOKEN #REQUIRED
+  value CDATA #REQUIRED>
+]>
+
+<datasources>
+
+  <datasource name="wms" connectionLog="false">
+    <!--<property name="username" value="awc"/>-->
+    <!--<property name="password" value="awc"/>-->
+      <property name="username" value="awc"/>
+      <property name="password" value="awc"/>
+    <property name="url" value="jdbc:oracle:thin:@10.244.26.10:1521:orcl"/>
+    <!--<property name="url" value="jdbc:oracle:thin:@172.16.192.1:1521:orcl"/>-->
+    <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+    <property name="defaultAutoCommit" value="false"/>
+    <property name="defaultReadOnly" value="false"/>
+    <property name="maxActive" value="30"/>
+    <property name="maxIdle" value="30"/>
+    <property name="minIdle" value="1"/>
+    <property name="maxWait" value="1"/>
+    <property name="removeAbandoned" value="false"></property>
+    <property name="removeAbandonedTimeout" value="300"/>
+    <property name="logAbandoned" value="false"/>
+  </datasource>
+  <datasource name="wmstool" connectionLog="false">
+    <property name="username" value="wmstool"/>
+    <property name="password" value="wmstool"/>
+    <property name="url" value="jdbc:oracle:thin:@172.23.81.6:1521:orcl"/>
+    <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+    <property name="defaultAutoCommit" value="false"/>
+    <property name="defaultReadOnly" value="false"/>
+    <property name="maxActive" value="30"/>
+    <property name="maxIdle" value="30"/>
+    <property name="minIdle" value="1"/>
+    <property name="maxWait" value="1"/>
+    <property name="removeAbandoned" value="false"/>
+    <property name="removeAbandonedTimeout" value="300"/>
+    <property name="logAbandoned" value="false"/>
+  </datasource>
+
+</datasources>
