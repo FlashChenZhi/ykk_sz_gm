@@ -227,7 +227,7 @@
         </Style>
         <ZIndex>22</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>4.8cm</Left>
+        <Left>4.4cm</Left>
         <Height>1.6cm</Height>
         <Value>=First(Fields!TicketBarcode.Value)</Value>
       </Textbox>

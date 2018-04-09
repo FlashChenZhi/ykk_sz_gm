@@ -119,6 +119,25 @@
   <Body>
     <ColumnSpacing>1cm</ColumnSpacing>
     <ReportItems>
+      <Textbox Name="TicketBarcode">
+        <rd:DefaultName>TicketBarcode</rd:DefaultName>
+        <Top>1.7cm</Top>
+        <Width>6cm</Width>
+        <Style>
+          <FontFamily>Free 3 of 9 Extended</FontFamily>
+          <FontSize>17pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>36</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>4.3cm</Left>
+        <Height>1.6cm</Height>
+        <Value>=First(Fields!TicketBarcode.Value)</Value>
+      </Textbox>
       <Textbox Name="Page">
         <rd:DefaultName>Page</rd:DefaultName>
         <Top>11.9cm</Top>
@@ -131,7 +150,7 @@
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>36</ZIndex>
+        <ZIndex>35</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>3.93016cm</Left>
         <Height>0.63492cm</Height>
@@ -143,7 +162,7 @@
         <Style>
           <FontFamily>Arial Narrow</FontFamily>
         </Style>
-        <ZIndex>35</ZIndex>
+        <ZIndex>34</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>5cm</Left>
         <Height>0.5cm</Height>
@@ -156,7 +175,7 @@
         <Style>
           <FontFamily>Arial Narrow</FontFamily>
         </Style>
-        <ZIndex>34</ZIndex>
+        <ZIndex>33</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>5cm</Left>
         <Height>0.5cm</Height>
@@ -170,7 +189,7 @@
           <FontFamily>Arial Narrow</FontFamily>
           <FontWeight>700</FontWeight>
         </Style>
-        <ZIndex>33</ZIndex>
+        <ZIndex>32</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>2.3cm</Left>
         <Height>0.5cm</Height>
@@ -182,7 +201,7 @@
         <Style>
           <FontFamily>KaiTi_GB2312</FontFamily>
         </Style>
-        <ZIndex>32</ZIndex>
+        <ZIndex>31</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>0.2cm</Left>
         <Height>0.5cm</Height>
@@ -194,7 +213,7 @@
         <Style>
           <FontFamily>KaiTi_GB2312</FontFamily>
         </Style>
-        <ZIndex>31</ZIndex>
+        <ZIndex>30</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>0.2cm</Left>
         <Height>0.5cm</Height>
@@ -206,7 +225,7 @@
         <Style>
           <FontFamily>KaiTi_GB2312</FontFamily>
         </Style>
-        <ZIndex>30</ZIndex>
+        <ZIndex>29</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>0.2cm</Left>
         <Height>0.5cm</Height>
@@ -218,7 +237,7 @@
         <Style>
           <FontFamily>KaiTi_GB2312</FontFamily>
         </Style>
-        <ZIndex>29</ZIndex>
+        <ZIndex>28</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>0.2cm</Left>
         <Height>0.5cm</Height>
@@ -230,7 +249,7 @@
         <Style>
           <FontFamily>KaiTi_GB2312</FontFamily>
         </Style>
-        <ZIndex>28</ZIndex>
+        <ZIndex>27</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>0.2cm</Left>
         <Height>0.5cm</Height>
@@ -245,7 +264,7 @@
           <FontSize>18pt</FontSize>
           <FontWeight>700</FontWeight>
         </Style>
-        <ZIndex>27</ZIndex>
+        <ZIndex>26</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>0.2cm</Left>
         <Height>0.7cm</Height>
@@ -258,7 +277,7 @@
           <FontFamily>KaiTi_GB2312</FontFamily>
           <FontSize>16pt</FontSize>
         </Style>
-        <ZIndex>26</ZIndex>
+        <ZIndex>25</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>0.2cm</Left>
         <Height>0.6cm</Height>
@@ -271,7 +290,7 @@
           <FontFamily>KaiTi_GB2312</FontFamily>
           <FontSize>16pt</FontSize>
         </Style>
-        <ZIndex>25</ZIndex>
+        <ZIndex>24</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>0.2cm</Left>
         <Height>0.6cm</Height>
@@ -284,7 +303,7 @@
           <FontFamily>KaiTi_GB2312</FontFamily>
           <FontSize>14pt</FontSize>
         </Style>
-        <ZIndex>24</ZIndex>
+        <ZIndex>23</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>0.2cm</Left>
         <Height>0.55cm</Height>
@@ -297,7 +316,7 @@
           <FontFamily>KaiTi_GB2312</FontFamily>
           <FontSize>14pt</FontSize>
         </Style>
-        <ZIndex>23</ZIndex>
+        <ZIndex>22</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>0.2cm</Left>
         <Height>0.55cm</Height>
@@ -312,7 +331,7 @@
           <TextAlign>Center</TextAlign>
           <VerticalAlign>Bottom</VerticalAlign>
         </Style>
-        <ZIndex>22</ZIndex>
+        <ZIndex>21</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>5.7cm</Left>
         <Height>0.55cm</Height>
@@ -328,7 +347,7 @@
           <TextAlign>Center</TextAlign>
           <VerticalAlign>Bottom</VerticalAlign>
         </Style>
-        <ZIndex>21</ZIndex>
+        <ZIndex>20</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>1.9cm</Left>
         <Height>0.9cm</Height>
@@ -342,7 +361,7 @@
           <FontWeight>700</FontWeight>
           <VerticalAlign>Bottom</VerticalAlign>
         </Style>
-        <ZIndex>20</ZIndex>
+        <ZIndex>19</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>1.2cm</Left>
         <Height>0.5cm</Height>
@@ -358,7 +377,7 @@
           <TextAlign>Center</TextAlign>
           <VerticalAlign>Bottom</VerticalAlign>
         </Style>
-        <ZIndex>19</ZIndex>
+        <ZIndex>18</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>1.9cm</Left>
         <Height>0.9cm</Height>
@@ -373,7 +392,7 @@
           <FontWeight>700</FontWeight>
           <VerticalAlign>Bottom</VerticalAlign>
         </Style>
-        <ZIndex>18</ZIndex>
+        <ZIndex>17</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>3cm</Left>
         <Height>0.6cm</Height>
@@ -388,7 +407,7 @@
           <FontSize>18pt</FontSize>
           <FontWeight>700</FontWeight>
         </Style>
-        <ZIndex>17</ZIndex>
+        <ZIndex>16</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>0.2cm</Left>
         <Height>1.4cm</Height>
@@ -403,7 +422,7 @@
           <FontWeight>700</FontWeight>
           <VerticalAlign>Bottom</VerticalAlign>
         </Style>
-        <ZIndex>16</ZIndex>
+        <ZIndex>15</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>4.5cm</Left>
         <Height>0.6cm</Height>
@@ -417,7 +436,7 @@
           <FontWeight>700</FontWeight>
           <VerticalAlign>Bottom</VerticalAlign>
         </Style>
-        <ZIndex>15</ZIndex>
+        <ZIndex>14</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>2.6cm</Left>
         <Height>0.6cm</Height>
@@ -431,7 +450,7 @@
           <FontWeight>700</FontWeight>
           <VerticalAlign>Bottom</VerticalAlign>
         </Style>
-        <ZIndex>14</ZIndex>
+        <ZIndex>13</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>2.6cm</Left>
         <Height>0.6cm</Height>
@@ -445,7 +464,7 @@
           <FontWeight>700</FontWeight>
           <VerticalAlign>Bottom</VerticalAlign>
         </Style>
-        <ZIndex>13</ZIndex>
+        <ZIndex>12</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>2.6cm</Left>
         <Height>0.6cm</Height>
@@ -460,7 +479,7 @@
           <FontWeight>700</FontWeight>
           <VerticalAlign>Bottom</VerticalAlign>
         </Style>
-        <ZIndex>12</ZIndex>
+        <ZIndex>11</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>3cm</Left>
         <Height>0.55cm</Height>
@@ -475,7 +494,7 @@
           <FontWeight>700</FontWeight>
           <VerticalAlign>Bottom</VerticalAlign>
         </Style>
-        <ZIndex>11</ZIndex>
+        <ZIndex>10</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>3cm</Left>
         <Height>0.55cm</Height>
@@ -489,7 +508,7 @@
           <FontFamily>KaiTi_GB2312</FontFamily>
           <TextAlign>Center</TextAlign>
         </Style>
-        <ZIndex>10</ZIndex>
+        <ZIndex>9</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>6.4cm</Left>
         <Height>0.4cm</Height>
@@ -503,7 +522,7 @@
           <FontFamily>Arial Narrow</FontFamily>
           <FontWeight>700</FontWeight>
         </Style>
-        <ZIndex>9</ZIndex>
+        <ZIndex>8</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>2.3cm</Left>
         <Height>0.5cm</Height>
@@ -521,30 +540,11 @@
           <PaddingTop>2pt</PaddingTop>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
-        <ZIndex>8</ZIndex>
+        <ZIndex>7</ZIndex>
         <CanGrow>true</CanGrow>
         <Left>5.7cm</Left>
         <Height>1cm</Height>
         <Value>=First(Fields!RetrievalNoBarcode.Value)</Value>
-      </Textbox>
-      <Textbox Name="TicketBarcode">
-        <rd:DefaultName>TicketBarcode</rd:DefaultName>
-        <Top>1.7cm</Top>
-        <Width>5.5cm</Width>
-        <Style>
-          <FontFamily>Free 3 of 9 Extended</FontFamily>
-          <FontSize>17pt</FontSize>
-          <TextAlign>Center</TextAlign>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-        <ZIndex>7</ZIndex>
-        <CanGrow>true</CanGrow>
-        <Left>4.8cm</Left>
-        <Height>1.6cm</Height>
-        <Value>=First(Fields!TicketBarcode.Value)</Value>
       </Textbox>
       <Textbox Name="textbox3">
         <rd:DefaultName>textbox3</rd:DefaultName>
