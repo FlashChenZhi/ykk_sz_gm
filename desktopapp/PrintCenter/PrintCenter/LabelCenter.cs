@@ -418,7 +418,7 @@ namespace PrintCenter
             pc.DoPrint(GetPrintName(labels[0].PRINTER_NO), lc);
         }
 
-        private void PrintSubdivided(List<FNLABELEntity> labels)
+        public void PrintSubdivided(List<FNLABELEntity> labels)
         {
             LabelSubdivided ls = new LabelSubdivided();
             ls.TicketNo = labels[0].TICKET_NO;

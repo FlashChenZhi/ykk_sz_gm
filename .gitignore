@@ -13,3 +13,11 @@ desktopapp/PrintCenter/PrintCenterService/bin/
 desktopapp/PrintCenter/PrintCenterService/obj/
 desktopapp/PrintCenter/YkkReports/bin/
 desktopapp/PrintCenter/YkkReports/obj/
+webapp/wms/.idea/
+webapp/wms/WEB-INF/classes/
+desktopapp/YkkWms/YkkWms.suo
+desktopapp/YkkWms/YkkWms/bin/
+desktopapp/YkkWms/YkkWms/obj/
+webapp/wms/WEB-INF/src/jp/co/daifuku/wms/YkkGMAX/resident/Test1.java
+webapp/wms/WEB-INF/src/jp/co/daifuku/wms/YkkGMAX/resident/Test2.java
+

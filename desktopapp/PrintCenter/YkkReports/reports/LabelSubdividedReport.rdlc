@@ -102,6 +102,14 @@
           <DataField>Page</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="ColorCode2">
+          <DataField>ColorCode2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemCode2">
+          <DataField>ItemCode2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>DummyDataSource</DataSourceName>
@@ -122,10 +130,46 @@
       <Textbox Name="TicketBarcode">
         <rd:DefaultName>TicketBarcode</rd:DefaultName>
         <Top>1.7cm</Top>
-        <Width>6cm</Width>
+        <Width>5.5cm</Width>
         <Style>
           <FontFamily>Free 3 of 9 Extended</FontFamily>
-          <FontSize>17pt</FontSize>
+          <FontSize>22pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>38</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>4.8cm</Left>
+        <Height>1.6cm</Height>
+        <Value>=First(Fields!TicketBarcode.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox26">
+        <Top>12.6cm</Top>
+        <Width>5.8cm</Width>
+        <Style>
+          <FontFamily>Free 3 of 9 Extended</FontFamily>
+          <FontSize>22pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>37</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.1cm</Left>
+        <Height>1cm</Height>
+        <Value>=First(Fields!ColorCode2.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox23">
+        <Top>6.9cm</Top>
+        <Width>5.8cm</Width>
+        <Style>
+          <FontFamily>Free 3 of 9 Extended</FontFamily>
+          <FontSize>22pt</FontSize>
           <TextAlign>Center</TextAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -134,9 +178,9 @@
         </Style>
         <ZIndex>36</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>4.3cm</Left>
-        <Height>1.6cm</Height>
-        <Value>=First(Fields!TicketBarcode.Value)</Value>
+        <Left>4.2cm</Left>
+        <Height>1cm</Height>
+        <Value>=First(Fields!ColorCode2.Value)</Value>
       </Textbox>
       <Textbox Name="Page">
         <rd:DefaultName>Page</rd:DefaultName>
@@ -323,7 +367,7 @@
         <Value>生产票号:</Value>
       </Textbox>
       <Textbox Name="textbox22">
-        <Top>9cm</Top>
+        <Top>11.1cm</Top>
         <Width>4cm</Width>
         <Style>
           <FontFamily>Arial Narrow</FontFamily>
@@ -394,7 +438,7 @@
         </Style>
         <ZIndex>17</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>3cm</Left>
+        <Left>2.9cm</Left>
         <Height>0.6cm</Height>
         <Value>=First(Fields!ColorCode.Value)</Value>
       </Textbox>
@@ -529,7 +573,7 @@
         <Value>=First(Fields!Unit.Value)</Value>
       </Textbox>
       <Textbox Name="RetrievalNoBarcode">
-        <Top>8cm</Top>
+        <Top>10.1cm</Top>
         <Width>4cm</Width>
         <Style>
           <FontFamily>Free 3 of 9 Extended</FontFamily>
@@ -583,7 +627,7 @@
         </Style>
         <ZIndex>4</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>0.25cm</Left>
+        <Left>0.15cm</Left>
         <Height>0.6cm</Height>
         <Value>颜色代码:</Value>
       </Textbox>

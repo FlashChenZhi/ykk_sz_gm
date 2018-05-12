@@ -218,7 +218,7 @@
         <Top>1.7cm</Top>
         <Style>
           <FontFamily>Free 3 of 9 Extended</FontFamily>
-          <FontSize>17pt</FontSize>
+          <FontSize>22pt</FontSize>
           <TextAlign>Center</TextAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -227,7 +227,7 @@
         </Style>
         <ZIndex>22</ZIndex>
         <CanGrow>true</CanGrow>
-        <Left>4.4cm</Left>
+        <Left>4.9cm</Left>
         <Height>1.6cm</Height>
         <Value>=First(Fields!TicketBarcode.Value)</Value>
       </Textbox>
