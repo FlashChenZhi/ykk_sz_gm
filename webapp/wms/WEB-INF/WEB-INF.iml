@@ -12,7 +12,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" inherit-compiler-output="false">
+  <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/classes" />
     <output-test url="file://$MODULE_DIR$/classes" />
     <exclude-output />
@@ -24,4 +24,3 @@
     <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>
-

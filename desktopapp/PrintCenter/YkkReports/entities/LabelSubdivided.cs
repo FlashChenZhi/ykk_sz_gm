@@ -126,6 +126,33 @@ namespace YkkReports.entities
             set { colorCode = value; }
         }
 
+        public string ColorCode2
+        {
+            get
+            {
+                string trimmedColorCode = colorCode.Trim();
+                string formattedColorCode = trimmedColorCode;
+                if (string.IsNullOrEmpty(formattedColorCode))
+                {
+                    formattedColorCode = string.Empty.PadLeft(7, ' ');
+                }else if (formattedColorCode.Length == 2)
+                {
+                    formattedColorCode = string.Empty.PadLeft(3, ' ') + formattedColorCode + string.Empty.PadLeft(2, ' ');
+                }else if (formattedColorCode.Length == 3)
+                {
+                    formattedColorCode = string.Empty.PadLeft(2, ' ') + formattedColorCode + string.Empty.PadLeft(2, ' ');
+                }else if (formattedColorCode.Length == 4)
+                {
+                    formattedColorCode = string.Empty.PadLeft(1, ' ') + formattedColorCode + string.Empty.PadLeft(2, ' ');
+                }
+                else if (formattedColorCode.Length == 5)
+                {
+                    formattedColorCode = formattedColorCode + string.Empty.PadLeft(2, ' ');
+                }
+                return "*" + itemCode + formattedColorCode + "*";
+            }
+        }
+
         public string ItemName
         {
             get { return itemName; }
@@ -136,6 +163,11 @@ namespace YkkReports.entities
         {
             get { return itemCode; }
             set { itemCode = value; }
+        }
+
+        public string ItemCode2
+        {
+            get { return "*" + itemCode + "*"; }
         }
 
         public string BucketNo
