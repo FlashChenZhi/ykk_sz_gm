@@ -8,10 +8,8 @@ import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKSQLException;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class ASRSInfoCentre {
 
@@ -19,6 +17,50 @@ public class ASRSInfoCentre {
 
     public ASRSInfoCentre(Connection conn) {
         this.conn = conn;
+    }
+
+    public boolean isAuto() throws YKKSQLException {
+        String columnList = "auto";
+        String queryString = "SELECT " + columnList
+                + " FROM WARENAVI_SYSTEM ";
+        DBHandler handler = new DBHandler(conn);
+        handler.executeQuery(queryString);
+        RecordSet recordSet = handler.getRecordSet();
+        List rowList = recordSet.getRowList();
+        Iterator it = rowList.iterator();
+        while (it.hasNext()) {
+            RecordSetRow row = (RecordSetRow) it.next();
+
+            return "1".equals(row.getValueByColumnName("auto"));
+        }
+        return true;
+    }
+
+    private String getDate() throws YKKSQLException {
+        String columnList = "auto_date";
+        String queryString = "SELECT " + columnList
+                + " FROM WARENAVI_SYSTEM ";
+        DBHandler handler = new DBHandler(conn);
+        handler.executeQuery(queryString);
+        RecordSet recordSet = handler.getRecordSet();
+        List rowList = recordSet.getRowList();
+        Iterator it = rowList.iterator();
+        int autoDate = 2;
+        while (it.hasNext()) {
+            RecordSetRow row = (RecordSetRow) it.next();
+
+            try {
+                autoDate = Integer.parseInt(row.getValueByColumnName("auto_date"));
+                break;
+            }catch (Exception ex){
+
+            }
+        }
+        Calendar c = Calendar.getInstance();
+        c.setTime(new Date());
+        c.set(Calendar.HOUR_OF_DAY,c.get(Calendar.HOUR_OF_DAY) - autoDate);
+        String date = new SimpleDateFormat("yyyyMMddHHmmss").format(c.getTime());
+        return date;
     }
 
     public void addBucket(BucketViewEntity entity) throws YKKSQLException {
@@ -1355,7 +1397,7 @@ public class ASRSInfoCentre {
     public List getExceptionStockoutDetailList(
             ExceptionStockoutEntity exceptionStockoutEntity, int beginningPos,
             int count) throws YKKSQLException {
-        String columnList = "FMZKEY.zaikey,FMZKEY.zkname1,FMZKEY.zkname2,FMZKEY.zkname3,FNLOCAT.syozaikey,FNZAIKO.ticket_no,FNZAIKO.made_section,FNZAIKO.made_line,FNZAIKO.nyukohiji,FNZAIKO.color_code,FNZAIKO.zaikosu,FNZAIKO.systemid,FNZAIKO.sainyukbn";
+        String columnList = "FMZKEY.zaikey,FMZKEY.zkname1,FMZKEY.zkname2,FMZKEY.zkname3,FNLOCAT.syozaikey,FNZAIKO.ticket_no,FNZAIKO.made_section,FNZAIKO.made_line,FNZAIKO.nyukohiji,FNZAIKO.color_code,FNZAIKO.zaikosu,FNZAIKO.systemid,FNZAIKO.sainyukbn,FNZAIKO.remark";
 
         String queryString = "SELECT "
                 + columnList
@@ -1539,7 +1581,8 @@ public class ASRSInfoCentre {
             entity.setStockinDateTime(row.getValueByColumnName("nyukohiji"));
             entity.setOriginalLocationNo(row.getValueByColumnName("syozaikey"));
             entity.setSystemId(row.getValueByColumnName("systemid"));
-            entity.setMemo(exceptionStockoutEntity.getMemo());
+//            entity.setMemo(exceptionStockoutEntity.getMemo());
+            entity.setMemo(row.getValueByColumnName("remark"));
 
             returnList.add(entity);
         }
@@ -4384,7 +4427,7 @@ public class ASRSInfoCentre {
         String queryString = "";
 
         if (head.getDepo().equals("平置")) {
-            columnList = "FNZAIKO.zaikey,FNZAIKO.color_code,FNZAIKO.ticket_no,FNZAIKO.bucket_no,FNZAIKO.zaikosu,FNZAIKO.nyukohiji,FMZKEY.zkname1,FMZKEY.zkname2,FMZKEY.zkname3,FNZAIKO.weight_report_complete_flag,FNZAIKO.storage_place_flag,FNZAIKO.plan_qty";
+            columnList = "FNZAIKO.zaikey,FNZAIKO.color_code,FNZAIKO.ticket_no,FNZAIKO.bucket_no,FNZAIKO.zaikosu,FNZAIKO.nyukohiji,FMZKEY.zkname1,FMZKEY.zkname2,FMZKEY.zkname3,FNZAIKO.weight_report_complete_flag,FNZAIKO.storage_place_flag,FNZAIKO.plan_qty,FNZAIKO.remark";
 
             queryString = "SELECT "
                     + columnList
@@ -5142,7 +5185,7 @@ public class ASRSInfoCentre {
         String queryString = "";
 
         if (head.getDepo().equals("平置")) {
-            columnList = "FNZAIKO.zaikey,FNZAIKO.color_code,FNZAIKO.ticket_no,FNZAIKO.bucket_no,FNZAIKO.zaikosu,FNZAIKO.nyukohiji,FMZKEY.zkname1,FMZKEY.zkname2,FMZKEY.zkname3,FNZAIKO.weight_report_complete_flag,FNZAIKO.storage_place_flag,FNZAIKO.plan_qty";
+            columnList = "FNZAIKO.zaikey,FNZAIKO.color_code,FNZAIKO.ticket_no,FNZAIKO.bucket_no,FNZAIKO.zaikosu,FNZAIKO.nyukohiji,FMZKEY.zkname1,FMZKEY.zkname2,FMZKEY.zkname3,FNZAIKO.weight_report_complete_flag,FNZAIKO.storage_place_flag,FNZAIKO.plan_qty,FNZAIKO.remark";
 
             queryString = "SELECT "
                     + columnList
@@ -5179,7 +5222,7 @@ public class ASRSInfoCentre {
             queryString += " ORDER BY FNZAIKO.zaikey,FNZAIKO.color_code";
 
         } else if (head.getDepo().equals("未入库仓库")) {
-            columnList = "FNZAIKO.zaikey,FNZAIKO.color_code,FNZAIKO.ticket_no,FNZAIKO.bucket_no,FNZAIKO.zaikosu,FNZAIKO.nyukohiji,FMZKEY.zkname1,FMZKEY.zkname2,FMZKEY.zkname3,FNZAIKO.weight_report_complete_flag,FNZAIKO.storage_place_flag,FNZAIKO.plan_qty";
+            columnList = "FNZAIKO.zaikey,FNZAIKO.color_code,FNZAIKO.ticket_no,FNZAIKO.bucket_no,FNZAIKO.zaikosu,FNZAIKO.nyukohiji,FMZKEY.zkname1,FMZKEY.zkname2,FMZKEY.zkname3,FNZAIKO.weight_report_complete_flag,FNZAIKO.storage_place_flag,FNZAIKO.plan_qty,FNZAIKO.remark";
 
             queryString += "SELECT "
                     + columnList
@@ -5212,11 +5255,11 @@ public class ASRSInfoCentre {
             }
             queryString += " ORDER BY FNZAIKO.zaikey,FNZAIKO.color_code";
         } else {
-            columnList = "zaikey,color_code,ticket_no,bucket_no,zaikosu,nyukohiji,zkname1,zkname2,zkname3,weight_report_complete_flag,storage_place_flag,tanaflg,accessflg,syozaikey,zaijyoflg,plan_qty";
+            columnList = "zaikey,color_code,ticket_no,bucket_no,zaikosu,nyukohiji,zkname1,zkname2,zkname3,weight_report_complete_flag,storage_place_flag,tanaflg,accessflg,syozaikey,zaijyoflg,plan_qty,remark";
 
-            String column1 = "FNZAIKO.zaikey as zaikey ,FNZAIKO.color_code as color_code ,FNZAIKO.ticket_no as ticket_no ,FNZAIKO.bucket_no as bucket_no ,FNZAIKO.zaikosu as zaikosu ,FNZAIKO.nyukohiji as nyukohiji ,FMZKEY.zkname1 as zkname1 ,FMZKEY.zkname2 as zkname2 ,FMZKEY.zkname3 as zkname3 ,FNZAIKO.weight_report_complete_flag as weight_report_complete_flag ,FNZAIKO.storage_place_flag as storage_place_flag,FNAKITANA.syozaikey AS syozaikey,FNAKITANA.tanaflg AS tanaflg,FNAKITANA.accessflg AS accessflg,FNZAIKO.plan_qty AS plan_qty,FNLOCAT.zaijyoflg AS zaijyoflg ";
+            String column1 = "FNZAIKO.zaikey as zaikey ,FNZAIKO.color_code as color_code ,FNZAIKO.ticket_no as ticket_no ,FNZAIKO.bucket_no as bucket_no ,FNZAIKO.zaikosu as zaikosu ,FNZAIKO.nyukohiji as nyukohiji ,FMZKEY.zkname1 as zkname1 ,FMZKEY.zkname2 as zkname2 ,FMZKEY.zkname3 as zkname3 ,FNZAIKO.weight_report_complete_flag as weight_report_complete_flag ,FNZAIKO.storage_place_flag as storage_place_flag,FNAKITANA.syozaikey AS syozaikey,FNAKITANA.tanaflg AS tanaflg,FNAKITANA.accessflg AS accessflg,FNZAIKO.plan_qty AS plan_qty,FNLOCAT.zaijyoflg AS zaijyoflg,FNZAIKO.remark ";
 
-            String column2 = "FNZAIKO.zaikey as zaikey ,FNZAIKO.color_code as color_code ,FNZAIKO.ticket_no as ticket_no ,FNZAIKO.bucket_no as bucket_no ,FNZAIKO.zaikosu as zaikosu ,FNZAIKO.nyukohiji as nyukohiji ,FMZKEY.zkname1 as zkname1 ,FMZKEY.zkname2 as zkname2 ,FMZKEY.zkname3 as zkname3 ,FNZAIKO.weight_report_complete_flag as weight_report_complete_flag ,FNZAIKO.storage_place_flag as storage_place_flag,FNLOCAT.syozaikey AS syozaikey,FNAKITANA.tanaflg AS tanaflg,FNAKITANA.accessflg AS accessflg,FNZAIKO.plan_qty AS plan_qty,FNLOCAT.zaijyoflg AS zaijyoflg ";
+            String column2 = "FNZAIKO.zaikey as zaikey ,FNZAIKO.color_code as color_code ,FNZAIKO.ticket_no as ticket_no ,FNZAIKO.bucket_no as bucket_no ,FNZAIKO.zaikosu as zaikosu ,FNZAIKO.nyukohiji as nyukohiji ,FMZKEY.zkname1 as zkname1 ,FMZKEY.zkname2 as zkname2 ,FMZKEY.zkname3 as zkname3 ,FNZAIKO.weight_report_complete_flag as weight_report_complete_flag ,FNZAIKO.storage_place_flag as storage_place_flag,FNLOCAT.syozaikey AS syozaikey,FNAKITANA.tanaflg AS tanaflg,FNAKITANA.accessflg AS accessflg,FNZAIKO.plan_qty AS plan_qty,FNLOCAT.zaijyoflg AS zaijyoflg,FNZAIKO.remark ";
 
             queryString = "SELECT "
                     + columnList
@@ -5480,6 +5523,7 @@ public class ASRSInfoCentre {
             entity.setItemName2(row.getValueByColumnName("zkname2"));
             entity.setItemName3(row.getValueByColumnName("zkname3"));
             entity.setColor(row.getValueByColumnName("color_code"));
+            entity.setMemo(row.getValueByColumnName("remark"));
             entity.setTicketNo(row.getValueByColumnName("ticket_no"));
             entity
                     .setWeightReportFlag(DBFlags.WeightReportCompleteFlag
@@ -6670,7 +6714,9 @@ public class ASRSInfoCentre {
                 "          FROM fnsyotei, fmzkey\n" +
                 "         WHERE     fnsyotei.zaikey = fmzkey.zaikey(+)\n" +
                 "               AND fmzkey.manage_item_flag = '0'\n" +
-                "               AND fnsyotei.retrieval_station NOT IN ('23', '25', '26'))\n" +
+                "               AND fnsyotei.retrieval_station NOT IN ('23', '25', '26')\n" +
+//                "               AND ((fnsyotei.cmt not like '1%' and fnsyotei.cmt not like '2%') or fnsyotei.create_datetime < " + StringUtils.surroundWithSingleQuotes(getDate())+")) \n" +
+                ") \n" +
                 " WHERE 1 = 1");
 
         String queryString = b.toString();
@@ -7199,7 +7245,9 @@ public class ASRSInfoCentre {
                 "          FROM fnsyotei, fmzkey\n" +
                 "         WHERE     fnsyotei.zaikey = fmzkey.zaikey(+)\n" +
                 "               AND fmzkey.manage_item_flag = '0'\n" +
-                "               AND fnsyotei.retrieval_station NOT IN ('23', '25', '26'))\n" +
+                "               AND fnsyotei.retrieval_station NOT IN ('23', '25', '26')\n"+
+//                "               AND ((fnsyotei.cmt not like '1%' and fnsyotei.cmt not like '2%') or fnsyotei.create_datetime < " + StringUtils.surroundWithSingleQuotes(getDate())+")) \n" +
+                ") \n" +
                 " WHERE 1 = 1");
 
         String queryString = b.toString();
@@ -7419,6 +7467,8 @@ public class ASRSInfoCentre {
 
     public List getStockoutList()
             throws YKKSQLException {
+
+
         StringBuffer b = new StringBuffer();
         b.append("	SELECT *\n" +
                 "  FROM (SELECT proc_flag,\n" +
@@ -7515,11 +7565,14 @@ public class ASRSInfoCentre {
                 "          FROM fnsyotei, fmzkey\n" +
                 "         WHERE     fnsyotei.zaikey = fmzkey.zaikey(+)\n" +
                 "               AND fmzkey.manage_item_flag = '0'\n" +
-                "               AND fnsyotei.retrieval_station NOT IN ('23', '25', '26'))\n" +
-                " WHERE 1 = 1");
+                "               AND fnsyotei.retrieval_station NOT IN ('23', '25', '26')\n" +
+                "               AND (fnsyotei.cmt like '1%' or fnsyotei.cmt like '2%') AND fnsyotei.create_datetime >= " + StringUtils.surroundWithSingleQuotes(getDate()) +") \n" +
+                " WHERE 1 = 1");//todo zhangming 自动出库标识
 
         String queryString = b.toString();
 
+        queryString += " AND proc_flag =  "
+                + StringUtils.surroundWithSingleQuotes(DBFlags.ProcFlag.UNDEALT);
 
         DBHandler handler = new DBHandler(conn);
         handler.executeQuery(queryString, 0, 8000);
@@ -7663,6 +7716,7 @@ public class ASRSInfoCentre {
                 .surroundWithSingleQuotes(DBFlags.ZaijyoFlg.FORBID_LOCATION)
                 + " ) AND TRIM(FNLOCAT.syozaikey) IS NOT NULL "
                 + " AND fnsyotei.retrieval_station NOT IN ('23', '25', '26')";
+//                + " AND ((fnsyotei.cmt not like '1%' and fnsyotei.cmt not like '2%') or fnsyotei.create_datetime < " + StringUtils.surroundWithSingleQuotes(getDate())+ ") ";
         if (searchMode.equals("1")) {
             queryString += " AND FNSIJI.section = "
                     + StringUtils.surroundWithSingleQuotes(section);
@@ -7748,6 +7802,7 @@ public class ASRSInfoCentre {
                 .surroundWithSingleQuotes(DBFlags.ZaijyoFlg.FORBID_LOCATION)
                 + " ) AND TRIM(FNLOCAT.syozaikey) IS NOT NULL "
                 + " AND fnsyotei.retrieval_station NOT IN ('23', '25', '26')";
+//                + " AND ((fnsyotei.cmt not like '1%' and fnsyotei.cmt not like '2%') or fnsyotei.create_datetime < " + StringUtils.surroundWithSingleQuotes(getDate())+ ") ";
         if (searchMode.equals("1")) {
             queryString += " AND FNSIJI.section = "
                     + StringUtils.surroundWithSingleQuotes(section);
@@ -7852,6 +7907,7 @@ public class ASRSInfoCentre {
 
     public List getStockoutStartList()
             throws YKKSQLException {
+
         String columnList = "FNZAIKO.nyukohiji,FNZAIKO.zaikey,FMZKEY.zkname1,FMZKEY.zkname2,FMZKEY.zkname3,FNZAIKO.color_code,FNLOCAT.syozaikey,FNZAIKO.zaikosu,FNHANSO.systemid,FNZAIKO.ticket_no";
 
         String queryString = "SELECT "
@@ -7875,7 +7931,10 @@ public class ASRSInfoCentre {
                 + StringUtils
                 .surroundWithSingleQuotes(DBFlags.ZaijyoFlg.FORBID_LOCATION)
                 + " ) AND TRIM(FNLOCAT.syozaikey) IS NOT NULL "
-                + " AND fnsyotei.retrieval_station NOT IN ('23', '25', '26')";
+                + " AND fnsyotei.retrieval_station NOT IN ('23', '25', '26')"
+                + " AND (fnsyotei.cmt like '1%' or fnsyotei.cmt like '2%') AND fnsyotei.create_datetime >= " + StringUtils.surroundWithSingleQuotes(getDate());
+
+        queryString += " GROUP BY " + columnList;
 
         DBHandler handler = new DBHandler(conn);
         handler.executeQuery(queryString, 0, 8000);

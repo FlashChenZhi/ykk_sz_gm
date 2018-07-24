@@ -1,0 +1,626 @@
+package jp.co.daifuku.wms.YkkGMAX.ListProxy;
+
+import java.math.BigDecimal;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
+import jp.co.daifuku.bluedog.ui.control.FixedListCell;
+import jp.co.daifuku.bluedog.ui.control.ListCell;
+import jp.co.daifuku.wms.YkkGMAX.Entities.IOHistoryInfoEntity;
+import jp.co.daifuku.wms.YkkGMAX.Entities.IOHistoryInfoHead;
+import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKDBException;
+import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKSQLException;
+import jp.co.daifuku.wms.YkkGMAX.Utils.ASRSInfoCentre;
+import jp.co.daifuku.wms.YkkGMAX.Utils.ConnectionManager;
+import jp.co.daifuku.wms.YkkGMAX.Utils.StringUtils;
+import jp.co.daifuku.wms.YkkGMAX.Utils.Debugprinter.DebugLevel;
+import jp.co.daifuku.wms.YkkGMAX.Utils.Debugprinter.DebugPrinter;
+
+public class IOHistoryInfoListProxy
+{
+	private final ListCell list;
+
+	private final FixedListCell head;
+
+	private final int HEAD_WORK_TYPE_ROW = 1;
+
+	private final int HEAD_WORK_TYPE_COLUMN = 1;
+
+	private final int HEAD_TIME_RANGE_ROW = 2;
+
+	private final int HEAD_TIME_RANGE_COLUMN = 1;
+
+	private final int HEAD_ITEM_RANGE_ROW = 3;
+
+	private final int HEAD_ITEM_RANGE_COLUMN = 1;
+
+	private final int HEAD_ST_BKCOUNT_ROW = 4;
+
+	private final int HEAD_ST_BKCOUNT_COLUMN = 1;
+
+	private final int HEAD_USER_ID_ROW = 5;
+
+	private final int HEAD_USER_ID_COLUMN = 1;
+
+	private final int NO_COLUMN = 1;
+
+	private final int TIME_COLUMN = 2;
+
+	private final int WORK_TYPE_COLUMN = 3;
+
+	private final int ITEM_CODE_COLUMN = 4;
+
+	private final int ITEM_NAME_1_COLUMN = 5;
+
+	private final int ITEM_NAME_2_COLUMN = 18;
+
+	private final int ITEM_NAME_3_COLUMN = 19;
+
+	private final int COLOR_COLUMN = 6;
+
+	private final int TICKET_NO_COLUMN = 7;
+
+	private final int BUCKET_NO_COLUMN = 8;
+
+	private final int LOCATION_NO_COLUMN = 9;
+
+	private final int WORK_COUNT_COLUMN = 10;
+
+	private final int RETRIEVAL_NO_COLUMN = 11;
+
+	private final int ORDER_NO_COLUMN = 12;
+
+	private final int MEASURE_UNIT_WEIGHT_COLUMN = 13;
+
+	private final int WORK_STATION_COLUMN = 14;
+
+	private final int USER_ID_COLUMN = 15;
+
+	private final int START_STATION_COLUMN = 16;
+
+	private final int END_STATION_COLUMN = 17;
+
+	public int getHEAD_ST_BKCOUNT_ROW()
+	{
+		return HEAD_ST_BKCOUNT_ROW;
+	}
+
+	public int getHEAD_ST_BKCOUNT_COLUMN()
+	{
+		return HEAD_ST_BKCOUNT_COLUMN;
+	}
+
+	public int getORDER_NO_COLUMN()
+	{
+		return ORDER_NO_COLUMN;
+	}
+
+	public int getMEASURE_UNIT_WEIGHT_COLUMN()
+	{
+		return MEASURE_UNIT_WEIGHT_COLUMN;
+	}
+
+	public int getSTART_STATION_COLUMN()
+	{
+		return START_STATION_COLUMN;
+	}
+
+	public int getEND_STATION_COLUMN()
+	{
+		return END_STATION_COLUMN;
+	}
+
+	public IOHistoryInfoListProxy(FixedListCell head, ListCell list)
+	{
+		this.head = head;
+		this.list = list;
+	}
+
+	public IOHistoryInfoListProxy(ListCell list)
+	{
+		this.head = null;
+		this.list = list;
+	}
+
+	public int getBUCKET_NO_COLUMN()
+	{
+		return BUCKET_NO_COLUMN;
+	}
+
+	public String getBucketNo()
+	{
+		return list.getValue(BUCKET_NO_COLUMN);
+	}
+
+	public String getColor()
+	{
+		return list.getValue(COLOR_COLUMN);
+	}
+
+	public int getCOLOR_COLUMN()
+	{
+		return COLOR_COLUMN;
+	}
+
+	public int getHEAD_ITEM_RANGE_COLUMN()
+	{
+		return HEAD_ITEM_RANGE_COLUMN;
+	}
+
+	public int getHEAD_ITEM_RANGE_ROW()
+	{
+		return HEAD_ITEM_RANGE_ROW;
+	}
+
+	public int getHEAD_TIME_RANGE_COLUMN()
+	{
+		return HEAD_TIME_RANGE_COLUMN;
+	}
+
+	public int getHEAD_TIME_RANGE_ROW()
+	{
+		return HEAD_TIME_RANGE_ROW;
+	}
+
+	public int getHEAD_USER_ID_COLUMN()
+	{
+		return HEAD_USER_ID_COLUMN;
+	}
+
+	public int getHEAD_USER_ID_ROW()
+	{
+		return HEAD_USER_ID_ROW;
+	}
+
+	public int getHEAD_WORK_TYPE_COLUMN()
+	{
+		return HEAD_WORK_TYPE_COLUMN;
+	}
+
+	public int getHEAD_WORK_TYPE_ROW()
+	{
+		return HEAD_WORK_TYPE_ROW;
+	}
+
+	public String getHeadItemRange()
+	{
+		head.setCurrentRow(HEAD_ITEM_RANGE_ROW);
+
+		return head.getValue(HEAD_ITEM_RANGE_COLUMN);
+	}
+
+	public String getHeadTimeRange()
+	{
+		head.setCurrentRow(HEAD_TIME_RANGE_ROW);
+
+		return head.getValue(HEAD_TIME_RANGE_COLUMN);
+	}
+
+	public String getHeadStBkcount()
+	{
+		head.setCurrentRow(HEAD_ST_BKCOUNT_ROW);
+
+		return head.getValue(HEAD_ST_BKCOUNT_COLUMN);
+	}
+
+	public void setHeadStBkcount(String headStBkcount)
+	{
+		head.setCurrentRow(HEAD_ST_BKCOUNT_ROW);
+
+		head.setValue(HEAD_ST_BKCOUNT_COLUMN, headStBkcount);
+	}
+
+	public String getHeadUserID()
+	{
+		head.setCurrentRow(HEAD_USER_ID_ROW);
+
+		return head.getValue(HEAD_USER_ID_COLUMN);
+	}
+
+	public String getHeadWorkType()
+	{
+		head.setCurrentRow(HEAD_WORK_TYPE_ROW);
+
+		return head.getValue(HEAD_WORK_TYPE_COLUMN);
+	}
+
+	public int getITEM_CODE_COLUMN()
+	{
+		return ITEM_CODE_COLUMN;
+	}
+
+	public int getITEM_NAME_1_COLUMN()
+	{
+		return ITEM_NAME_1_COLUMN;
+	}
+
+	public int getITEM_NAME_2_COLUMN()
+	{
+		return ITEM_NAME_2_COLUMN;
+	}
+
+	public int getITEM_NAME_3_COLUMN()
+	{
+		return ITEM_NAME_3_COLUMN;
+	}
+
+	public String getItemCode()
+	{
+		return list.getValue(ITEM_CODE_COLUMN);
+	}
+
+	public String getItemName1()
+	{
+		return list.getValue(ITEM_NAME_1_COLUMN);
+	}
+
+	public String getItemName2()
+	{
+		return list.getValue(ITEM_NAME_2_COLUMN);
+	}
+
+	public String getItemName3()
+	{
+		return list.getValue(ITEM_NAME_3_COLUMN);
+	}
+
+	public int getLOCATION_NO_COLUMN()
+	{
+		return LOCATION_NO_COLUMN;
+	}
+
+	public String getLocationNo()
+	{
+		return list.getValue(LOCATION_NO_COLUMN);
+	}
+
+	public String getNo()
+	{
+		return list.getValue(NO_COLUMN);
+	}
+
+	public int getNO_COLUMN()
+	{
+		return NO_COLUMN;
+	}
+
+	public int getRETRIEVAL_NO_COLUMN()
+	{
+		return RETRIEVAL_NO_COLUMN;
+	}
+
+	public String getRetrievalNo()
+	{
+		return list.getValue(RETRIEVAL_NO_COLUMN);
+	}
+
+	public int getTICKET_NO_COLUMN()
+	{
+		return TICKET_NO_COLUMN;
+	}
+
+	public String getTicketNo()
+	{
+		return list.getValue(TICKET_NO_COLUMN);
+	}
+
+	public String getTime()
+	{
+		return list.getValue(TIME_COLUMN);
+	}
+
+	public int getTIME_COLUMN()
+	{
+		return TIME_COLUMN;
+	}
+
+	public int getUSER_ID_COLUMN()
+	{
+		return USER_ID_COLUMN;
+	}
+
+	public String getUserId()
+	{
+		return list.getValue(USER_ID_COLUMN);
+	}
+
+	public int getWORK_COUNT_COLUMN()
+	{
+		return WORK_COUNT_COLUMN;
+	}
+
+	public int getWORK_STATION_COLUMN()
+	{
+		return WORK_STATION_COLUMN;
+	}
+
+	public int getWORK_TYPE_COLUMN()
+	{
+		return WORK_TYPE_COLUMN;
+	}
+
+	public int getWorkCount()
+	{
+		String workCount = list.getValue(WORK_COUNT_COLUMN);
+		if (workCount != null)
+		{
+			try
+			{
+				return Integer.parseInt(list.getValue(WORK_COUNT_COLUMN)
+						.replaceAll(",", ""));
+			}
+			catch (Exception ex)
+			{
+				return 0;
+			}
+		}
+		else
+		{
+			return 0;
+		}
+	}
+
+	public String getWorkStation()
+	{
+		return list.getValue(WORK_STATION_COLUMN);
+	}
+
+	public String getWorkType()
+	{
+		return list.getValue(WORK_TYPE_COLUMN);
+	}
+
+	public void setBucketNo(String bucketNo)
+	{
+		list.setValue(BUCKET_NO_COLUMN, bucketNo);
+	}
+
+	public void setColor(String color)
+	{
+		list.setValue(COLOR_COLUMN, color);
+	}
+
+	public void setHeadItemRange(String itemRange)
+	{
+		head.setCurrentRow(HEAD_ITEM_RANGE_ROW);
+
+		head.setValue(HEAD_ITEM_RANGE_COLUMN, itemRange);
+
+	}
+
+	public void setHeadTimeRange(String timeRange)
+	{
+		head.setCurrentRow(HEAD_TIME_RANGE_ROW);
+
+		head.setValue(HEAD_TIME_RANGE_COLUMN, timeRange);
+
+	}
+
+	public void setHeadUserID(String userId)
+	{
+		head.setCurrentRow(HEAD_USER_ID_ROW);
+
+		head.setValue(HEAD_USER_ID_COLUMN, userId);
+
+	}
+
+	public void setHeadValue(IOHistoryInfoHead head) throws YKKDBException,
+			YKKSQLException
+	{
+		setHeadWorkType(head.getWorkType());
+		setHeadTimeRange(StringUtils.formatDateAndTimeFromDBToPage(head
+				.getTimeFrom())
+				+ "～"
+				+ StringUtils.formatDateAndTimeFromDBToPage(head.getTimeTo()));
+
+		setHeadItemRange(head.getItem());
+
+		setHeadStBkcount(head.getStockoutStationName() + "("
+				+ head.getStockinStationName() + ")" + "/"
+				+ getBucketCount(head));
+
+		setHeadUserID(head.getUserId());
+	}
+
+	private String getBucketCount(IOHistoryInfoHead head)
+			throws YKKDBException, YKKSQLException
+	{
+		Connection conn = null;
+		int totalCount = 0;
+
+		try
+		{
+			conn = ConnectionManager.getConnection();
+			ASRSInfoCentre centre = new ASRSInfoCentre(conn);
+			totalCount = centre.getBucketCount(head);
+		}
+		finally
+		{
+			if (conn != null)
+			{
+				try
+				{
+					conn.close();
+				}
+				catch (SQLException e)
+				{
+					DebugPrinter.print(DebugLevel.ERROR, e.getMessage());
+					YKKDBException ex = new YKKDBException();
+					ex.setResourceKey("7200002");
+					throw ex;
+				}
+			}
+		}
+		return DecimalFormat.getIntegerInstance().format(totalCount);
+	}
+
+	public void setHeadWorkType(String workType)
+	{
+		head.setCurrentRow(HEAD_WORK_TYPE_ROW);
+
+		head.setValue(HEAD_WORK_TYPE_COLUMN, workType);
+
+	}
+
+	public void setItemCode(String itemCode)
+	{
+		list.setValue(ITEM_CODE_COLUMN, itemCode);
+	}
+
+	public void setItemName1(String itemName1)
+	{
+		list.setValue(ITEM_NAME_1_COLUMN, itemName1);
+	}
+
+	public void setItemName2(String itemName2)
+	{
+		list.setValue(ITEM_NAME_2_COLUMN, itemName2);
+	}
+
+	public void setItemName3(String itemName3)
+	{
+		list.setValue(ITEM_NAME_3_COLUMN, itemName3);
+	}
+
+	public void setLocationNo(String locationNo)
+	{
+		list.setValue(LOCATION_NO_COLUMN, locationNo);
+	}
+
+	public void setNo(String no)
+	{
+		list.setValue(NO_COLUMN, no);
+	}
+
+	public void setRetrievalNo(String retrievalNo)
+	{
+		list.setValue(RETRIEVAL_NO_COLUMN, retrievalNo);
+	}
+
+	public void setRowValueByEntity(IOHistoryInfoEntity entity, int rowNum)
+	{
+		setNo(String.valueOf(rowNum));
+		setTime(StringUtils.formatDateAndTimeFromDBToPage(entity.getTime()));
+		setWorkType(entity.getWorkType());
+		setItemCode(entity.getItemCode());
+		setItemName1(entity.getItemName1());
+		setItemName2(entity.getItemName2());
+		setItemName3(entity.getItemName3());
+		setColor(entity.getColor());
+		setTicketNo(entity.getTicketNo());
+		setBucketNo(entity.getBucketNo());
+		setLocationNo(StringUtils.formatLocationNoFromDBToPage(entity
+				.getLocationNo()));
+		setWorkCount(entity.getWorkCount(), entity.getIncreaseDecreaseFlag());
+		setRetrievalNo(entity.getRetrievalNo());
+		setOrderNo(entity.getOrderNo());
+		setMeasureUnitWeight(entity.getMeasureUnitWeight());
+		setWorkStation(entity.getStNo());
+		setUserId(entity.getUserId());
+		setStartStation(entity.getStartStation());
+		setEndStation(entity.getEndStation());
+	}
+
+	public void setTicketNo(String ticketNo)
+	{
+		list.setValue(TICKET_NO_COLUMN, ticketNo);
+	}
+
+	public void setTime(String time)
+	{
+		list.setValue(TIME_COLUMN, time);
+	}
+
+	public void setUserId(String userId)
+	{
+		list.setValue(USER_ID_COLUMN, userId);
+	}
+
+	public void setWorkCount(int workCount, String increaseDecreaseFlag)
+	{
+		String token = "";
+		if (increaseDecreaseFlag.equals("1"))
+		{
+			token = "+";
+		}
+		else if (increaseDecreaseFlag.equals("2"))
+		{
+			token = "-";
+		}
+
+		list.setValue(WORK_COUNT_COLUMN, token
+				+ DecimalFormat.getIntegerInstance().format(workCount));
+	}
+
+	public void setWorkStation(String workStation)
+	{
+		list.setValue(WORK_STATION_COLUMN, workStation);
+	}
+
+	public void setWorkType(String workType)
+	{
+		list.setValue(WORK_TYPE_COLUMN, workType);
+	}
+
+	public String getOrderNo()
+	{
+		return list.getValue(ORDER_NO_COLUMN);
+	}
+
+	public void setOrderNo(String orderNo)
+	{
+		list.setValue(ORDER_NO_COLUMN, orderNo);
+	}
+
+	public BigDecimal getMeasureUnitWeight()
+	{
+		String measureUnitWeight = list.getValue(MEASURE_UNIT_WEIGHT_COLUMN);
+		if (measureUnitWeight != null)
+		{
+			try
+			{
+				return new BigDecimal(measureUnitWeight.replaceAll(",", ""));
+			}
+			catch (Exception ex)
+			{
+				return new BigDecimal(0);
+			}
+		}
+		else
+		{
+			return new BigDecimal(0);
+
+		}
+	}
+
+	public void setMeasureUnitWeight(BigDecimal measureUnitWeight)
+	{
+		NumberFormat numberFormat = DecimalFormat.getNumberInstance();
+		numberFormat.setMaximumFractionDigits(7);
+		numberFormat.setMinimumFractionDigits(0);
+		
+		list.setValue(MEASURE_UNIT_WEIGHT_COLUMN, numberFormat.format(measureUnitWeight));
+	}
+
+	public String getStartStation()
+	{
+		return list.getValue(START_STATION_COLUMN);
+	}
+
+	public void setStartStation(String startStation)
+	{
+		list.setValue(START_STATION_COLUMN, startStation);
+	}
+
+	public String getEndStation()
+	{
+		return list.getValue(END_STATION_COLUMN);
+	}
+
+	public void setEndStation(String endStation)
+	{
+		list.setValue(END_STATION_COLUMN, endStation);
+	}
+}

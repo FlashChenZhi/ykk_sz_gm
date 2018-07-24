@@ -28,7 +28,7 @@ public class LocationStorageInfoCSV implements IExportable
 
 	public String generateHead()
 	{
-		return "货位,物料编号,品名,颜色,生产票号,计量报告状态,箱子编号,在库数,入库时间";
+		return "货位,物料编号,品名,颜色,生产票号,计量报告状态,箱子编号,在库数,入库时间,记录";
 	}
 
 	public String getNativeSQL()
@@ -53,6 +53,7 @@ public class LocationStorageInfoCSV implements IExportable
 		entity.setBucketNo(resultSetProxy.getString("bucket_no"));
 
 		entity.setStockinDateTime(resultSetProxy.getString("nyukohiji"));
+        entity.setMemo(resultSetProxy.getString("remark"));
 
         int planQty = Integer.parseInt(resultSetProxy.getString("plan_qty"));
 
@@ -147,7 +148,8 @@ public class LocationStorageInfoCSV implements IExportable
 		line += entity.getWeightReportFlag() + ",";
 		line += entity.getBucketNo() + ",";
 		line += String.valueOf(entity.getInstockCount()) + ",";
-		line += StringUtils.formatDateFromDBToPage(entity.getStockinDateTime());
+		line += StringUtils.formatDateFromDBToPage(entity.getStockinDateTime()) + ",";
+        line += entity.getMemo();
 
 		return line;
 	}

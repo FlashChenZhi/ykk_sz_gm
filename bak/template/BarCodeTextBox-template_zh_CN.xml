@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE servercontrol-template[
+<!ELEMENT templates (template+)>
+<!ELEMENT template (property+, list-items+)>
+<!ELEMENT list-items (list-item+)>
+<!ELEMENT list-item (property+, list-items+)>
+<!ATTLIST template key NMTOKEN #REQUIRED>
+<!ATTLIST property name NMTOKEN #REQUIRED value CDATA #REQUIRED>
+<!ATTLIST list-items type NMTOKEN #REQUIRED>
+<!ATTLIST list-item type NMTOKEN #REQUIRED>
+]>
+
+<templates>
+</templates>

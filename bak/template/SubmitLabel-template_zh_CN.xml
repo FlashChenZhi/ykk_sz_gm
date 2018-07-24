@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+  <template key="W_Download" keyword="" description="Download" lastupdate="" username="">
+    <property name="async" value="false" />
+    <property name="text" value="" />
+    <property name="resourceKey" value="" />
+    <property name="visible" value="false" />
+    <property name="showProgress" value="" />
+    <property name="progressMessage" value="" />
+    <property name="target" value="DownLoad" />
+    <property name="features" value="width=32,height=40" />
+    <property name="functionKey" value="" />
+    <property name="beforeConfirm" value="" />
+    <property name="onconfirmOK" value="" />
+    <property name="serverEvents" value="" />
+    <property name="cssClass" value="" />
+    <property name="accessKey" value="" />
+    <property name="onblur" value="" />
+    <property name="onclick" value="" />
+    <property name="onfocus" value="" />
+    <property name="onmousedown" value="" />
+    <property name="onmousemove" value="" />
+    <property name="onmouseout" value="" />
+    <property name="onmouseover" value="" />
+  </template>
+  <template key="YKK_SLB_Popup" keyword="YKK" description="" lastupdate="2012-05-18 11:32:21" username="">
+    <property name="async" value="false" />
+    <property name="text" value="" />
+    <property name="resourceKey" value="YKK-LBL-Select" />
+    <property name="visible" value="false" />
+    <property name="showProgress" value="" />
+    <property name="progressMessage" value="" />
+    <property name="target" value="POPUP" />
+    <property name="features" value="width=1280,height=1024,top=0,left=0,toolbar=no,directories=no,status=no,menubar=no,location=no,scrollbars=yes,resizable=yes" />
+    <property name="functionKey" value="" />
+    <property name="beforeConfirm" value="" />
+    <property name="onconfirmOK" value="" />
+    <property name="serverEvents" value="" />
+    <property name="cssClass" value="lbl-black-001" />
+    <property name="accessKey" value="" />
+    <property name="onblur" value="" />
+    <property name="onclick" value="" />
+    <property name="onfocus" value="" />
+    <property name="onmousedown" value="" />
+    <property name="onmousemove" value="" />
+    <property name="onmouseout" value="" />
+    <property name="onmouseover" value="" />
+  </template>
+  <template key="YKK_SLB_SubmitLabelPopup" keyword="YKK" description="" lastupdate="2012-05-18 11:32:21" username="">
+    <property name="async" value="false" />
+    <property name="text" value="" />
+    <property name="resourceKey" value="" />
+    <property name="visible" value="false" />
+    <property name="showProgress" value="" />
+    <property name="progressMessage" value="" />
+    <property name="target" value="POPUP" />
+    <property name="features" value="width=1280,height=1024,top=0,left=0,toolbar=no,directories=no,status=no,menubar=no,location=no,scrollbars=yes,resizable=yes" />
+    <property name="functionKey" value="" />
+    <property name="beforeConfirm" value="" />
+    <property name="onconfirmOK" value="" />
+    <property name="serverEvents" value="" />
+    <property name="cssClass" value="lbl-black-001" />
+    <property name="accessKey" value="" />
+    <property name="onblur" value="" />
+    <property name="onclick" value="" />
+    <property name="onfocus" value="" />
+    <property name="onmousedown" value="" />
+    <property name="onmousemove" value="" />
+    <property name="onmouseout" value="" />
+    <property name="onmouseover" value="" />
+  </template>
+</templates>

@@ -1,40 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="desktopapp/ReservationDiscardInfoMonitor/src"/>
-	<classpathentry kind="src" path="exploded/WEB-INF/src"/>
-	<classpathentry kind="src" path="exploded/WEB-INF/tool/default"/>
-	<classpathentry kind="src" path="webapp/tools/WEB-INF/src"/>
 	<classpathentry kind="src" path="webapp/wms/WEB-INF/src"/>
-	<classpathentry kind="src" path="webapp/wms/WEB-INF/tool/default"/>
-	<classpathentry kind="lib" path="desktopapp/ReservationDiscardInfoMonitor/lib/commons-lang-2.0.jar"/>
-	<classpathentry kind="lib" path="desktopapp/ReservationDiscardInfoMonitor/lib/log4j-1.2.15.jar"/>
-	<classpathentry kind="lib" path="desktopapp/ReservationDiscardInfoMonitor/lib/ojdbc14.jar"/>
-	<classpathentry kind="lib" path="exploded/WEB-INF/lib/bluedog.jar"/>
-	<classpathentry kind="lib" path="exploded/WEB-INF/lib/commons-beanutils.jar"/>
-	<classpathentry kind="lib" path="exploded/WEB-INF/lib/commons-collections.jar"/>
-	<classpathentry kind="lib" path="exploded/WEB-INF/lib/commons-dbcp-1.1.jar"/>
-	<classpathentry kind="lib" path="exploded/WEB-INF/lib/commons-digester.jar"/>
-	<classpathentry kind="lib" path="exploded/WEB-INF/lib/commons-fileupload-1.0.jar"/>
-	<classpathentry kind="lib" path="exploded/WEB-INF/lib/commons-lang-2.0.jar"/>
-	<classpathentry kind="lib" path="exploded/WEB-INF/lib/commons-pool-1.1.jar"/>
-	<classpathentry kind="lib" path="exploded/WEB-INF/lib/daifuku-commons.jar"/>
-	<classpathentry kind="lib" path="exploded/WEB-INF/lib/jcommon-1.0.0-rc1.jar"/>
-	<classpathentry kind="lib" path="exploded/WEB-INF/lib/jfreechart-1.0.0-rc1.jar"/>
-	<classpathentry kind="lib" path="exploded/WEB-INF/lib/log4j-1.2.8.jar"/>
-	<classpathentry kind="lib" path="exploded/WEB-INF/lib/ojdbc14.jar"/>
-	<classpathentry kind="lib" path="exploded/WEB-INF/lib/poi-2.5.1-final-20040804.jar"/>
-	<classpathentry kind="lib" path="exploded/WEB-INF/lib/servlet-api.jar"/>
-	<classpathentry kind="lib" path="exploded/WEB-INF/lib/UCXSingle.jar"/>
-	<classpathentry kind="lib" path="webapp/tools/WEB-INF/lib/bluedog.jar"/>
-	<classpathentry kind="lib" path="webapp/tools/WEB-INF/lib/commons-beanutils.jar"/>
-	<classpathentry kind="lib" path="webapp/tools/WEB-INF/lib/commons-collections.jar"/>
-	<classpathentry kind="lib" path="webapp/tools/WEB-INF/lib/commons-dbcp-1.1.jar"/>
-	<classpathentry kind="lib" path="webapp/tools/WEB-INF/lib/commons-digester.jar"/>
-	<classpathentry kind="lib" path="webapp/tools/WEB-INF/lib/commons-fileupload-1.0.jar"/>
-	<classpathentry kind="lib" path="webapp/tools/WEB-INF/lib/commons-pool-1.1.jar"/>
-	<classpathentry kind="lib" path="webapp/tools/WEB-INF/lib/daifuku-commons-1.0.jar"/>
-	<classpathentry kind="lib" path="webapp/tools/WEB-INF/lib/log4j-1.2.8.jar"/>
-	<classpathentry kind="lib" path="webapp/tools/WEB-INF/lib/UCXSingle.jar"/>
 	<classpathentry kind="lib" path="webapp/wms/WEB-INF/lib/bluedog.jar"/>
 	<classpathentry kind="lib" path="webapp/wms/WEB-INF/lib/commons-beanutils.jar"/>
 	<classpathentry kind="lib" path="webapp/wms/WEB-INF/lib/commons-collections.jar"/>
@@ -52,5 +18,5 @@
 	<classpathentry kind="lib" path="webapp/wms/WEB-INF/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="webapp/wms/WEB-INF/lib/UCXSingle.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="output" path="exploded/WEB-INF/classes"/>
+	<classpathentry kind="output" path="webapp/wms/WEB-INF/classes2"/>
 </classpath>

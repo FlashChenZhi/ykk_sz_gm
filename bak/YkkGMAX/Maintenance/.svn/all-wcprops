@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/424/ykk_sz/webapp/wms/jsp/YkkGMAX/Maintenance
+END
+WorkMaintenance.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/91/ykk_sz/webapp/wms/jsp/YkkGMAX/Maintenance/WorkMaintenance.jsp
+END
+ErroRangeMaintenance.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/91/ykk_sz/webapp/wms/jsp/YkkGMAX/Maintenance/ErroRangeMaintenance.jsp
+END
+WorkMaintenancePopup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/424/ykk_sz/webapp/wms/jsp/YkkGMAX/Maintenance/WorkMaintenancePopup.jsp
+END
+LocationMaintenance.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/91/ykk_sz/webapp/wms/jsp/YkkGMAX/Maintenance/LocationMaintenance.jsp
+END
+BucketMasterMaintenance.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/91/ykk_sz/webapp/wms/jsp/YkkGMAX/Maintenance/BucketMasterMaintenance.jsp
+END
+ForbidLocationSetting.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/91/ykk_sz/webapp/wms/jsp/YkkGMAX/Maintenance/ForbidLocationSetting.jsp
+END
+ItemMasterMaintenance.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/421/ykk_sz/webapp/wms/jsp/YkkGMAX/Maintenance/ItemMasterMaintenance.jsp
+END
+UserMasterMaintenance.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/424/ykk_sz/webapp/wms/jsp/YkkGMAX/Maintenance/UserMasterMaintenance.jsp
+END
+PendingTransferDataCencelOrPrioritize.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/359/ykk_sz/webapp/wms/jsp/YkkGMAX/Maintenance/PendingTransferDataCencelOrPrioritize.jsp
+END
+StockoutCancelSetting.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/91/ykk_sz/webapp/wms/jsp/YkkGMAX/Maintenance/StockoutCancelSetting.jsp
+END
+StopPrintLableSetting.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/91/ykk_sz/webapp/wms/jsp/YkkGMAX/Maintenance/StopPrintLableSetting.jsp
+END

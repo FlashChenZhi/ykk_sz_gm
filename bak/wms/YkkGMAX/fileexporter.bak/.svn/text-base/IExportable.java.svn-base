@@ -1,0 +1,19 @@
+package jp.co.daifuku.wms.YkkGMAX.fileexporter;
+
+import java.util.List;
+
+import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKDBException;
+import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKSQLException;
+
+
+public interface IExportable
+{
+
+    List getList() throws YKKSQLException, YKKDBException;
+
+    String getLine(Object object);
+
+    String getHead();
+
+	int getCount() throws YKKSQLException, YKKDBException;
+}

@@ -70,7 +70,7 @@
       <plural-data />
     </datas>
   </control>
-  <control id="chk_AfterThisLocation" reflection="false">
+  <control id="lbl_LocationNo" reflection="false">
     <single-data name="text" value="" />
     <single-data name="maxrows" value="" />
     <datas>
@@ -91,7 +91,7 @@
       <plural-data />
     </datas>
   </control>
-  <control id="lbl_LocationNo" reflection="false">
+  <control id="txt_ColorCode" reflection="false">
     <single-data name="text" value="" />
     <single-data name="maxrows" value="" />
     <datas>
@@ -112,7 +112,7 @@
       <plural-data />
     </datas>
   </control>
-  <control id="txt_ColorCode" reflection="false">
+  <control id="btn_ItemBrowse3" reflection="false">
     <single-data name="text" value="" />
     <single-data name="maxrows" value="" />
     <datas>
@@ -133,14 +133,7 @@
       <plural-data />
     </datas>
   </control>
-  <control id="btn_ItemBrowse3" reflection="false">
-    <single-data name="text" value="" />
-    <single-data name="maxrows" value="" />
-    <datas>
-      <plural-data />
-    </datas>
-  </control>
-  <control id="txt_ColorCode2" reflection="false">
+  <control id="txt_Memo" reflection="false">
     <single-data name="text" value="" />
     <single-data name="maxrows" value="" />
     <datas>
@@ -154,7 +147,21 @@
       <plural-data />
     </datas>
   </control>
-  <control id="lbl_Memo" reflection="false">
+  <control id="txt_ColorCode2" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="chk_AfterThisLocation" reflection="false">
+    <single-data name="text" value="" />
+    <single-data name="maxrows" value="" />
+    <datas>
+      <plural-data />
+    </datas>
+  </control>
+  <control id="lbl_Time" reflection="false">
     <single-data name="text" value="" />
     <single-data name="maxrows" value="" />
     <datas>
@@ -175,7 +182,7 @@
       <plural-data />
     </datas>
   </control>
-  <control id="txt_LocationNo" reflection="false">
+  <control id="rdo_DesignateLocationStockout" reflection="false">
     <single-data name="text" value="" />
     <single-data name="maxrows" value="" />
     <datas>
@@ -196,7 +203,7 @@
       <plural-data />
     </datas>
   </control>
-  <control id="rdo_DesignateLocationStockout" reflection="false">
+  <control id="lbl_ColorCode" reflection="false">
     <single-data name="text" value="" />
     <single-data name="maxrows" value="" />
     <datas>
@@ -217,14 +224,14 @@
       <plural-data />
     </datas>
   </control>
-  <control id="lbl_ColorCode" reflection="false">
+  <control id="txt_ItemNo3" reflection="false">
     <single-data name="text" value="" />
     <single-data name="maxrows" value="" />
     <datas>
       <plural-data />
     </datas>
   </control>
-  <control id="lbl_Time" reflection="false">
+  <control id="btn_Set" reflection="false">
     <single-data name="text" value="" />
     <single-data name="maxrows" value="" />
     <datas>
@@ -238,14 +245,14 @@
       <plural-data />
     </datas>
   </control>
-  <control id="txt_ItemNo3" reflection="false">
+  <control id="rdo_SearchStockout" reflection="false">
     <single-data name="text" value="" />
     <single-data name="maxrows" value="" />
     <datas>
       <plural-data />
     </datas>
   </control>
-  <control id="lbl_ColorCode2" reflection="false">
+  <control id="lbl_Memo" reflection="false">
     <single-data name="text" value="" />
     <single-data name="maxrows" value="" />
     <datas>
@@ -259,14 +266,14 @@
       <plural-data />
     </datas>
   </control>
-  <control id="rdo_SearchStockout" reflection="false">
+  <control id="lbl_ColorCode2" reflection="false">
     <single-data name="text" value="" />
     <single-data name="maxrows" value="" />
     <datas>
       <plural-data />
     </datas>
   </control>
-  <control id="btn_Set" reflection="false">
+  <control id="txt_LocationNo" reflection="false">
     <single-data name="text" value="" />
     <single-data name="maxrows" value="" />
     <datas>
@@ -281,13 +288,6 @@
     </datas>
   </control>
   <control id="txt_StockinDate" reflection="false">
-    <single-data name="text" value="" />
-    <single-data name="maxrows" value="" />
-    <datas>
-      <plural-data />
-    </datas>
-  </control>
-  <control id="txt_Memo" reflection="false">
     <single-data name="text" value="" />
     <single-data name="maxrows" value="" />
     <datas>

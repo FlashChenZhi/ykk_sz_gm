@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+  <template key="Pager" keyword="List Cell" description="Pager">
+    <property name="async" value="" />
+    <property name="max" value="100" />
+    <property name="index" value="" />
+    <property name="page" value="5" />
+    <property name="visible" value="true" />
+    <property name="cssClass" value="" />
+  </template>
+  <template key="YKK_Pager" keyword="YKK" description="">
+    <property name="async" value="true" />
+    <property name="max" value="" />
+    <property name="index" value="" />
+    <property name="page" value="30" />
+    <property name="visible" value="true" />
+    <property name="cssClass" value="" />
+  </template>
+</templates>

@@ -1,0 +1,81 @@
+package jp.co.daifuku.wms.YkkGMAX.fileexporter;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+import javax.servlet.http.HttpServletResponse;
+
+import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKCommonException;
+import jp.co.daifuku.wms.YkkGMAX.Utils.Debugprinter.DebugLevel;
+import jp.co.daifuku.wms.YkkGMAX.Utils.Debugprinter.DebugPrinter;
+
+
+public class FileExporter
+{
+
+    private HttpServletResponse httpResponse;
+
+    public FileExporter(HttpServletResponse httpResponse)
+    {
+	this.httpResponse = httpResponse;
+    }
+
+    public void export(String path) throws YKKCommonException
+    {
+	if(path.equals("")) return;
+	
+	File file = new File(path);
+	String name = file.getName();
+
+	httpResponse.setContentType("unknown");
+	httpResponse.addHeader("Content-Disposition", "filename=\"" + name
+		+ "\"");
+	OutputStream os = null;
+	FileInputStream fis = null;
+
+	try
+	{
+	    os = httpResponse.getOutputStream();
+	    fis = new FileInputStream(path);
+	    byte[] b = new byte[1024];
+	    int i = 0;
+
+	    while ((i = fis.read(b)) > 0)
+	    {
+		os.write(b, 0, i);
+	    }
+
+	    fis.close();
+	    os.flush();
+	    os.close();
+	}
+	catch (IOException e)
+	{
+	    DebugPrinter.print(DebugLevel.ERROR, e.getMessage());
+	    YKKCommonException ex = new YKKCommonException();
+	    ex.setResourceKey("7500002");
+	    throw ex;	   
+	}
+	finally
+	{
+	    try
+	    {
+		if (fis != null)
+		    fis.close();
+		if (os != null)
+		    os.close();
+	    }
+	    catch (IOException e)
+	    {
+		DebugPrinter.print(DebugLevel.ERROR, e.getMessage());
+		YKKCommonException ex = new YKKCommonException();
+		    ex.setResourceKey("7500003");
+		    throw ex;		
+	    }
+	}
+
+    }
+
+}

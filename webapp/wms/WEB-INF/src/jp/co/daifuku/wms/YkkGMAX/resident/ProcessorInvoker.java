@@ -13,6 +13,7 @@ import jp.co.daifuku.wms.YkkGMAX.Utils.ASRSInfoCentre;
 import jp.co.daifuku.wms.YkkGMAX.Utils.ConnectionManager;
 import jp.co.daifuku.wms.YkkGMAX.Utils.Debugprinter.DebugLevel;
 import jp.co.daifuku.wms.YkkGMAX.Utils.Debugprinter.DebugPrinter;
+import jp.co.daifuku.wms.base.common.WmsParam;
 
 public class ProcessorInvoker
 {
@@ -47,7 +48,11 @@ public class ProcessorInvoker
 
 	try
 	{
-	    conn = ConnectionManager.getConnection();
+        try {
+            conn = ConnectionManager.getConnection();
+        }catch (YKKDBException dbEx){
+            conn = WmsParam.getConnection();
+        }
 	    for (int i = 0; i < processorList.size(); i++)
 	    {
 		BasicProcessor processor = (BasicProcessor) processorList

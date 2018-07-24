@@ -38,6 +38,10 @@
 					document.all('txt_StockinDate').focus();
 					_setMessage('<%= jp.co.daifuku.bluedog.util.MessageResources.getText("7000001",jp.co.daifuku.bluedog.util.DispResources.getText("YKK-LBL-StockinDate")) %>',2);
 					return true;
+				}else if(!_isValueInput('txt_Memo')){
+					document.all('txt_Memo').focus();
+					_setMessage('<%= jp.co.daifuku.bluedog.util.MessageResources.getText("7000001",jp.co.daifuku.bluedog.util.DispResources.getText("YKK-LBL-Memo")) %>',2);
+					return true;
 				}
 
 			}
@@ -48,6 +52,10 @@
 				{
 					document.all('txt_InstockCount').focus();
 					_setMessage('<%= jp.co.daifuku.bluedog.util.MessageResources.getText("7000001",jp.co.daifuku.bluedog.util.DispResources.getText("YKK-LBL-InstockCount")) %>',2);
+					return true;
+				}else if(!_isValueInput('txt_Memo')){
+					document.all('txt_Memo').focus();
+					_setMessage('<%= jp.co.daifuku.bluedog.util.MessageResources.getText("7000001",jp.co.daifuku.bluedog.util.DispResources.getText("YKK-LBL-Memo")) %>',2);
 					return true;
 				}
 			}
@@ -60,6 +68,10 @@
 					document.all('txt_ItemNo3').focus();
 					_setMessage('<%= jp.co.daifuku.bluedog.util.MessageResources.getText("7000001",jp.co.daifuku.bluedog.util.DispResources.getText("YKK-LBL-ItemNo")) %>',2);
 					return true;
+				}else if(!_isValueInput('txt_Memo')){
+					document.all('txt_Memo').focus();
+					_setMessage('<%= jp.co.daifuku.bluedog.util.MessageResources.getText("7000001",jp.co.daifuku.bluedog.util.DispResources.getText("YKK-LBL-Memo")) %>',2);
+					return true;
 				}
 			}
 			else if(<%= session.getAttribute("STOCKOUT_MODE")%> == "5")
@@ -69,6 +81,10 @@
 				{
 					document.all('txt_LocationNo').focus();
 					_setMessage('<%= jp.co.daifuku.bluedog.util.MessageResources.getText("7000001",jp.co.daifuku.bluedog.util.DispResources.getText("YKK-LBL-LocationNo")) %>',2);
+					return true;
+				}else if(!_isValueInput('txt_Memo')){
+					document.all('txt_Memo').focus();
+					_setMessage('<%= jp.co.daifuku.bluedog.util.MessageResources.getText("7000001",jp.co.daifuku.bluedog.util.DispResources.getText("YKK-LBL-Memo")) %>',2);
 					return true;
 				}
 			}
@@ -245,10 +261,18 @@
                 <TD bgColor=#b8b7d7><IMG src="<%=request.getContextPath()%>/img/common/icon_colon3.gif"></TD>
                 <TD width="100%" bgColor=#b8b7d7><h:formattextbox id="txt_LocationNo" templateKey="YKK_TXT_LocationNo"/><h:checkbox id="chk_AfterThisLocation" templateKey="YKK_CHK_AfterThisLocation"/></TD></TR>
               <TR>
-                <TD noWrap bgColor=#b8b7d7></TD>
-                <TD noWrap bgColor=#b8b7d7></TD>
-                <TD bgColor=#b8b7d7></TD>
-                <TD width="100%" bgColor=#b8b7d7></TD></TR>
+                <TD noWrap bgColor=#b8b7d7>
+                  <HR color=#000000>
+                </TD>
+                <TD noWrap bgColor=#b8b7d7>
+                  <HR color=#000000>
+                </TD>
+                <TD bgColor=#b8b7d7>
+                  <HR color=#000000>
+                </TD>
+                <TD width="100%" bgColor=#b8b7d7>
+                  <HR color=#000000>
+                </TD></TR>
               <TR>
                 <TD noWrap bgColor=#b8b7d7></TD>
                 <TD noWrap bgColor=#b8b7d7><h:label id="lbl_Memo" templateKey="YKK_LBL_Memo"/></TD>

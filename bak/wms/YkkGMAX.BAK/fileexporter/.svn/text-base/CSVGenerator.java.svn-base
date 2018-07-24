@@ -1,0 +1,150 @@
+package jp.co.daifuku.wms.YkkGMAX.fileexporter;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.util.Calendar;
+import java.util.Iterator;
+import java.util.List;
+
+import jp.co.daifuku.bluedog.ui.control.Message;
+import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKCommonException;
+import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKDBException;
+import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKSQLException;
+import jp.co.daifuku.wms.YkkGMAX.Utils.StringPadder;
+import jp.co.daifuku.wms.YkkGMAX.Utils.Debugprinter.DebugLevel;
+import jp.co.daifuku.wms.YkkGMAX.Utils.Debugprinter.DebugPrinter;
+
+public class CSVGenerator
+{
+    private IExportable export;
+    private String root;
+
+    public CSVGenerator(IExportable export, String root)
+    {
+	this.export = export;
+	this.root = root;
+	File csvRoot = new File(root);
+    if(!csvRoot.exists())
+    {
+    	csvRoot.mkdir();
+    }
+    }
+
+    public String generateFile(Message message) throws YKKCommonException, YKKSQLException, YKKDBException
+    {
+    	int totalCount = export.getCount();
+    	int maxCount = 10000;
+    	if(totalCount == 0)
+    	{
+			message.setMsgResourceKey("7000030");
+			return "";
+    	}
+    	else if(totalCount > maxCount)
+    	{
+			message.setMsgResourceKey("7000031" + "\t" + totalCount + "\t" + maxCount);
+			return "";
+    	}
+	List list = export.getList();
+	
+	String name = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
+	name += StringPadder.leftPad(String.valueOf(Calendar.getInstance().get(
+		Calendar.MONTH) + 1), "0", 2);
+	name += StringPadder.leftPad(String.valueOf(Calendar.getInstance().get(
+		Calendar.DATE)), "0", 2);
+	name += StringPadder.leftPad(String.valueOf(Calendar.getInstance().get(
+		Calendar.HOUR)), "0", 2);
+	name += StringPadder.leftPad(String.valueOf(Calendar.getInstance().get(
+		Calendar.MINUTE)), "0", 2);
+	name += StringPadder.leftPad(String.valueOf(Calendar.getInstance().get(
+		Calendar.SECOND)), "0", 2);
+	name += StringPadder.leftPad(String.valueOf(Calendar.getInstance().get(
+		Calendar.MILLISECOND)), "0", 3);
+	
+	String path = root + "\\" + name + ".csv";
+	String osName = System.getProperties().getProperty("os.name");	
+	if(osName.indexOf("Windows") != -1)
+	{
+	    path = root + "\\" + name + ".csv";
+	}
+	else
+	{
+	    path = root + "/" + name + ".csv";
+	}	
+	
+	File file = new File(path);
+//	FileWriter fw = null;
+	FileOutputStream fos = null;
+	OutputStreamWriter osw = null;
+	BufferedWriter bw = null;
+		
+	Iterator it = list.iterator();	
+	try
+	{
+//	    fw = new FileWriter(file);
+//	    bw = new BufferedWriter(fw);
+		fos = new FileOutputStream(file);
+		osw = new OutputStreamWriter(fos,  "GB2312");
+		bw = new BufferedWriter(osw);
+	    
+		bw.write(export.getHead());
+//	    bw.newLine();
+		bw.write("\r\n");
+	    int count = 0;
+	    while (it.hasNext())
+	    {
+		count++;
+		String line = export.getLine(it.next());
+		bw.write(line);
+//		bw.newLine();
+		bw.write("\r\n");
+	    }
+	    bw.flush();
+	    bw.close();
+//	    fw.close();
+	    fos.close();
+	    osw.close();
+	    if(count == 0) return "";
+	}
+	catch (IOException e)
+	{
+	    DebugPrinter.print(DebugLevel.ERROR, e.getMessage());
+	    YKKCommonException ex = new YKKCommonException();
+	    ex.setResourceKey("7500002");
+	    throw ex;	    
+	}
+	finally
+	{
+
+	    try
+	    {
+//		if (bw != null) bw.close();
+//		if (fw != null) fw.close();
+		if (bw != null) 
+		{
+			bw.close();
+		}
+		if (fos != null)
+		{
+			fos.close();
+		}
+		if(osw != null)
+		{
+			osw.close();
+		}
+	    }
+	    catch (IOException e)
+	    {
+		DebugPrinter.print(DebugLevel.ERROR, e.getMessage());
+		YKKCommonException ex = new YKKCommonException();
+		    ex.setResourceKey("7500003");
+		    throw ex;
+		
+	    }
+	}
+
+	return path;
+    }	
+}

@@ -1,0 +1,2517 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+  <template key="W_S_ShpStuIqrShp" keyword="" description="出荷状況照会（出荷）">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="7" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="true" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="100" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="100" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="150" />
+          <property name="height" value="" />
+          <property name="rowspan" value="6" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0189" />
+          <property name="cssClass" value="listcell-header-nodelim" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0038" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0263" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0106" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0016" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0151" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0027" />
+          <property name="cssClass" value="listcell-header" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0269" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0307" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0275" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0162" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0163" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_S_ShpStuIqrTCShp" keyword="" description="出荷状況照会（ＴＣ出荷）">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="7" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="false" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="100" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-header-nodelim" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="100" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-header" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="150" />
+          <property name="height" value="" />
+          <property name="rowspan" value="6" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0262" />
+          <property name="cssClass" value="listcell-header-nodelim" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0038" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0263" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0106" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0016" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0151" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0027" />
+          <property name="cssClass" value="listcell-header" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_S_ShpStuIqrDCShp" keyword="" description="出荷状況照会（ＤＣ出荷）">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="7" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="false" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="100" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-header-nodelim" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="100" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-header" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="150" />
+          <property name="height" value="" />
+          <property name="rowspan" value="6" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0041" />
+          <property name="cssClass" value="listcell-header-nodelim" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0038" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0263" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0106" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0016" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0151" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0027" />
+          <property name="cssClass" value="listcell-header" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_S_ShpStuIqrCrTCShp" keyword="" description="出荷状況照会（クロスＴＣ出荷）">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="7" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="false" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="100" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-header-nodelim" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="100" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-header" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="150" />
+          <property name="height" value="" />
+          <property name="rowspan" value="6" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0032" />
+          <property name="cssClass" value="listcell-header-nodelim" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0038" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0263" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0106" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0016" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0151" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0027" />
+          <property name="cssClass" value="listcell-header" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_S_StrgStuIqr" keyword="" description="入庫状況照会">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="5" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="true" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="100" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="100" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="4" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0234" />
+          <property name="cssClass" value="listcell-header-nodelim" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0271" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0016" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0151" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0027" />
+          <property name="cssClass" value="listcell-header" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0269" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0307" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0275" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0162" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0163" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_S_RtrivlWorkingIqrOrder" keyword="" description="出庫状況照会（オーダー集約）">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="6" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="true" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="170" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="170" />
+          <property name="height" value="" />
+          <property name="rowspan" value="5" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0126" />
+          <property name="cssClass" value="listcell-header-nodelim" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0125" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0271" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0016" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0151" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0027" />
+          <property name="cssClass" value="listcell-header" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0269" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0307" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0275" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0162" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0163" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_S_RtrivlWorkingIqrItem" keyword="" description="出庫状況照会（アイテム集約）">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="5" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="false" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="170" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="170" />
+          <property name="height" value="" />
+          <property name="rowspan" value="4" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0102" />
+          <property name="cssClass" value="listcell-header-nodelim" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0271" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0016" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0151" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0027" />
+          <property name="cssClass" value="listcell-header" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_S_SortingInquiryCase" keyword="" description="仕分状況照会（ｹｰｽ仕分）">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="5" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="true" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="4" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0012" />
+          <property name="cssClass" value="listcell-header-nodelim" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0256" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0106" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0016" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0027" />
+          <property name="cssClass" value="listcell-header" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0269" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0307" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0275" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0162" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0163" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_S_SortingInquiryPiece" keyword="" description="仕分状況照会(ﾋﾟｰｽ仕分)">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="5" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="false" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="4" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0148" />
+          <property name="cssClass" value="listcell-header-nodelim" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0256" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0106" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0151" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="110" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0027" />
+          <property name="cssClass" value="listcell-header" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="120" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell@" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_S_InstkWorkingIqrTC" keyword="" description="入荷状況照会(TC入荷)">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="7" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="true" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="170" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="170" />
+          <property name="height" value="" />
+          <property name="rowspan" value="6" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0261" />
+          <property name="cssClass" value="listcell-header-nodelim" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0255" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0263" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0106" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0016" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0151" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0027" />
+          <property name="cssClass" value="listcell-header" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0269" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0307" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0275" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0162" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="LBL-W0163" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_S_InstkWorkingIqrCrsTC" keyword="" description="入荷状況照会（クロスTC）">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="7" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="false" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="170" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="170" />
+          <property name="height" value="" />
+          <property name="rowspan" value="6" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0031" />
+          <property name="cssClass" value="listcell-header-nodelim" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0255" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0263" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0106" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0016" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0151" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0027" />
+          <property name="cssClass" value="listcell-header" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_S_InstkWorkingIqrDC" keyword="" description="入荷状況照会（DC）">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="7" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="false" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="170" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="" />
+          <property name="cssClass" value="listcell-rowheader-left" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="170" />
+          <property name="height" value="" />
+          <property name="rowspan" value="6" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0040" />
+          <property name="cssClass" value="listcell-header-nodelim" />
+        </list-item>
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0255" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0263" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0106" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0016" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0151" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="130" />
+          <property name="height" value="" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="LBL-W0027" />
+          <property name="cssClass" value="listcell-header" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+      <list-item type="ListCellColumn">
+        <property name="width" value="110" />
+        <property name="height" value="" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header" />
+        <property name="detailCssClass" value="listcell-detail-right" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="YKK_LST_StorageInfoPopup_Head" keyword="YKK" description="">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="3" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="true" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-InquiryCondition" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-ItemNo" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-ColorCode" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="315" />
+        <property name="height" value="30" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="YKK_LST_OvertimeStorageInfoPopupHead" keyword="YKK" description="">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="5" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="true" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="125" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-InquiryCondition" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="125" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-DepositoryType" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="125" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-BenchmarkDate" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="125" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-BenchmarkObject" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="125" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-OrderBy" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="155" />
+        <property name="height" value="30" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="YKK_LST_LocationStorageInfoPopupHead" keyword="YKK" description="">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="5" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="true" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-InquiryCondition" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-Depository" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-LocationStatus" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-WeightReportFlag" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-LocationNo" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="315" />
+        <property name="height" value="30" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="YKK_LST_TicketNoItemStorageInfoPopupHead" keyword="YKK" description="">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="7" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="true" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="125" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-InquiryCondition" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="125" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-Depository" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="125" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-Division" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="125" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-TicketNoRange" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="125" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-ItemNo" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="125" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-ColorCode" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="125" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-BucketNo" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="315" />
+        <property name="height" value="30" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="YKK_LST_IOHistoryInfoPopupHead" keyword="YKK" description="">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="6" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="true" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="170" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-InquiryCondition" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="170" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-WorkDivision" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="170" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-DateTimeRange" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="170" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-ItemNo" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="145" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-StockStationBucketCount" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="170" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-UserID" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="515" />
+        <property name="height" value="30" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="YKK_LST_ErroMessageInfoPopupHead" keyword="YKK" description="">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="3" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="true" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-InquiryCondition" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-MessageDivision" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-DateTimeRange" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="455" />
+        <property name="height" value="30" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="YKK_LST_MessageInfoPopupHead" keyword="YKK" description="">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="3" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="true" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-InquiryCondition" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-MessageDivision" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-DateTimeRange" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="455" />
+        <property name="height" value="30" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="YKK_LST_WorkMaintenancePopupHead" keyword="YKK" description="">
+    <property name="async" value="" />
+    <property name="visible" value="true" />
+    <property name="tableCssClass" value="" />
+    <property name="errRequired" value="" />
+    <property name="maxRows" value="4" />
+    <property name="alterationBgColor" value="true" />
+    <property name="colHeader" value="" />
+    <list-items type="ListCellRowHeaders">
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-InquiryCondition" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-TransferType" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-Station" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+      <list-items type="RowHeaders">
+        <list-item type="RowHeader">
+          <property name="width" value="105" />
+          <property name="height" value="30" />
+          <property name="rowspan" value="" />
+          <property name="text" value="" />
+          <property name="resourceKey" value="YKK-LBL-Division" />
+          <property name="cssClass" value="listcell-rowheader" />
+        </list-item>
+      </list-items>
+    </list-items>
+    <list-items type="ListCellColumns">
+      <list-item type="ListCellColumn">
+        <property name="width" value="315" />
+        <property name="height" value="30" />
+        <property name="colspan" value="" />
+        <property name="text" value="" />
+        <property name="resourceKey" value="" />
+        <property name="columnClickEvent" value="false" />
+        <property name="cssClass" value="listcell-header-nodelim" />
+        <property name="detailCssClass" value="listcell-detail-left" />
+        <property name="controlName" value="Label" />
+        <property name="templateKey" value="In_Listcell" />
+        <property name="enterOrder" value="" />
+        <property name="toolTipHidden" value="" />
+      </list-item>
+    </list-items>
+  </template>
+</templates>

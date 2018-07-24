@@ -1,0 +1,61 @@
+9
+
+dir
+437
+http://www.daifuku.sh.cn:8100/svn/ykk_sz/webapp/wms/WEB-INF/src/jp/co/daifuku/wms
+http://www.daifuku.sh.cn:8100/svn
+
+
+
+2008-12-04T04:10:42.846875Z
+435
+gavin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+13acff44-d81e-464e-9497-3eed1f1870d1
+
+shipping
+dir
+
+stockcontrol
+dir
+
+storage
+dir
+
+sorting
+dir
+
+asrs
+dir
+
+idm
+dir
+
+base
+dir
+
+YkkGMAX
+dir
+
+master
+dir
+
+instockreceive
+dir
+
+retrieval
+dir
+

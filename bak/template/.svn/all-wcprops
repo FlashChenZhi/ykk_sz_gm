@@ -1,0 +1,593 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/425/ykk_sz/webapp/wms/WEB-INF/control/template
+END
+Tab-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/Tab-template_ja_JP.xml
+END
+ScrollListCell-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/ScrollListCell-template_zh_CN.xml
+END
+LinkedPullDown-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/LinkedPullDown-template_zh_CN.xml
+END
+FixedListCell-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/358/ykk_sz/webapp/wms/WEB-INF/control/template/FixedListCell-template_zh_CN.xml
+END
+TimeTextBox-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/TimeTextBox-template.xml
+END
+GanttChart-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/GanttChart-template_zh_CN.xml
+END
+SubmitButton-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/408/ykk_sz/webapp/wms/WEB-INF/control/template/SubmitButton-template_zh_CN.xml
+END
+ImageButton-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/ImageButton-template_ja_JP.xml
+END
+Label-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/421/ykk_sz/webapp/wms/WEB-INF/control/template/Label-template_ja_JP.xml
+END
+PasswordTextBox-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/PasswordTextBox-template_ja_JP.xml
+END
+Message-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/Message-template.xml
+END
+copy_zh_CN.cmd
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/copy_zh_CN.cmd
+END
+FormatTextBox-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/FormatTextBox-template_zh_CN.xml
+END
+CheckBox-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/358/ykk_sz/webapp/wms/WEB-INF/control/template/CheckBox-template_ja_JP.xml
+END
+FixedListCell-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/358/ykk_sz/webapp/wms/WEB-INF/control/template/FixedListCell-template.xml
+END
+LinkedPullDown-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/LinkedPullDown-template.xml
+END
+VerticalBarLineChart-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/VerticalBarLineChart-template_ja_JP.xml
+END
+ListCell-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/442/ykk_sz/webapp/wms/WEB-INF/control/template/ListCell-template_zh_CN.xml
+END
+LinkButton-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/LinkButton-template_ja_JP.xml
+END
+FileBrows-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/FileBrows-template.xml
+END
+RadioButton-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/421/ykk_sz/webapp/wms/WEB-INF/control/template/RadioButton-template_ja_JP.xml
+END
+Pager-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/Pager-template.xml
+END
+BarCodeTextBox-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/BarCodeTextBox-template_zh_CN.xml
+END
+TextArea-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/TextArea-template_zh_CN.xml
+END
+GanttChart-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/GanttChart-template.xml
+END
+SubmitButton-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/408/ykk_sz/webapp/wms/WEB-INF/control/template/SubmitButton-template.xml
+END
+LinkLabel-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/393/ykk_sz/webapp/wms/WEB-INF/control/template/LinkLabel-template_ja_JP.xml
+END
+ImageLink-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/ImageLink-template.xml
+END
+FreeTextBox-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/424/ykk_sz/webapp/wms/WEB-INF/control/template/FreeTextBox-template_ja_JP.xml
+END
+PieChart-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/PieChart-template_ja_JP.xml
+END
+HorizontalBarChart-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/HorizontalBarChart-template_ja_JP.xml
+END
+ListBox-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/ListBox-template_zh_CN.xml
+END
+Tab-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/Tab-template.xml
+END
+PullDown-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/442/ykk_sz/webapp/wms/WEB-INF/control/template/PullDown-template_ja_JP.xml
+END
+NumberTextBox-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/421/ykk_sz/webapp/wms/WEB-INF/control/template/NumberTextBox-template_ja_JP.xml
+END
+ListCell-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/442/ykk_sz/webapp/wms/WEB-INF/control/template/ListCell-template.xml
+END
+BarCodeTextBox-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/BarCodeTextBox-template.xml
+END
+TextArea-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/TextArea-template.xml
+END
+ImageButton-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/ImageButton-template.xml
+END
+PasswordTextBox-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/PasswordTextBox-template.xml
+END
+CheckBox-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/358/ykk_sz/webapp/wms/WEB-INF/control/template/CheckBox-template.xml
+END
+VerticalBarLineChart-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/VerticalBarLineChart-template.xml
+END
+RadioButton-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/421/ykk_sz/webapp/wms/WEB-INF/control/template/RadioButton-template.xml
+END
+ScrollListCell-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/ScrollListCell-template_ja_JP.xml
+END
+TimeTextBox-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/TimeTextBox-template_zh_CN.xml
+END
+LinkedPullDown-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/LinkedPullDown-template_ja_JP.xml
+END
+FixedListCell-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/358/ykk_sz/webapp/wms/WEB-INF/control/template/FixedListCell-template_ja_JP.xml
+END
+HorizontalBarChart-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/HorizontalBarChart-template.xml
+END
+GanttChart-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/GanttChart-template_ja_JP.xml
+END
+SubmitButton-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/408/ykk_sz/webapp/wms/WEB-INF/control/template/SubmitButton-template_ja_JP.xml
+END
+PullDown-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/442/ykk_sz/webapp/wms/WEB-INF/control/template/PullDown-template.xml
+END
+Message-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/Message-template_zh_CN.xml
+END
+NumberTextBox-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/421/ykk_sz/webapp/wms/WEB-INF/control/template/NumberTextBox-template.xml
+END
+FormatTextBox-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/FormatTextBox-template_ja_JP.xml
+END
+DateTextBox-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/358/ykk_sz/webapp/wms/WEB-INF/control/template/DateTextBox-template_zh_CN.xml
+END
+FileBrows-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/FileBrows-template_zh_CN.xml
+END
+ListCell-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/442/ykk_sz/webapp/wms/WEB-INF/control/template/ListCell-template_ja_JP.xml
+END
+Pager-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/Pager-template_zh_CN.xml
+END
+BarCodeTextBox-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/BarCodeTextBox-template_ja_JP.xml
+END
+GeneralChart-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/GeneralChart-template_zh_CN.xml
+END
+TextArea-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/TextArea-template_ja_JP.xml
+END
+ImageLink-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/ImageLink-template_zh_CN.xml
+END
+SubmitLabel-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/393/ykk_sz/webapp/wms/WEB-INF/control/template/SubmitLabel-template_zh_CN.xml
+END
+ListBox-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/ListBox-template_ja_JP.xml
+END
+Tab-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/Tab-template_zh_CN.xml
+END
+ScrollListCell-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/ScrollListCell-template.xml
+END
+DateTextBox-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/358/ykk_sz/webapp/wms/WEB-INF/control/template/DateTextBox-template.xml
+END
+ImageButton-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/ImageButton-template_zh_CN.xml
+END
+GeneralChart-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/GeneralChart-template.xml
+END
+Label-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/421/ykk_sz/webapp/wms/WEB-INF/control/template/Label-template_zh_CN.xml
+END
+PasswordTextBox-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/PasswordTextBox-template_zh_CN.xml
+END
+SubmitLabel-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/393/ykk_sz/webapp/wms/WEB-INF/control/template/SubmitLabel-template.xml
+END
+FormatTextBox-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/FormatTextBox-template.xml
+END
+CheckBox-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/358/ykk_sz/webapp/wms/WEB-INF/control/template/CheckBox-template_zh_CN.xml
+END
+VerticalBarLineChart-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/VerticalBarLineChart-template_zh_CN.xml
+END
+LinkButton-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/LinkButton-template_zh_CN.xml
+END
+RadioButton-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/421/ykk_sz/webapp/wms/WEB-INF/control/template/RadioButton-template_zh_CN.xml
+END
+LinkLabel-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/393/ykk_sz/webapp/wms/WEB-INF/control/template/LinkLabel-template_zh_CN.xml
+END
+Label-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/421/ykk_sz/webapp/wms/WEB-INF/control/template/Label-template.xml
+END
+TimeTextBox-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/TimeTextBox-template_ja_JP.xml
+END
+FreeTextBox-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/424/ykk_sz/webapp/wms/WEB-INF/control/template/FreeTextBox-template_zh_CN.xml
+END
+PieChart-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/PieChart-template_zh_CN.xml
+END
+HorizontalBarChart-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/HorizontalBarChart-template_zh_CN.xml
+END
+ListBox-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/ListBox-template.xml
+END
+PullDown-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/442/ykk_sz/webapp/wms/WEB-INF/control/template/PullDown-template_zh_CN.xml
+END
+NumberTextBox-template_zh_CN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/421/ykk_sz/webapp/wms/WEB-INF/control/template/NumberTextBox-template_zh_CN.xml
+END
+Message-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/Message-template_ja_JP.xml
+END
+LinkButton-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/LinkButton-template.xml
+END
+LinkLabel-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/393/ykk_sz/webapp/wms/WEB-INF/control/template/LinkLabel-template.xml
+END
+DateTextBox-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/358/ykk_sz/webapp/wms/WEB-INF/control/template/DateTextBox-template_ja_JP.xml
+END
+FileBrows-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/FileBrows-template_ja_JP.xml
+END
+FreeTextBox-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/424/ykk_sz/webapp/wms/WEB-INF/control/template/FreeTextBox-template.xml
+END
+PieChart-template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/PieChart-template.xml
+END
+Pager-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/Pager-template_ja_JP.xml
+END
+GeneralChart-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/GeneralChart-template_ja_JP.xml
+END
+Page.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/408/ykk_sz/webapp/wms/WEB-INF/control/template/Page.xml
+END
+ImageLink-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/91/ykk_sz/webapp/wms/WEB-INF/control/template/ImageLink-template_ja_JP.xml
+END
+SubmitLabel-template_ja_JP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/393/ykk_sz/webapp/wms/WEB-INF/control/template/SubmitLabel-template_ja_JP.xml
+END

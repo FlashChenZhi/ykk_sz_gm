@@ -25,8 +25,18 @@ public class LocationStorageInfoEntity
 	private String itemName2 = "";
 	
 	private String itemName3 = "";
-	
-	public String getBucketNo()
+
+    private String memo = "";
+
+    public String getMemo() {
+        return memo;
+    }
+
+    public void setMemo(String memo) {
+        this.memo = memo;
+    }
+
+    public String getBucketNo()
 	{
 		return bucketNo;
 	}

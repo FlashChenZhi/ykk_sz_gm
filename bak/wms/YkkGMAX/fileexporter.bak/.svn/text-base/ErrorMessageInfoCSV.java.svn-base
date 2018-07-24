@@ -1,0 +1,110 @@
+package jp.co.daifuku.wms.YkkGMAX.fileexporter;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.List;
+
+import jp.co.daifuku.bluedog.ui.control.Page;
+import jp.co.daifuku.wms.YkkGMAX.Entities.ErrorMessageInfoEntity;
+import jp.co.daifuku.wms.YkkGMAX.Entities.ErrorMessageInfoHead;
+import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKDBException;
+import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKSQLException;
+import jp.co.daifuku.wms.YkkGMAX.Utils.ASRSInfoCentre;
+import jp.co.daifuku.wms.YkkGMAX.Utils.ConnectionManager;
+import jp.co.daifuku.wms.YkkGMAX.Utils.StringUtils;
+import jp.co.daifuku.wms.YkkGMAX.Utils.Debugprinter.DebugLevel;
+import jp.co.daifuku.wms.YkkGMAX.Utils.Debugprinter.DebugPrinter;
+
+public class ErrorMessageInfoCSV implements IExportable
+{
+	private final String ERROR_MESSAGE_INFO_HEAD = "ERROR_MESSAGE_INFO_HEAD";
+	private Page page;
+	
+	public ErrorMessageInfoCSV(Page page)
+	{
+		this.page = page;
+	}
+
+	public String getHead()
+	{
+		String head = "发生时间,受信区分,错误信息";
+		return head;
+	}
+
+	public String getLine(Object object)
+	{
+		ErrorMessageInfoEntity entity = (ErrorMessageInfoEntity)object;
+		
+		String line = StringUtils.formatDateAndTimeFromDBToPage(entity.getTime()) + ",";
+		line += entity.getMessageType() + ",";
+		line += entity.getErrorMessage();
+		return line;
+	}
+
+	public List getList() throws YKKSQLException, YKKDBException
+	{
+		Connection conn = null;
+		List errorMessageInfoList = null;
+		ASRSInfoCentre centre = null;
+		try
+		{
+		    conn = ConnectionManager.getConnection();
+		    centre = new ASRSInfoCentre(conn);
+		    errorMessageInfoList = centre.getErrorMessageInfoList(getErrorMessageInfoHead());
+		}
+		finally
+		{
+			if (conn != null)
+			{
+				try
+				{
+					conn.close();
+				}
+				catch (SQLException e)
+				{
+					DebugPrinter.print(DebugLevel.ERROR, e.getMessage());
+					YKKDBException ex = new YKKDBException();
+					    ex.setResourceKey("7200002");
+					    throw ex;					
+				}
+			}
+		}
+		return errorMessageInfoList;
+	}
+
+	public ErrorMessageInfoHead getErrorMessageInfoHead()
+	{
+		return (ErrorMessageInfoHead)page.getSession().getAttribute(ERROR_MESSAGE_INFO_HEAD);
+	}
+
+	public int getCount() throws YKKSQLException, YKKDBException
+	{
+		Connection conn = null;
+		int count = 0;
+		ASRSInfoCentre centre = null;
+		try
+		{
+		    conn = ConnectionManager.getConnection();
+		    centre = new ASRSInfoCentre(conn);
+		    count = centre.getErrorMessageInfoCount(getErrorMessageInfoHead());
+		}
+		finally
+		{
+			if (conn != null)
+			{
+				try
+				{
+					conn.close();
+				}
+				catch (SQLException e)
+				{
+					DebugPrinter.print(DebugLevel.ERROR, e.getMessage());
+					YKKDBException ex = new YKKDBException();
+					    ex.setResourceKey("7200002");
+					    throw ex;					
+				}
+			}
+		}
+		return count;
+	}
+}

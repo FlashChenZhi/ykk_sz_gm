@@ -1,0 +1,143 @@
+package jp.co.daifuku.wms.YkkGMAX.fileexporter;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.List;
+
+import jp.co.daifuku.bluedog.ui.control.Page;
+import jp.co.daifuku.wms.YkkGMAX.Entities.IOHistoryInfoEntity;
+import jp.co.daifuku.wms.YkkGMAX.Entities.IOHistoryInfoHead;
+import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKDBException;
+import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKSQLException;
+import jp.co.daifuku.wms.YkkGMAX.Utils.ASRSInfoCentre;
+import jp.co.daifuku.wms.YkkGMAX.Utils.ConnectionManager;
+import jp.co.daifuku.wms.YkkGMAX.Utils.StringUtils;
+import jp.co.daifuku.wms.YkkGMAX.Utils.Debugprinter.DebugLevel;
+import jp.co.daifuku.wms.YkkGMAX.Utils.Debugprinter.DebugPrinter;
+
+public class IOHistoryInfoCSV implements IExportable
+{
+	private final String IO_HISTORY_INFO_HEAD = "IO_HISTORY_INFO_HEAD";
+	private final Page page;
+
+	public IOHistoryInfoCSV(Page page)
+	{
+		this.page = page;
+	}
+
+	public int getCount() throws YKKSQLException, YKKDBException
+	{
+		Connection conn = null;
+		int count = 0;
+		ASRSInfoCentre centre = null;
+		try
+		{
+			conn = ConnectionManager.getConnection();
+			centre = new ASRSInfoCentre(conn);
+			count = centre.getIOHistoryInfoCount(getIOHistoryInfoHead());
+		}
+		finally
+		{
+			if (conn != null)
+			{
+				try
+				{
+					conn.close();
+				}
+				catch (SQLException e)
+				{
+					DebugPrinter.print(DebugLevel.ERROR, e.getMessage());
+					YKKDBException ex = new YKKDBException();
+					ex.setResourceKey("7200002");
+					throw ex;
+				}
+			}
+		}
+		return count;
+	}
+
+	public String getHead()
+	{
+		String head = "发生时间,作业区分,物料编号,品名1,品名2,品名3,颜色号,生产票号,箱子编号,货位编号,作业数量,出库指示No,订单号,单位重量,作业站台,用户号码,开始站台,最终站台";
+		return head;
+	}
+
+	private IOHistoryInfoHead getIOHistoryInfoHead()
+	{
+		return (IOHistoryInfoHead) page.getSession().getAttribute(
+				IO_HISTORY_INFO_HEAD);
+	}
+
+	public String getLine(Object object)
+	{
+		IOHistoryInfoEntity entity = (IOHistoryInfoEntity) object;
+
+		String line = StringUtils.formatDateAndTimeFromDBToPage(entity
+				.getTime())
+				+ ",";
+		line += entity.getWorkType() + ",";
+		line += entity.getItemCode() + ",";
+		line += entity.getItemName1() + ",";
+		line += entity.getItemName2() + ",";
+		line += entity.getItemName3() + ",";
+		line += entity.getColor() + ",";
+		line += entity.getTicketNo() + ",";
+		line += entity.getBucketNo() + ",";
+		line += StringUtils
+				.formatLocationNoFromDBToPage(entity.getLocationNo())
+				+ ",";
+
+		String token = "";
+		if (entity.getIncreaseDecreaseFlag().equals("1"))
+		{
+			token = "+";
+		}
+		else if (entity.getIncreaseDecreaseFlag().equals("2"))
+		{
+			token = "-";
+		}
+
+		line += token + String.valueOf(entity.getWorkCount()) + ",";
+		line += entity.getRetrievalNo() + ",";
+		line += entity.getOrderNo() + ",";
+		line += entity.getMeasureUnitWeight().toString() + ",";
+		line += entity.getStNo() + ",";
+		line += entity.getUserId() + ",";
+		line += entity.getStartStation() + ",";
+		line += entity.getEndStation();
+		return line;
+	}
+
+	public List getList() throws YKKSQLException, YKKDBException
+	{
+		Connection conn = null;
+		List ioHistoryInfoList = null;
+		ASRSInfoCentre centre = null;
+		try
+		{
+			conn = ConnectionManager.getConnection();
+			centre = new ASRSInfoCentre(conn);
+			ioHistoryInfoList = centre
+					.getIOHistoryInfoList(getIOHistoryInfoHead());
+		}
+		finally
+		{
+			if (conn != null)
+			{
+				try
+				{
+					conn.close();
+				}
+				catch (SQLException e)
+				{
+					DebugPrinter.print(DebugLevel.ERROR, e.getMessage());
+					YKKDBException ex = new YKKDBException();
+					ex.setResourceKey("7200002");
+					throw ex;
+				}
+			}
+		}
+		return ioHistoryInfoList;
+	}
+
+}

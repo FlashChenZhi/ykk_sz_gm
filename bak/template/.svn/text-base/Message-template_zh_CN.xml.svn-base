@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE servercontrol-template[
+<!ELEMENT templates (template+)>
+<!ELEMENT template (property+, list-items+)>
+<!ELEMENT list-items (list-item+)>
+<!ELEMENT list-item (property+, list-items+)>
+<!ATTLIST template key NMTOKEN #REQUIRED>
+<!ATTLIST property name NMTOKEN #REQUIRED value CDATA #REQUIRED>
+<!ATTLIST list-items type NMTOKEN #REQUIRED>
+<!ATTLIST list-item type NMTOKEN #REQUIRED>
+]>
+<templates>
+	<template key="OperationMsg" keyword="Common" description="Default Message">
+	    <property name="infoNoMin" value="0000" />
+	    <property name="infoNoMax" value="1999" />
+	    <property name="attentionNoMin" value="2000" />
+	    <property name="attentionNoMax" value="3999" />
+	    <property name="warningNoMin" value="4000" />
+	    <property name="warningNoMax" value="5999" />
+	    <property name="errorNoMin" value="6000" />
+	    <property name="errorNoMax" value="7999" />
+	    <property name="cssClass" value="message-001" />
+	</template>
+</templates>

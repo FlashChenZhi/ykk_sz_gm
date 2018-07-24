@@ -50,6 +50,8 @@ public class LocationStorageInfoListProxy
 
     private final int STOCKIN_DATE_TIME_COLUMN = 10;
 
+    private final int MEMO_COLUMN = 11;
+
     public LocationStorageInfoListProxy(FixedListCell head, ListCell list)
     {
 	this.head = head;
@@ -120,6 +122,10 @@ public class LocationStorageInfoListProxy
     public int getHEAD_WEIGHT_REPORT_FLAG_ROW()
     {
 	return HEAD_WEIGHT_REPORT_FLAG_ROW;
+    }
+
+    public int getMEMO_COLUMN() {
+        return MEMO_COLUMN;
     }
 
     public String getHeadDepo()
@@ -256,6 +262,16 @@ public class LocationStorageInfoListProxy
 	list.setValue(COLOR_COLUMN, color);
     }
 
+    public String getMemo()
+    {
+        return list.getValue(MEMO_COLUMN);
+    }
+
+    public void setMemo(String memo)
+    {
+        list.setValue(MEMO_COLUMN, memo);
+    }
+
     public void setHeadDepo(String depo)
     {
 	head.setCurrentRow(HEAD_DEPO_ROW);
@@ -376,6 +392,7 @@ public class LocationStorageInfoListProxy
 		    .getLocationNo()));
 	}
 	setInstockCount(entity.getInstockCount());
+        setMemo(entity.getMemo());
     }
 
     public void setStockinDateTime(String dateTime)

@@ -1,0 +1,887 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+  <template key="LoginUserMaintenance" keyword="LoginUserMaintenance" description="セッション切断">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-9000" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_DataLoad" keyword="" description="データ取り込み">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0009" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_DataReport" keyword="" description="データ報告">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0010" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_MessageLog" keyword="" description="メッセージログ">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0013" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_Maintenance" keyword="" description="メンテナンス">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0003" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_ListOutput" keyword="" description="リスト発行">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0005" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_StockMoveMtn" keyword="" description="移動メンテナンス">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0027" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_Print" keyword="" description="印刷">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0036" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_StartSet" keyword="" description="開始設定">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0006" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_EndSet" keyword="" description="完了設定">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0007" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_Bsc_DtlMdfyDlt" keyword="" description="基本情報設定→-詳細情報　修正・削除">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0014" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0019" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_Inventory" keyword="" description="基本情報設定→-詳細情報　設定">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0014" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0028" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_Bsc_DtlRst" keyword="" description="基本情報設定→-詳細情報　登録">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0014" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0018" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_StockMove" keyword="" description="在庫移動">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0026" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_ReportDataStock" keyword="" description="在庫情報報告">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0034" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_WkrMsrIpt_Mdfy" keyword="" description="作業者マスタ入力→-作業者マスタ修正">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0017" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0025" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_WorkSet" keyword="" description="作業設定">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0035" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_Delete" keyword="" description="削除">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0004" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_LodClm_Set" keyword="" description="取り込みデータ項目定義→-設定">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0015" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0001" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_LodClm_SetPick" keyword="" description="取り込みデータ項目定義→-設定　（仕分）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0015" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0023" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_LodClm_SetShp" keyword="" description="取り込みデータ項目定義→-設定　（出荷）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0015" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0024" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_LodClm_SetRtrivl" keyword="" description="取り込みデータ項目定義→-設定　（出庫）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0015" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0022" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_LodClm_SetInstk" keyword="" description="取り込みデータ項目定義→-設定　（入荷）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0015" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0020" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_LodClm_SetStrg" keyword="" description="取り込みデータ項目定義→-設定　（入庫）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0015" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0021" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_Modify_Delete" keyword="" description="修正・削除">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0040" />
+        <property name="selected" value="" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_RetrievalSetting" keyword="" description="出庫設定">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0039" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="BSR_Detail" keyword="" description="処理詳細">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="BSR_TAB-W0035" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_Inquiry" keyword="" description="照会">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0002" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_Set" keyword="" description="設定">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0001" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_Add_Storage" keyword="" description="棚選択→-入庫情報入力">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0037" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0038" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_CommunicationTrace" keyword="" description="通信トレース">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0012" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_Regist" keyword="" description="登録">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0008" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_DailyUpdate" keyword="" description="日次更新">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0011" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_RptClm_Set" keyword="" description="報告データ項目定義→-設定">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0016" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0001" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_RptClm_SetStockMov" keyword="" description="報告データ項目定義→-設定　（在庫移動）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0016" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0029" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_RptClm_SetPick" keyword="" description="報告データ項目定義→-設定　（仕分）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0016" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0023" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_RptClm_SetShp" keyword="" description="報告データ項目定義→-設定　（出荷）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0016" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0024" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_RptClm_SetRtrivl" keyword="" description="報告データ項目定義→-設定　（出庫）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0016" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0022" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_RptClm_SetInvntry" keyword="" description="報告データ項目定義→-設定　（棚卸し）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0016" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0030" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_RptClm_SetInstk" keyword="" description="報告データ項目定義→-設定　（入荷）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0016" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0020" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_RptClm_SetStrg" keyword="" description="報告データ項目定義→-設定　（入庫）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0016" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0021" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_RptClm_SetNoPlanRtrivl" keyword="" description="報告データ項目定義→-設定　（予定外出庫）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0016" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0032" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_RptClm_SetNoPlanStrg" keyword="" description="報告データ項目定義→-設定　（予定外入庫）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0016" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0031" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_Query" keyword="" description="問合せ">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0033" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_AllocClear" keyword="" description="引当解除">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0041" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="AST_CategorySelect_CategoryList_Parameter" keyword="" description="カテゴリ選択-カテゴリ一覧-パラメータ追加">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TTAB-W0006" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TTAB-W0007" />
+        <property name="selected" value="false" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TTAB-W0008" />
+        <property name="selected" value="false" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="AST_Create" keyword="" description="設定">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TTAB-W0009" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="AST_Inquiry" keyword="" description="問合せ">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TTAB-W0017" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="AST_WorkPlace_Create" keyword="" description="作業場入力-設定">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TTAB-W0016" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TTAB-W0009" />
+        <property name="selected" value="false" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="AST_Classification_Create" keyword="" description="分類入力-設定">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TTAB-W0018" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TTAB-W0009" />
+        <property name="selected" value="false" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="AST_Area_Create" keyword="" description="エリア入力-設定">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TTAB-W0019" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TTAB-W0009" />
+        <property name="selected" value="false" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="AST_DataSelect" keyword="" description="データ選択">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TTAB-W0001" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_LodClm_SetCon" keyword="" description="取り込みデータ項目定義→-設定　（荷主マスタ）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0015" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0048" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_LodClm_SetSup" keyword="" description="取り込みデータ項目定義→-設定　（仕入先マスタ）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0015" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0049" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_LodClm_SetCus" keyword="" description="取り込みデータ項目定義→-設定　（出荷先マスタ）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0015" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0050" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_LodClm_SetItem" keyword="" description="取り込みデータ項目定義→-設定　（商品マスタ）">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0015" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0044" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_ListWorkStart" keyword="" description="リスト作業開始">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0051" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="W_ListWorkEnd" keyword="" description="リスト作業完了">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="TAB-W0052" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="YKK_TAB_Reprint" keyword="YKK" description="">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="YKK-LBL-Reprint" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="false" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="YKK_TAB_Switch" keyword="YKK" description="">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="YKK-LBL-Switch" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="false" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="YKK_TAB_SearchReport" keyword="YKK" description="">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="YKK-LBL-InquiryReport" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="false" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="YKK_TAB_Inquiry" keyword="YKK" description="">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="YKK-LBL-Inquiry" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="false" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="YKK_TAB_Maintenance" keyword="YKK" description="">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="YKK-LBL-Maintenance" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="false" />
+      </list-item>
+    </list-items>
+  </template>
+  <template key="YKK_TAB_Setting" keyword="YKK" description="">
+    <property name="async" value="" />
+    <list-items type="TabColumns">
+      <list-item type="TabColumn">
+        <property name="text" value="" />
+        <property name="resourceKey" value="YKK-LBL-Set" />
+        <property name="selected" value="true" />
+        <property name="tabClickEvent" value="false" />
+      </list-item>
+    </list-items>
+  </template>
+</templates>

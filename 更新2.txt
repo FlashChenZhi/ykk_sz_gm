@@ -1,0 +1,13 @@
+fnsyotei.cmtxrz
+FNGSET.remark
+FNZAIKO.remark
+
+AutoStockoutDaemon
+AutoStockoutStartDaemon
+NonautoStockoutDaemon
+ASRSInfoCentre
+ExceptionStockout
+ExceptionStockoutBusiness
+ExceptionStockoutDetailEntity
+ExceptionStockoutEntity
+ExceptionStockoutPopupListProxy

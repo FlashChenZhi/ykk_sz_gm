@@ -56,7 +56,7 @@ public class ExceptionStockoutRequestProcessor extends BasicProcessor
 			SystemIdSortable entity = (SystemIdSortable) exceptionStockoutEntity
 					.getExceptionStockoutDetailList().get(i);
 			String sqlString = "INSERT INTO FNGSET";
-			sqlString += "(syoriflg,schno,systemid,endstno,userid)";
+			sqlString += "(syoriflg,schno,systemid,endstno,userid,remark)";
 			sqlString += "VALUES";
 			sqlString += "("
 					+ StringUtils
@@ -70,7 +70,9 @@ public class ExceptionStockoutRequestProcessor extends BasicProcessor
 					+ StringUtils
 							.surroundWithSingleQuotes(exceptionStockoutEntity
 									.getEndStation()) + ","
-					+ StringUtils.surroundWithSingleQuotes(userid) + ")";
+					+ StringUtils.surroundWithSingleQuotes(userid)
+                    + ","
+                    + StringUtils.surroundWithSingleQuotes(exceptionStockoutEntity.getMemo())+ ")";
 
 			DBHandler dbHandler = new DBHandler(conn);
 			dbHandler.executeUpdate(sqlString);
