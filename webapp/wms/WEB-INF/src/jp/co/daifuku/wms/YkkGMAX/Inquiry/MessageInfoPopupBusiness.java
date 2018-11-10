@@ -88,8 +88,7 @@ public class MessageInfoPopupBusiness extends MessageInfoPopup implements
 	 */
 	public void page_Load(ActionEvent e) throws Exception
 	{
-		MessageInfoHead head = (MessageInfoHead) session
-				.getAttribute(MESSAGE_INFO_HEAD);
+		MessageInfoHead head = (MessageInfoHead) session.getAttribute(MESSAGE_INFO_HEAD);
 
 		listProxy.setHeadValue(head);
 
@@ -830,7 +829,8 @@ public class MessageInfoPopupBusiness extends MessageInfoPopup implements
 	{
 		this.closeWindow();
 	}
-	/** 
+
+	/** 
 	 * 
 	 * @param e ActionEvent 
 	 * @throws Exception 

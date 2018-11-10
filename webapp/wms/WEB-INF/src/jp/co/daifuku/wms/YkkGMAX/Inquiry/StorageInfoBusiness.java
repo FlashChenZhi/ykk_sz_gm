@@ -255,7 +255,7 @@ public class StorageInfoBusiness extends StorageInfo implements WMSConstants
 	/**
 	 * 
 	 * @param e
-	 *            ActionEvent
+	 *            ActionEventbtn_Show_Click
 	 * @throws Exception
 	 */
 	public void btn_Show_Click(ActionEvent e) throws Exception
@@ -317,14 +317,14 @@ public class StorageInfoBusiness extends StorageInfo implements WMSConstants
 	}
 
 	private void ClearPage()
-	{
-		txt_ItemCode.setText("");
-		txt_ItemName1.setText("");
-		txt_ItemName2.setText("");
-		txt_ItemName3.setText("");
-		txt_ColorCode.setText("");
+{
+	txt_ItemCode.setText("");
+	txt_ItemName1.setText("");
+	txt_ItemName2.setText("");
+	txt_ItemName3.setText("");
+	txt_ColorCode.setText("");
 
-	}
+}
 
 	private void FillItemName()
 	{

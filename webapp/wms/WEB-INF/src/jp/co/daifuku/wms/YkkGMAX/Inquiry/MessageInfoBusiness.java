@@ -24,7 +24,6 @@ import jp.co.daifuku.wms.YkkGMAX.Entities.MessageInfoHead;
 import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKDBException;
 import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKSQLException;
 import jp.co.daifuku.wms.YkkGMAX.PulldownManager.PulldownManager;
-import jp.co.daifuku.wms.YkkGMAX.Utils.ASRSInfoCentre;
 import jp.co.daifuku.wms.YkkGMAX.Utils.ConnectionManager;
 import jp.co.daifuku.wms.YkkGMAX.Utils.StringUtils;
 import jp.co.daifuku.wms.YkkGMAX.Utils.Debugprinter.DebugLevel;
@@ -443,7 +442,7 @@ public class MessageInfoBusiness extends MessageInfo implements WMSConstants
 		try
 		{
 			conn = ConnectionManager.getConnection();
-			ASRSInfoCentre centre = new ASRSInfoCentre(conn);
+			ASRSInfoCentre.ASRSInfoCentre centre = new ASRSInfoCentre.ASRSInfoCentre(conn);
 
 			int count = centre.getMessageInfoCount(head);
 
@@ -505,7 +504,7 @@ public class MessageInfoBusiness extends MessageInfo implements WMSConstants
 		try
 		{
 			conn = ConnectionManager.getConnection();
-			ASRSInfoCentre centre = new ASRSInfoCentre(conn);
+			ASRSInfoCentre.ASRSInfoCentre centre = new ASRSInfoCentre.ASRSInfoCentre(conn);
 
 			String printerName = centre.getPrinterName(getHttpRequest()
 					.getRemoteAddr());
@@ -697,7 +696,8 @@ public class MessageInfoBusiness extends MessageInfo implements WMSConstants
 		pul_MessageDivision.setSelectedIndex(0);
 
 	}
-	/** 
+
+	/** 
 	 * 
 	 * @param e ActionEvent 
 	 * @throws Exception 

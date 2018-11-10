@@ -6,6 +6,8 @@ import jp.co.daifuku.wms.YkkGMAX.DBHandler.*;
 import jp.co.daifuku.wms.YkkGMAX.Entities.*;
 import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKProcedureException;
 import jp.co.daifuku.wms.YkkGMAX.Exceptions.YKKSQLException;
+import jp.co.daifuku.wms.YkkGMAX.Utils.DBFlags;
+import jp.co.daifuku.wms.YkkGMAX.Utils.StringUtils;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
@@ -14471,7 +14473,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
-public class ASRSInfoCentre {
+public static class ASRSInfoCentre {
 
     private Connection conn = null;
 
